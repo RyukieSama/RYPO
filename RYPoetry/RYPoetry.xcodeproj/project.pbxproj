@@ -12,7 +12,9 @@
 		4A5F032E1F7CFE8700199F0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A5F032D1F7CFE8700199F0D /* Assets.xcassets */; };
 		4A5F033C1F7CFE8700199F0D /* RYPoetryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F033B1F7CFE8700199F0D /* RYPoetryTests.swift */; };
 		4A5F03471F7CFE8700199F0D /* RYPoetryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F03461F7CFE8700199F0D /* RYPoetryUITests.swift */; };
+		4AB296B31F7D485900004273 /* FZZJ-HFXSJW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4AFF4D8E1F7D378700E2EC01 /* FZZJ-HFXSJW.TTF */; };
 		4AFF4D891F7D1B4500E2EC01 /* RPHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF4D881F7D1B4500E2EC01 /* RPHomeController.swift */; };
+		4AFF4D8C1F7D361C00E2EC01 /* RYFontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF4D8B1F7D361C00E2EC01 /* RYFontHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		4A5F03461F7CFE8700199F0D /* RYPoetryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RYPoetryUITests.swift; sourceTree = "<group>"; };
 		4A5F03481F7CFE8700199F0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AFF4D881F7D1B4500E2EC01 /* RPHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPHomeController.swift; sourceTree = "<group>"; };
+		4AFF4D8B1F7D361C00E2EC01 /* RYFontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RYFontHelper.swift; sourceTree = "<group>"; };
+		4AFF4D8E1F7D378700E2EC01 /* FZZJ-HFXSJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FZZJ-HFXSJW.TTF"; sourceTree = "<group>"; };
 		641393E7860C1FF27F6C0010 /* Pods-RYPoetry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RYPoetry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RYPoetry/Pods-RYPoetry.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +150,7 @@
 		4AFF4D801F7D07D800E2EC01 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				4AFF4D8D1F7D377300E2EC01 /* Font */,
 				4A5F032D1F7CFE8700199F0D /* Assets.xcassets */,
 			);
 			path = Resource;
@@ -164,6 +169,7 @@
 		4AFF4D821F7D09AF00E2EC01 /* Units */ = {
 			isa = PBXGroup;
 			children = (
+				4AFF4D8A1F7D35CD00E2EC01 /* RYFontHelper */,
 			);
 			path = Units;
 			sourceTree = "<group>";
@@ -188,6 +194,22 @@
 			children = (
 			);
 			path = Mine;
+			sourceTree = "<group>";
+		};
+		4AFF4D8A1F7D35CD00E2EC01 /* RYFontHelper */ = {
+			isa = PBXGroup;
+			children = (
+				4AFF4D8B1F7D361C00E2EC01 /* RYFontHelper.swift */,
+			);
+			path = RYFontHelper;
+			sourceTree = "<group>";
+		};
+		4AFF4D8D1F7D377300E2EC01 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				4AFF4D8E1F7D378700E2EC01 /* FZZJ-HFXSJW.TTF */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		DE42807E47692E01E08697FD /* Pods */ = {
@@ -309,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AB296B31F7D485900004273 /* FZZJ-HFXSJW.TTF in Resources */,
 				4A5F032E1F7CFE8700199F0D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AFF4D891F7D1B4500E2EC01 /* RPHomeController.swift in Sources */,
+				4AFF4D8C1F7D361C00E2EC01 /* RYFontHelper.swift in Sources */,
 				4A5F03271F7CFE8700199F0D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

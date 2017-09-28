@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class RPHomeController: UIViewController {
 
@@ -24,8 +25,24 @@ class RPHomeController: UIViewController {
     
     // MARK: - function
     private func setupUI() {
-        view.backgroundColor = UIColor.blue
+        view.backgroundColor = UIColor.darkGray
+        
+        view.addSubview(lbText)
+        lbText.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+        }
         
     }
+    
+    // MARK: - Lazy
+    private lazy var lbText : UILabel = {
+        var lb = UILabel()
+        lb.text = "诗客\nRyukieSama\n😂\n詩囡囡⑤乄"
+        lb.numberOfLines = 0
+        lb.backgroundColor = UIColor.white
+        lb.textColor = UIColor.black
+        lb.font = RYFontHelper.getFontstyle(ttfName: "asd", fontSize: 24)
+        return lb
+    }()
     
 }
