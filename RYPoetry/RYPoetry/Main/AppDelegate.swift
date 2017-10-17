@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //启动图过去太快了
-        Thread.sleep(forTimeInterval: 2)
+//        Thread.sleep(forTimeInterval: 2)
         setDefault()
         return true
     }
