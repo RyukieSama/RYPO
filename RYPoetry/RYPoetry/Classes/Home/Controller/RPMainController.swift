@@ -32,7 +32,9 @@ class RPMainController: RPBaseController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         let vc = segue.destination as! RPBaseController
-        vc.dic = ["title" : "详情"]
+        if segue.identifier == segueDetail {
+            vc.dic = ["title" : "详情"]
+        }
     }
  
     
@@ -43,6 +45,12 @@ class RPMainController: RPBaseController {
     private func setupUI() {
         view.backgroundColor = UIColor.gray
     }
+    
+    // MARK: - segueID
+    let segueDetail = "segueToDetail"
+    
+    // MARK: - other
+    let currentIndex = 0;
 }
 
 extension RPMainController : UICollectionViewDelegate,UICollectionViewDataSource {
@@ -62,9 +70,10 @@ extension RPMainController : UICollectionViewDelegate,UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath)
+        performSegue(withIdentifier: segueDetail, sender: nil)
         
     }
-    
 }
 
 
