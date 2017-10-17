@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RPPoetryDetailController: UIViewController {
+class RPPoetryDetailController: RPBaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +29,8 @@ class RPPoetryDetailController: UIViewController {
     @IBOutlet weak var tvMain: UITableView!
     
     private func setupUI() {
+        title = dic["title"] as? String
+        
         //tableView
         tvMain.register(UINib.init(nibName: "RPPoetryDetailCell", bundle: nil), forCellReuseIdentifier: "RPPoetryDetailCell")
     }

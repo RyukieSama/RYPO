@@ -10,15 +10,15 @@ import UIKit
 
 class RYFontHelper: NSObject {
     class func getFontstyle(ttfName : String, fontSize : CGFloat) -> UIFont {
-        let familyNames = UIFont.familyNames
-        for familyName in familyNames {
-            print("++++++ " + familyName + " ++++++")
-            let fontNames = UIFont.fontNames(forFamilyName: familyName)
-            for fontName in fontNames {
-                print(fontName)
-            }
-            print("=================================")
-        }
+//        let familyNames = UIFont.familyNames
+//        for familyName in familyNames {
+//            print("++++++ " + familyName + " ++++++")
+//            let fontNames = UIFont.fontNames(forFamilyName: familyName)
+//            for fontName in fontNames {
+//                print(fontName)
+//            }
+//            print("=================================")
+//        }
         
         return UIFont(name: "FZZJ-HFXSJW", size: fontSize)!
     }

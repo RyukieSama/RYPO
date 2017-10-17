@@ -15,6 +15,7 @@
 		4A1297861F959F2200A021BA /* RPMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1297851F959F2200A021BA /* RPMainController.swift */; };
 		4A12978B1F95A34800A021BA /* RPMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12978A1F95A34800A021BA /* RPMainCell.swift */; };
 		4A12978D1F95A83300A021BA /* RPPoetryDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A12978C1F95A83200A021BA /* RPPoetryDetailCell.xib */; };
+		4A12978F1F95B18700A021BA /* RPBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12978E1F95B18700A021BA /* RPBaseController.swift */; };
 		4A5F03271F7CFE8700199F0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F03261F7CFE8700199F0D /* AppDelegate.swift */; };
 		4A5F032E1F7CFE8700199F0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A5F032D1F7CFE8700199F0D /* Assets.xcassets */; };
 		4A5F033C1F7CFE8700199F0D /* RYPoetryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F033B1F7CFE8700199F0D /* RYPoetryTests.swift */; };
@@ -51,6 +52,7 @@
 		4A1297851F959F2200A021BA /* RPMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPMainController.swift; sourceTree = "<group>"; };
 		4A12978A1F95A34800A021BA /* RPMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPMainCell.swift; sourceTree = "<group>"; };
 		4A12978C1F95A83200A021BA /* RPPoetryDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RPPoetryDetailCell.xib; sourceTree = "<group>"; };
+		4A12978E1F95B18700A021BA /* RPBaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPBaseController.swift; sourceTree = "<group>"; };
 		4A5F03231F7CFE8700199F0D /* RYPoetry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RYPoetry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A5F03261F7CFE8700199F0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A5F032D1F7CFE8700199F0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				4A5F03261F7CFE8700199F0D /* AppDelegate.swift */,
+				4A12978E1F95B18700A021BA /* RPBaseController.swift */,
 				4A1297831F959E9E00A021BA /* RPNaviController.swift */,
 			);
 			path = Main;
@@ -455,6 +458,7 @@
 			files = (
 				4AFF4D8C1F7D361C00E2EC01 /* RYFontHelper.swift in Sources */,
 				4AB7A8411F94AAA2006BE50C /* RPConstants.swift in Sources */,
+				4A12978F1F95B18700A021BA /* RPBaseController.swift in Sources */,
 				4A12977E1F95962100A021BA /* RPPoetryDetailController.swift in Sources */,
 				4A12978B1F95A34800A021BA /* RPMainCell.swift in Sources */,
 				4A1297861F959F2200A021BA /* RPMainController.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RPMainController: UIViewController {
+class RPMainController: RPBaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +25,16 @@ class RPMainController: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let vc = segue.destination as! RPBaseController
+        vc.dic = ["title" : "详情"]
     }
-    */
+ 
     
     // MARK: - UI
     
