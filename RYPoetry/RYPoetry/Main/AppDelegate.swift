@@ -34,12 +34,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setHome() -> UIViewController {
-        return RPHomeController()
+        let vc = UIStoryboard.init(name: "RPMain", bundle: nil).instantiateInitialViewController() as! RPNaviController
+        return vc
     }
     
-    func setWelcome() -> UIViewController {
-        return RPHomeController()
-    }
+//    func setWelcome() -> UIViewController {
+//        return RPHomeController()
+//    }
     
     // MARK: - Delegate
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

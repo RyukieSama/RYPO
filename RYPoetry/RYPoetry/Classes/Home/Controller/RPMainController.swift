@@ -1,0 +1,69 @@
+//
+//  RPMainController.swift
+//  RYPoetry
+//
+//  Created by 王荣庆 on 2017/10/17.
+//  Copyright © 2017年 RyukieSama. All rights reserved.
+//
+
+import UIKit
+
+class RPMainController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+    
+    // MARK: - UI
+    
+    @IBOutlet weak var cvMain: UICollectionView!
+    
+    private func setupUI() {
+        view.backgroundColor = UIColor.gray
+    }
+}
+
+extension RPMainController : UICollectionViewDelegate,UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RPMainCell", for: indexPath)
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
+    
+}
+
+

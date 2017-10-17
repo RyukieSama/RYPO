@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		0F6CAF4AC9A3062E35E1BAF0 /* Pods_RYPoetry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A265A432EA01821B38D762E /* Pods_RYPoetry.framework */; };
+		4A12977E1F95962100A021BA /* RPPoetryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12977D1F95962100A021BA /* RPPoetryDetailController.swift */; };
+		4A1297801F959A0100A021BA /* RPPoetryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12977F1F959A0100A021BA /* RPPoetryDetailCell.swift */; };
+		4A1297821F959E5A00A021BA /* RPMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A1297811F959E5A00A021BA /* RPMain.storyboard */; };
+		4A1297841F959E9E00A021BA /* RPNaviController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1297831F959E9E00A021BA /* RPNaviController.swift */; };
+		4A1297861F959F2200A021BA /* RPMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1297851F959F2200A021BA /* RPMainController.swift */; };
+		4A12978B1F95A34800A021BA /* RPMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12978A1F95A34800A021BA /* RPMainCell.swift */; };
+		4A12978D1F95A83300A021BA /* RPPoetryDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A12978C1F95A83200A021BA /* RPPoetryDetailCell.xib */; };
 		4A5F03271F7CFE8700199F0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F03261F7CFE8700199F0D /* AppDelegate.swift */; };
 		4A5F032E1F7CFE8700199F0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A5F032D1F7CFE8700199F0D /* Assets.xcassets */; };
 		4A5F033C1F7CFE8700199F0D /* RYPoetryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F033B1F7CFE8700199F0D /* RYPoetryTests.swift */; };
 		4A5F03471F7CFE8700199F0D /* RYPoetryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F03461F7CFE8700199F0D /* RYPoetryUITests.swift */; };
 		4AB296B31F7D485900004273 /* FZZJ-HFXSJW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4AFF4D8E1F7D378700E2EC01 /* FZZJ-HFXSJW.TTF */; };
-		4AFF4D891F7D1B4500E2EC01 /* RPHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF4D881F7D1B4500E2EC01 /* RPHomeController.swift */; };
+		4AB7A8411F94AAA2006BE50C /* RPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB7A8401F94AAA2006BE50C /* RPConstants.swift */; };
 		4AFF4D8C1F7D361C00E2EC01 /* RYFontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF4D8B1F7D361C00E2EC01 /* RYFontHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +44,13 @@
 /* Begin PBXFileReference section */
 		0A265A432EA01821B38D762E /* Pods_RYPoetry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RYPoetry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		261FE57C88B43897E43CD64B /* Pods-RYPoetry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RYPoetry.release.xcconfig"; path = "Pods/Target Support Files/Pods-RYPoetry/Pods-RYPoetry.release.xcconfig"; sourceTree = "<group>"; };
+		4A12977D1F95962100A021BA /* RPPoetryDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPPoetryDetailController.swift; sourceTree = "<group>"; };
+		4A12977F1F959A0100A021BA /* RPPoetryDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPPoetryDetailCell.swift; sourceTree = "<group>"; };
+		4A1297811F959E5A00A021BA /* RPMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RPMain.storyboard; sourceTree = "<group>"; };
+		4A1297831F959E9E00A021BA /* RPNaviController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPNaviController.swift; sourceTree = "<group>"; };
+		4A1297851F959F2200A021BA /* RPMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPMainController.swift; sourceTree = "<group>"; };
+		4A12978A1F95A34800A021BA /* RPMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPMainCell.swift; sourceTree = "<group>"; };
+		4A12978C1F95A83200A021BA /* RPPoetryDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RPPoetryDetailCell.xib; sourceTree = "<group>"; };
 		4A5F03231F7CFE8700199F0D /* RYPoetry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RYPoetry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A5F03261F7CFE8700199F0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A5F032D1F7CFE8700199F0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,7 +61,7 @@
 		4A5F03421F7CFE8700199F0D /* RYPoetryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RYPoetryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A5F03461F7CFE8700199F0D /* RYPoetryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RYPoetryUITests.swift; sourceTree = "<group>"; };
 		4A5F03481F7CFE8700199F0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4AFF4D881F7D1B4500E2EC01 /* RPHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPHomeController.swift; sourceTree = "<group>"; };
+		4AB7A8401F94AAA2006BE50C /* RPConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPConstants.swift; sourceTree = "<group>"; };
 		4AFF4D8B1F7D361C00E2EC01 /* RYFontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RYFontHelper.swift; sourceTree = "<group>"; };
 		4AFF4D8E1F7D378700E2EC01 /* FZZJ-HFXSJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FZZJ-HFXSJW.TTF"; sourceTree = "<group>"; };
 		641393E7860C1FF27F6C0010 /* Pods-RYPoetry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RYPoetry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RYPoetry/Pods-RYPoetry.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,10 +153,38 @@
 			path = RYPoetryUITests;
 			sourceTree = "<group>";
 		};
+		4A86B13E1F94890000B827A5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A1297851F959F2200A021BA /* RPMainController.swift */,
+				4A1297811F959E5A00A021BA /* RPMain.storyboard */,
+				4A12977D1F95962100A021BA /* RPPoetryDetailController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A86B13F1F94891200B827A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A12977F1F959A0100A021BA /* RPPoetryDetailCell.swift */,
+				4A12978C1F95A83200A021BA /* RPPoetryDetailCell.xib */,
+				4A12978A1F95A34800A021BA /* RPMainCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A86B1411F94891F00B827A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4AFF4D7F1F7D07C300E2EC01 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				4A5F03261F7CFE8700199F0D /* AppDelegate.swift */,
+				4A1297831F959E9E00A021BA /* RPNaviController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -169,6 +211,7 @@
 		4AFF4D821F7D09AF00E2EC01 /* Units */ = {
 			isa = PBXGroup;
 			children = (
+				4AB7A8401F94AAA2006BE50C /* RPConstants.swift */,
 				4AFF4D8A1F7D35CD00E2EC01 /* RYFontHelper */,
 			);
 			path = Units;
@@ -184,7 +227,9 @@
 		4AFF4D841F7D09F900E2EC01 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4AFF4D881F7D1B4500E2EC01 /* RPHomeController.swift */,
+				4A86B1411F94891F00B827A5 /* Model */,
+				4A86B13F1F94891200B827A5 /* View */,
+				4A86B13E1F94890000B827A5 /* Controller */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -286,6 +331,7 @@
 		4A5F031B1F7CFE8700199F0D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = RP;
 				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = RyukieSama;
@@ -333,6 +379,8 @@
 			files = (
 				4AB296B31F7D485900004273 /* FZZJ-HFXSJW.TTF in Resources */,
 				4A5F032E1F7CFE8700199F0D /* Assets.xcassets in Resources */,
+				4A1297821F959E5A00A021BA /* RPMain.storyboard in Resources */,
+				4A12978D1F95A83300A021BA /* RPPoetryDetailCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,9 +453,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AFF4D891F7D1B4500E2EC01 /* RPHomeController.swift in Sources */,
 				4AFF4D8C1F7D361C00E2EC01 /* RYFontHelper.swift in Sources */,
+				4AB7A8411F94AAA2006BE50C /* RPConstants.swift in Sources */,
+				4A12977E1F95962100A021BA /* RPPoetryDetailController.swift in Sources */,
+				4A12978B1F95A34800A021BA /* RPMainCell.swift in Sources */,
+				4A1297861F959F2200A021BA /* RPMainController.swift in Sources */,
 				4A5F03271F7CFE8700199F0D /* AppDelegate.swift in Sources */,
+				4A1297801F959A0100A021BA /* RPPoetryDetailCell.swift in Sources */,
+				4A1297841F959E9E00A021BA /* RPNaviController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
