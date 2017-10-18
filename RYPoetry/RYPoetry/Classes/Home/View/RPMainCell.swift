@@ -10,4 +10,16 @@ import UIKit
 
 class RPMainCell: UICollectionViewCell {
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        lbTitle.font = RYFontHelper.getFontstyle(ttfName: "asd", fontSize: 24)
+    }
+    
+    func bindCellModel(cellModel : RPMainCellModel) {
+        lbTitle.text = cellModel.title
+        
+    }
+    
+    // MARK: - UI
+    @IBOutlet weak var lbTitle: UILabel!
 }

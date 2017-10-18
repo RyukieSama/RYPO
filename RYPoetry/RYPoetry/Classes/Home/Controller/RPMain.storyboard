@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -49,9 +50,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtM-W9-nZc">
-                                                    <rect key="frame" x="99" y="150" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtM-W9-nZc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -59,6 +59,15 @@
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" secondItem="wtM-W9-nZc" secondAttribute="bottom" id="7wY-bV-QRH"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="wtM-W9-nZc" secondAttribute="trailing" id="Kpr-5C-mBt"/>
+                                            <constraint firstItem="wtM-W9-nZc" firstAttribute="leading" secondItem="p3O-MC-vZF" secondAttribute="leadingMargin" id="dbR-eI-rvU"/>
+                                            <constraint firstItem="wtM-W9-nZc" firstAttribute="top" secondItem="p3O-MC-vZF" secondAttribute="topMargin" id="jFr-xf-BhX"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="lbTitle" destination="wtM-W9-nZc" id="pmH-kc-CL7"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
