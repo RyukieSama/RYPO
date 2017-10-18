@@ -16,8 +16,7 @@ class RPMainCell: UICollectionViewCell {
     }
     
     func bindCellModel(cellModel : RPMainCellModel) {
-        lbTitle.text = cellModel.title
-        
+        lbTitle.text = cellModel.titleL
     }
     
     // MARK: - UI

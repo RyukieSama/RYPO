@@ -38,6 +38,16 @@ class RPPoetryDetailController: RPBaseController {
         tvMain.register(UINib.init(nibName: "RPPoetryDetailCell", bundle: nil), forCellReuseIdentifier: "RPPoetryDetailCell")
     }
     
+    // MARK: - segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToDetailSetting" {
+            let vc = segue.destination as! RPBaseController
+            vc.baseClosure = {(x) -> () in
+                print(x)
+            }
+        }
+    }
+    
 }
 
 // MARK: - tv delegate & dataSource
@@ -53,6 +63,10 @@ extension RPPoetryDetailController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RPPoetryDetailCell", for: indexPath) as! RPPoetryDetailCell
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "segueToDetailSetting", sender: nil)
     }
     
 }

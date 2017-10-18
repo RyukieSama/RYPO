@@ -138,12 +138,57 @@
                     <connections>
                         <outlet property="tvMain" destination="6Uq-pJ-NEm" id="9fc-Ec-Lpq"/>
                         <segue destination="KSv-MX-dYk" kind="unwind" identifier="segueBackToMain" unwindAction="unwindSegueActionWithSegue:" id="7JO-t6-Mb2"/>
+                        <segue destination="fpn-6t-eYi" kind="presentation" identifier="segueToDetailSetting" id="2MN-Sg-qUe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPI-GB-UBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="KSv-MX-dYk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="689" y="90"/>
+            <point key="canvasLocation" x="854" y="-786"/>
+        </scene>
+        <!--Detail Setting Controller-->
+        <scene sceneID="z0A-sk-8hV">
+            <objects>
+                <viewController storyboardIdentifier="RPDetailSettingController" id="fpn-6t-eYi" customClass="RPDetailSettingController" customModule="RYPoetry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9ui-S1-PMy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VuL-6p-GyZ">
+                                <rect key="frame" x="139" y="261" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOk-9k-CG5">
+                                <rect key="frame" x="164" y="414" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Dimiss"/>
+                                <connections>
+                                    <action selector="dismissClick:" destination="fpn-6t-eYi" eventType="touchUpInside" id="py2-Jo-D9W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeP-J8-X5X">
+                                <rect key="frame" x="151" y="359" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ToMain"/>
+                                <connections>
+                                    <segue destination="H4i-of-oSb" kind="unwind" identifier="settingToMain" unwindAction="unwindSegueActionWithSegue:" id="uCs-1S-FTt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Oxy-I2-ieL"/>
+                    </view>
+                    <connections>
+                        <outlet property="tfInput" destination="VuL-6p-GyZ" id="31K-7k-IOq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kD7-h1-GWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="H4i-of-oSb" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="-781.25937031484261"/>
         </scene>
     </scenes>
 </document>

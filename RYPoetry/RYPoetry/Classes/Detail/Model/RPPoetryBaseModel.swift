@@ -1,5 +1,5 @@
 //
-//  RPMainCellModel.swift
+//  RPPoetryBaseModel.swift
 //  RYPoetry
 //
 //  Created by 王荣庆 on 2017/10/18.
@@ -8,7 +8,6 @@
 
 import UIKit
 
-class RPMainCellModel: NSObject {
-    var title : String = "title"
-    var titleL : String = "titleL"
+class RPPoetryBaseModel: NSObject {
+
 }

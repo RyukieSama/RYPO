@@ -15,6 +15,10 @@ class RPPoetryDetailCell: UITableViewCell {
         // Initialization code
         setupUI()
     }
+    
+    func bindPoetryModel(poetry : RPPoetryBaseModel) {
+        
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

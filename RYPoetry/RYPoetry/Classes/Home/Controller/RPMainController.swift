@@ -9,13 +9,13 @@
 import UIKit
 
 class RPMainController: RPBaseController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -24,7 +24,7 @@ class RPMainController: RPBaseController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
     }
-
+    
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -35,7 +35,7 @@ class RPMainController: RPBaseController {
             vc.dic = ["title" : mainCellModels[currentIndex].title]
         }
     }
- 
+    
     //配置unwind segue
     @IBAction func unwindSegueAction(segue : UIStoryboardSegue) {
         if segue.identifier == "segueBackToMain" {
@@ -59,16 +59,20 @@ class RPMainController: RPBaseController {
     let mainCellModels : [RPMainCellModel] = {
         
         var look = RPMainCellModel()
-        look.title = "鉴\n赏"
+        look.titleL = "鉴\n赏"
+        look.title = "鉴赏"
         
         var fight = RPMainCellModel()
-        fight.title = "对\n诗"
+        fight.titleL = "对\n诗"
+        fight.title = "对诗"
         
         var travel = RPMainCellModel()
-        travel.title = "游\n历"
+        travel.titleL = "游\n历"
+        travel.title = "游历"
         
         var mine = RPMainCellModel()
-        mine.title = "孤\n家\n寡\n人"
+        mine.titleL = "孤\n家\n寡\n人"
+        mine.title = "孤家寡人"
         
         let arr = [look,fight,travel,mine]
         
@@ -76,7 +80,7 @@ class RPMainController: RPBaseController {
     }()
 }
 
-extension RPMainController : UICollectionViewDelegate,UICollectionViewDataSource,UIScrollViewDelegate {
+extension RPMainController : UICollectionViewDelegate,UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -97,14 +101,14 @@ extension RPMainController : UICollectionViewDelegate,UICollectionViewDataSource
         if indexPath.item == currentIndex {
             performSegue(withIdentifier: segueDetail, sender: nil)
         } else {
-//            collectionView.scrollToItem(at: indexPath, at: UICollectionViewScrollPosition.centeredHorizontally, animated: true)
+            //            collectionView.scrollToItem(at: indexPath, at: UICollectionViewScrollPosition.centeredHorizontally, animated: true)
         }
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let itemMargin = 250
         let index = Int((scrollView.contentOffset.x) / CGFloat(itemMargin))
-//        print(scrollView.contentOffset.x)
+        //        print(scrollView.contentOffset.x)
         print(index)
         currentIndex = index
     }
@@ -113,7 +117,7 @@ extension RPMainController : UICollectionViewDelegate,UICollectionViewDataSource
         let itemMargin = 250
         let index = Int((scrollView.contentOffset.x) / CGFloat(itemMargin))
         //        print(scrollView.contentOffset.x)
-                print(index)
+        print(index)
         currentIndex = index
     }
     
