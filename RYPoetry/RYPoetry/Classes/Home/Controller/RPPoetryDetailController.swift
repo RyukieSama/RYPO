@@ -28,6 +28,9 @@ class RPPoetryDetailController: RPBaseController {
     // MARK: - UI
     @IBOutlet weak var tvMain: UITableView!
     
+    @IBAction func backClick(_ sender: Any) {
+        performSegue(withIdentifier: "segueBackToMain", sender: nil)
+    }
     private func setupUI() {
         title = dic["title"] as? String
         

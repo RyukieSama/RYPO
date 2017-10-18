@@ -63,7 +63,7 @@ class RPMainFlowLayout: UICollectionViewFlowLayout {
         endRect.size = (collectionView?.frame.size)!
         
         let endAttributesArr : [UICollectionViewLayoutAttributes] = super.layoutAttributesForElements(in: endRect)!
-        print(endAttributesArr)
+//        print(endAttributesArr)
         let endCenter = (collectionView?.center.x)! + proposedContentOffset.x
         var minMargin = CGFloat.greatestFiniteMagnitude
         
@@ -74,8 +74,8 @@ class RPMainFlowLayout: UICollectionViewFlowLayout {
             }
         }
         
-        print("proposedContentOffset.x")
-        print(proposedContentOffset.x)
+//        print("proposedContentOffset.x")
+//        print(proposedContentOffset.x)
         
         return CGPoint(x: proposedContentOffset.x + minMargin, y: proposedContentOffset.y)
     }

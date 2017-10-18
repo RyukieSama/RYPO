@@ -26,7 +26,6 @@ class RPMainController: RPBaseController {
     }
 
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
@@ -37,6 +36,12 @@ class RPMainController: RPBaseController {
         }
     }
  
+    //配置unwind segue
+    @IBAction func unwindSegueAction(segue : UIStoryboardSegue) {
+        if segue.identifier == "segueBackToMain" {
+            print("segueBackToMain")
+        }
+    }
     
     // MARK: - UI
     
@@ -72,6 +77,10 @@ extension RPMainController : UICollectionViewDelegate,UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath)
         performSegue(withIdentifier: segueDetail, sender: nil)
+        
+    }
+    
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         
     }
 }
