@@ -13,6 +13,7 @@ class RPPoetryDetailController: RPBaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        loadData()
         // Do any additional setup after loading the view.
     }
 
@@ -46,6 +47,11 @@ class RPPoetryDetailController: RPBaseController {
                 print(x)
             }
         }
+    }
+    
+    // MARK: - data
+    func loadData() {
+        print(RPPoetryHelper().readData().count)
     }
     
 }

@@ -20,6 +20,8 @@
 		4A1297931F96F7E500A021BA /* RPMainCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1297921F96F7E400A021BA /* RPMainCellModel.swift */; };
 		4A1297991F97032300A021BA /* RPPoetryBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1297981F97032300A021BA /* RPPoetryBaseModel.swift */; };
 		4A12979B1F9703E900A021BA /* RPDetailSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12979A1F9703E900A021BA /* RPDetailSettingController.swift */; };
+		4A12979F1F97449600A021BA /* RPPoetryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12979E1F97449600A021BA /* RPPoetryHelper.swift */; };
+		4A50F4AB1F975DFF00B1B1FF /* quantangshi.db in Resources */ = {isa = PBXBuildFile; fileRef = 4A50F4A91F975B5D00B1B1FF /* quantangshi.db */; };
 		4A5F03271F7CFE8700199F0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F03261F7CFE8700199F0D /* AppDelegate.swift */; };
 		4A5F032E1F7CFE8700199F0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A5F032D1F7CFE8700199F0D /* Assets.xcassets */; };
 		4A5F033C1F7CFE8700199F0D /* RYPoetryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F033B1F7CFE8700199F0D /* RYPoetryTests.swift */; };
@@ -61,6 +63,8 @@
 		4A1297921F96F7E400A021BA /* RPMainCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPMainCellModel.swift; sourceTree = "<group>"; };
 		4A1297981F97032300A021BA /* RPPoetryBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPPoetryBaseModel.swift; sourceTree = "<group>"; };
 		4A12979A1F9703E900A021BA /* RPDetailSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPDetailSettingController.swift; sourceTree = "<group>"; };
+		4A12979E1F97449600A021BA /* RPPoetryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPPoetryHelper.swift; sourceTree = "<group>"; };
+		4A50F4A91F975B5D00B1B1FF /* quantangshi.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = quantangshi.db; sourceTree = "<group>"; };
 		4A5F03231F7CFE8700199F0D /* RYPoetry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RYPoetry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A5F03261F7CFE8700199F0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A5F032D1F7CFE8700199F0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,6 +151,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		4A12979D1F97446D00A021BA /* RPPoetryHelper */ = {
+			isa = PBXGroup;
+			children = (
+				4A50F4A91F975B5D00B1B1FF /* quantangshi.db */,
+				4A12979E1F97449600A021BA /* RPPoetryHelper.swift */,
+			);
+			path = RPPoetryHelper;
+			sourceTree = "<group>";
+		};
 		4A5F031A1F7CFE8700199F0D = {
 			isa = PBXGroup;
 			children = (
@@ -176,7 +189,7 @@
 				4AFF4D821F7D09AF00E2EC01 /* Units */,
 				4AFF4D811F7D099900E2EC01 /* Classes */,
 				4AFF4D801F7D07D800E2EC01 /* Resource */,
-				4AFF4D7F1F7D07C300E2EC01 /* Main */,
+				4AFF4D7F1F7D07C300E2EC01 /* App */,
 			);
 			path = RYPoetry;
 			sourceTree = "<group>";
@@ -225,14 +238,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4AFF4D7F1F7D07C300E2EC01 /* Main */ = {
+		4AFF4D7F1F7D07C300E2EC01 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				4A5F03261F7CFE8700199F0D /* AppDelegate.swift */,
 				4A12978E1F95B18700A021BA /* RPBaseController.swift */,
 				4A1297831F959E9E00A021BA /* RPNaviController.swift */,
 			);
-			path = Main;
+			path = App;
 			sourceTree = "<group>";
 		};
 		4AFF4D801F7D07D800E2EC01 /* Resource */ = {
@@ -249,7 +262,7 @@
 			children = (
 				4A1297941F9702AE00A021BA /* Detail */,
 				4AFF4D851F7D0A0100E2EC01 /* Mine */,
-				4AFF4D841F7D09F900E2EC01 /* Home */,
+				4AFF4D841F7D09F900E2EC01 /* Main */,
 				4AFF4D831F7D09EE00E2EC01 /* Welcome */,
 			);
 			path = Classes;
@@ -259,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				4AB7A8401F94AAA2006BE50C /* RPConstants.swift */,
+				4A12979D1F97446D00A021BA /* RPPoetryHelper */,
 				4AFF4D8A1F7D35CD00E2EC01 /* RYFontHelper */,
 			);
 			path = Units;
@@ -271,14 +285,14 @@
 			path = Welcome;
 			sourceTree = "<group>";
 		};
-		4AFF4D841F7D09F900E2EC01 /* Home */ = {
+		4AFF4D841F7D09F900E2EC01 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				4A86B1411F94891F00B827A5 /* Model */,
 				4A86B13F1F94891200B827A5 /* View */,
 				4A86B13E1F94890000B827A5 /* Controller */,
 			);
-			path = Home;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		4AFF4D851F7D0A0100E2EC01 /* Mine */ = {
@@ -424,6 +438,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A50F4AB1F975DFF00B1B1FF /* quantangshi.db in Resources */,
 				4AB296B31F7D485900004273 /* FZZJ-HFXSJW.TTF in Resources */,
 				4A5F032E1F7CFE8700199F0D /* Assets.xcassets in Resources */,
 				4A1297821F959E5A00A021BA /* RPMain.storyboard in Resources */,
@@ -506,6 +521,7 @@
 				4A12977E1F95962100A021BA /* RPPoetryDetailController.swift in Sources */,
 				4A12978B1F95A34800A021BA /* RPMainCell.swift in Sources */,
 				4A1297861F959F2200A021BA /* RPMainController.swift in Sources */,
+				4A12979F1F97449600A021BA /* RPPoetryHelper.swift in Sources */,
 				4A5F03271F7CFE8700199F0D /* AppDelegate.swift in Sources */,
 				4A1297801F959A0100A021BA /* RPPoetryDetailCell.swift in Sources */,
 				4A1297911F95D82D00A021BA /* RPMainFlowLayout.swift in Sources */,
