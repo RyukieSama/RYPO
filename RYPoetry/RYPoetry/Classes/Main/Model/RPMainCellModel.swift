@@ -8,7 +8,16 @@
 
 import UIKit
 
+enum RPMainCellType {
+    case none
+    case read
+    case fight
+    case travel
+    case mine
+}
+
 class RPMainCellModel: NSObject {
     var title : String = "title"
     var titleL : String = "titleL"
+    var type : RPMainCellType = RPMainCellType.none
 }

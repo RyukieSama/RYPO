@@ -22,6 +22,10 @@
 		4A12979B1F9703E900A021BA /* RPDetailSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12979A1F9703E900A021BA /* RPDetailSettingController.swift */; };
 		4A12979F1F97449600A021BA /* RPPoetryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12979E1F97449600A021BA /* RPPoetryHelper.swift */; };
 		4A50F4AB1F975DFF00B1B1FF /* quantangshi.db in Resources */ = {isa = PBXBuildFile; fileRef = 4A50F4A91F975B5D00B1B1FF /* quantangshi.db */; };
+		4A50F4B11F983C2A00B1B1FF /* RVolumeMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A50F4B01F983C2A00B1B1FF /* RVolumeMainController.swift */; };
+		4A50F4B41F983C6700B1B1FF /* RPAuthorMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A50F4B31F983C6700B1B1FF /* RPAuthorMainController.swift */; };
+		4A50F4BD1F983D4A00B1B1FF /* RPPoetryListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A50F4BC1F983D4A00B1B1FF /* RPPoetryListController.swift */; };
+		4A50F4BF1F98405400B1B1FF /* RPBaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A50F4BE1F98405400B1B1FF /* RPBaseCollectionCell.swift */; };
 		4A5F03271F7CFE8700199F0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F03261F7CFE8700199F0D /* AppDelegate.swift */; };
 		4A5F032E1F7CFE8700199F0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A5F032D1F7CFE8700199F0D /* Assets.xcassets */; };
 		4A5F033C1F7CFE8700199F0D /* RYPoetryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F033B1F7CFE8700199F0D /* RYPoetryTests.swift */; };
@@ -65,6 +69,10 @@
 		4A12979A1F9703E900A021BA /* RPDetailSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPDetailSettingController.swift; sourceTree = "<group>"; };
 		4A12979E1F97449600A021BA /* RPPoetryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPPoetryHelper.swift; sourceTree = "<group>"; };
 		4A50F4A91F975B5D00B1B1FF /* quantangshi.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = quantangshi.db; sourceTree = "<group>"; };
+		4A50F4B01F983C2A00B1B1FF /* RVolumeMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RVolumeMainController.swift; sourceTree = "<group>"; };
+		4A50F4B31F983C6700B1B1FF /* RPAuthorMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPAuthorMainController.swift; sourceTree = "<group>"; };
+		4A50F4BC1F983D4A00B1B1FF /* RPPoetryListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPPoetryListController.swift; sourceTree = "<group>"; };
+		4A50F4BE1F98405400B1B1FF /* RPBaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPBaseCollectionCell.swift; sourceTree = "<group>"; };
 		4A5F03231F7CFE8700199F0D /* RYPoetry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RYPoetry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A5F03261F7CFE8700199F0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A5F032D1F7CFE8700199F0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -160,6 +168,102 @@
 			path = RPPoetryHelper;
 			sourceTree = "<group>";
 		};
+		4A50F4AC1F983BB500B1B1FF /* Volume */ = {
+			isa = PBXGroup;
+			children = (
+				4A50F4AF1F983BE100B1B1FF /* Model */,
+				4A50F4AE1F983BDB00B1B1FF /* View */,
+				4A50F4AD1F983BD000B1B1FF /* Controller */,
+			);
+			path = Volume;
+			sourceTree = "<group>";
+		};
+		4A50F4AD1F983BD000B1B1FF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A50F4B01F983C2A00B1B1FF /* RVolumeMainController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A50F4AE1F983BDB00B1B1FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A50F4AF1F983BE100B1B1FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A50F4B21F983C4100B1B1FF /* Author */ = {
+			isa = PBXGroup;
+			children = (
+				4A50F4B71F983C7F00B1B1FF /* Model */,
+				4A50F4B61F983C7900B1B1FF /* View */,
+				4A50F4B51F983C6E00B1B1FF /* Controller */,
+			);
+			path = Author;
+			sourceTree = "<group>";
+		};
+		4A50F4B51F983C6E00B1B1FF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A50F4B31F983C6700B1B1FF /* RPAuthorMainController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A50F4B61F983C7900B1B1FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A50F4B71F983C7F00B1B1FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A50F4B81F983D0900B1B1FF /* Poetry */ = {
+			isa = PBXGroup;
+			children = (
+				4A50F4BB1F983D3300B1B1FF /* Model */,
+				4A50F4BA1F983D2A00B1B1FF /* View */,
+				4A50F4B91F983D2400B1B1FF /* Controller */,
+			);
+			path = Poetry;
+			sourceTree = "<group>";
+		};
+		4A50F4B91F983D2400B1B1FF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A50F4BC1F983D4A00B1B1FF /* RPPoetryListController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A50F4BA1F983D2A00B1B1FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A50F4BB1F983D3300B1B1FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4A5F031A1F7CFE8700199F0D = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +348,7 @@
 				4A5F03261F7CFE8700199F0D /* AppDelegate.swift */,
 				4A12978E1F95B18700A021BA /* RPBaseController.swift */,
 				4A1297831F959E9E00A021BA /* RPNaviController.swift */,
+				4A50F4BE1F98405400B1B1FF /* RPBaseCollectionCell.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -260,6 +365,9 @@
 		4AFF4D811F7D099900E2EC01 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4A50F4B81F983D0900B1B1FF /* Poetry */,
+				4A50F4B21F983C4100B1B1FF /* Author */,
+				4A50F4AC1F983BB500B1B1FF /* Volume */,
 				4A1297941F9702AE00A021BA /* Detail */,
 				4AFF4D851F7D0A0100E2EC01 /* Mine */,
 				4AFF4D841F7D09F900E2EC01 /* Main */,
@@ -518,7 +626,10 @@
 				4AFF4D8C1F7D361C00E2EC01 /* RYFontHelper.swift in Sources */,
 				4AB7A8411F94AAA2006BE50C /* RPConstants.swift in Sources */,
 				4A12978F1F95B18700A021BA /* RPBaseController.swift in Sources */,
+				4A50F4B11F983C2A00B1B1FF /* RVolumeMainController.swift in Sources */,
 				4A12977E1F95962100A021BA /* RPPoetryDetailController.swift in Sources */,
+				4A50F4B41F983C6700B1B1FF /* RPAuthorMainController.swift in Sources */,
+				4A50F4BF1F98405400B1B1FF /* RPBaseCollectionCell.swift in Sources */,
 				4A12978B1F95A34800A021BA /* RPMainCell.swift in Sources */,
 				4A1297861F959F2200A021BA /* RPMainController.swift in Sources */,
 				4A12979F1F97449600A021BA /* RPPoetryHelper.swift in Sources */,
@@ -526,6 +637,7 @@
 				4A1297801F959A0100A021BA /* RPPoetryDetailCell.swift in Sources */,
 				4A1297911F95D82D00A021BA /* RPMainFlowLayout.swift in Sources */,
 				4A12979B1F9703E900A021BA /* RPDetailSettingController.swift in Sources */,
+				4A50F4BD1F983D4A00B1B1FF /* RPPoetryListController.swift in Sources */,
 				4A1297841F959E9E00A021BA /* RPNaviController.swift in Sources */,
 				4A1297931F96F7E500A021BA /* RPMainCellModel.swift in Sources */,
 				4A1297991F97032300A021BA /* RPPoetryBaseModel.swift in Sources */,

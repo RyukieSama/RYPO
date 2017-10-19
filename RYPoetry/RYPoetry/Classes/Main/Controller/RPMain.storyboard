@@ -44,28 +44,53 @@
                                 <collectionViewLayout key="collectionViewLayout" id="eYv-Lr-9u4" customClass="RPMainFlowLayout" customModule="RYPoetry" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RPMainCell" id="p3O-MC-vZF" customClass="RPMainCell" customModule="RYPoetry" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="176" height="154"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="176" height="154"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtM-W9-nZc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="176" height="154"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyH-kH-9Rn">
+                                                    <rect key="frame" x="4" y="120" width="46" height="30"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="btOneClick:" destination="p3O-MC-vZF" eventType="touchUpInside" id="ObM-PM-cOE"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhC-HK-bXM">
+                                                    <rect key="frame" x="126" y="120" width="46" height="30"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="btTwoClick:" destination="p3O-MC-vZF" eventType="touchUpInside" id="Cva-cy-QpA"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottomMargin" secondItem="wtM-W9-nZc" secondAttribute="bottom" id="7wY-bV-QRH"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="LhC-HK-bXM" secondAttribute="bottom" constant="4" id="FYC-EL-N8s"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="wtM-W9-nZc" secondAttribute="trailing" id="Kpr-5C-mBt"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="nyH-kH-9Rn" secondAttribute="bottom" constant="4" id="T9I-oP-SLA"/>
+                                            <constraint firstItem="nyH-kH-9Rn" firstAttribute="leading" secondItem="p3O-MC-vZF" secondAttribute="leadingMargin" constant="4" id="dH4-lf-zsN"/>
                                             <constraint firstItem="wtM-W9-nZc" firstAttribute="leading" secondItem="p3O-MC-vZF" secondAttribute="leadingMargin" id="dbR-eI-rvU"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="LhC-HK-bXM" secondAttribute="trailing" constant="4" id="fdu-Ku-VPr"/>
                                             <constraint firstItem="wtM-W9-nZc" firstAttribute="top" secondItem="p3O-MC-vZF" secondAttribute="topMargin" id="jFr-xf-BhX"/>
                                         </constraints>
+                                        <size key="customSize" width="176" height="154"/>
                                         <connections>
+                                            <outlet property="btOne" destination="nyH-kH-9Rn" id="y8V-xm-N8I"/>
+                                            <outlet property="btTwo" destination="LhC-HK-bXM" id="H0W-Al-OaI"/>
                                             <outlet property="lbTitle" destination="wtM-W9-nZc" id="pmH-kc-CL7"/>
                                         </connections>
                                     </collectionViewCell>
@@ -89,11 +114,13 @@
                     <connections>
                         <outlet property="cvMain" destination="RVY-c6-WeA" id="fNi-LK-Gip"/>
                         <segue destination="EcO-Ns-uWs" kind="show" identifier="segueToDetail" id="4Lz-jS-dI6"/>
+                        <segue destination="HKc-Wu-0M1" kind="show" identifier="segueToVolumeMain" id="QkQ-kO-ec9"/>
+                        <segue destination="6XV-3p-dlF" kind="show" identifier="segueToAllList" id="s4s-2f-9or"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AF3-Qs-93e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-135.19999999999999" y="90.404797601199405"/>
+            <point key="canvasLocation" x="-135.5" y="89.5"/>
         </scene>
         <!--Poetry Detail Controller-->
         <scene sceneID="d9c-CA-kNS">
@@ -144,7 +171,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPI-GB-UBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="KSv-MX-dYk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="854" y="-786"/>
+            <point key="canvasLocation" x="793" y="-1320"/>
+        </scene>
+        <!--Volume Main Controller-->
+        <scene sceneID="zvx-Dr-6cy">
+            <objects>
+                <viewController id="HKc-Wu-0M1" customClass="RVolumeMainController" customModule="RYPoetry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bwL-Fp-2dE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gYY-ca-pFt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gYY-ca-pFt" firstAttribute="leading" secondItem="Ptx-nr-Vrm" secondAttribute="leading" id="1XC-Yu-uGV"/>
+                            <constraint firstItem="Ptx-nr-Vrm" firstAttribute="trailing" secondItem="gYY-ca-pFt" secondAttribute="trailing" id="IAs-uX-XSb"/>
+                            <constraint firstItem="gYY-ca-pFt" firstAttribute="top" secondItem="Ptx-nr-Vrm" secondAttribute="top" id="lYV-Xs-3TO"/>
+                            <constraint firstItem="Ptx-nr-Vrm" firstAttribute="bottom" secondItem="gYY-ca-pFt" secondAttribute="bottom" id="utH-3Z-92i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ptx-nr-Vrm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8MK-iw-eCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="-510"/>
+        </scene>
+        <!--Poetry List Controller-->
+        <scene sceneID="dyL-ab-ufQ">
+            <objects>
+                <viewController id="6XV-3p-dlF" customClass="RPPoetryListController" customModule="RYPoetry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nnk-fY-3Dg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="89x-0X-cuP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i6M-EX-ITK" firstAttribute="trailing" secondItem="89x-0X-cuP" secondAttribute="trailing" id="3yM-ft-rsm"/>
+                            <constraint firstItem="89x-0X-cuP" firstAttribute="leading" secondItem="i6M-EX-ITK" secondAttribute="leading" id="Diu-Xe-9F8"/>
+                            <constraint firstItem="i6M-EX-ITK" firstAttribute="bottom" secondItem="89x-0X-cuP" secondAttribute="bottom" id="F2W-ab-w25"/>
+                            <constraint firstItem="89x-0X-cuP" firstAttribute="top" secondItem="i6M-EX-ITK" secondAttribute="top" id="Pr1-vg-6SK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i6M-EX-ITK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3HK-d8-ZLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="267"/>
         </scene>
         <!--Detail Setting Controller-->
         <scene sceneID="z0A-sk-8hV">
@@ -188,7 +269,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kD7-h1-GWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="H4i-of-oSb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1812" y="-781.25937031484261"/>
+            <point key="canvasLocation" x="1346" y="-1688"/>
         </scene>
     </scenes>
 </document>

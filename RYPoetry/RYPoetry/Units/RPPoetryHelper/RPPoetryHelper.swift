@@ -41,13 +41,15 @@ struct RPPoetryHelper {
     private mutating func loadDataBase() {
         let path = Bundle.main.path(forResource: "quantangshi.db", ofType: nil)
         if path == nil {
-            //
+            //要在buidPhases 中添加文件  要不然会找不到
             return
         }
         print(path as Any)
         do {
             db = try Connection(path!)
-        } catch { print(error) }
+        } catch {
+            print(error)
+        }
     }
     
     func readData() -> [RPPoetryBaseModel] {
@@ -55,14 +57,20 @@ struct RPPoetryHelper {
             return [RPPoetryBaseModel]()
         }
         var poetryArr = [RPPoetryBaseModel]()
-        for poem in try! db.prepare(tPoetry) {
-            let poetry = RPPoetryBaseModel()
-            poetry.volume = poem[tPoetryVolume]
-            poetry.sequence = poem[tPoetrySequence]
-            poetry.title = poem[tPoetryTitle]
-            poetry.text = poem[tPoetryText]
-            poetryArr.append(poetry)
+        
+        do {
+            for poem in try db.prepare(tPoetry) {
+                let poetry = RPPoetryBaseModel()
+                poetry.volume = poem[tPoetryVolume]
+                poetry.sequence = poem[tPoetrySequence]
+                poetry.title = poem[tPoetryTitle]
+                poetry.text = poem[tPoetryText]
+                poetryArr.append(poetry)
+            }
+        } catch {
+            print(error)
         }
+        
         return poetryArr
     }
     

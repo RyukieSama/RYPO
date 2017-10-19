@@ -25,6 +25,10 @@ class RPMainController: RPBaseController {
         navigationController?.isNavigationBarHidden = true
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -34,6 +38,10 @@ class RPMainController: RPBaseController {
         if segue.identifier == segueDetail {
             vc.dic = ["title" : mainCellModels[currentIndex].title]
         }
+    }
+    
+    func routeWithSegue (identifier : String) {
+        performSegue(withIdentifier: identifier, sender: nil)
     }
     
     //配置unwind segue
@@ -57,27 +65,23 @@ class RPMainController: RPBaseController {
     // MARK: - other
     var currentIndex = 0;
     let mainCellModels : [RPMainCellModel] = {
-        
         var look = RPMainCellModel()
-        look.titleL = "鉴\n赏"
-        look.title = "鉴赏"
+        look.type = RPMainCellType.read
         
         var fight = RPMainCellModel()
-        fight.titleL = "对\n诗"
-        fight.title = "对诗"
+        fight.type = RPMainCellType.fight
         
         var travel = RPMainCellModel()
-        travel.titleL = "游\n历"
-        travel.title = "游历"
+        travel.type = RPMainCellType.travel
         
         var mine = RPMainCellModel()
-        mine.titleL = "孤\n家\n寡\n人"
-        mine.title = "孤家寡人"
+        mine.type = RPMainCellType.mine
         
         let arr = [look,fight,travel,mine]
         
         return arr
     }()
+
 }
 
 extension RPMainController : UICollectionViewDelegate,UICollectionViewDataSource {
@@ -93,6 +97,10 @@ extension RPMainController : UICollectionViewDelegate,UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RPMainCell", for: indexPath) as! RPMainCell
         cell.bindCellModel(cellModel: mainCellModels[indexPath.item])
+        cell.cellClosures = {(x) -> () in
+            print(x)
+            self.routeWithSegue(identifier: x as! String)
+            }
         return cell
     }
     
