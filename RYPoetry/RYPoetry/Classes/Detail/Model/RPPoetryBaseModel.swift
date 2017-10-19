@@ -8,11 +8,18 @@
 
 import UIKit
 
-class RPPoetryBaseModel: NSObject {
+struct RPPoetryBaseModel {
+    var id : Int64?
     var title : String?
     var author : String?
     var text : String?
     var lines : [String]?
     var volume : Int64?
     var sequence : Int64?
+}
+
+struct RPPoetryVolumeModel {
+    var volume : Int64?
+    var comment : String?
+    var count : Int64?
 }

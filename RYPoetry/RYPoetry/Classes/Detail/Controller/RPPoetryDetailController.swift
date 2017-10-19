@@ -51,7 +51,7 @@ class RPPoetryDetailController: RPBaseController {
     
     // MARK: - data
     func loadData() {
-        print(RPPoetryHelper().readData().count)
+        
     }
     
 }

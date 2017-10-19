@@ -12,7 +12,9 @@ class RPPoetryListController: RPBaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        RPPoetryHelper.sharedHelper.loadAllPoetry { (poetryArr) in
+            print(poetryArr.count)
+        }
         // Do any additional setup after loading the view.
     }
 

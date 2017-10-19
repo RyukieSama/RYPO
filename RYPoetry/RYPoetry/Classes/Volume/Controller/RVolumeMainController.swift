@@ -12,7 +12,10 @@ class RVolumeMainController: RPBaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        RPPoetryHelper.sharedHelper.loadVolumeList { (volumeArr) in
+            print(volumeArr.count)
+        }
+        print("viewDidLoad")
         // Do any additional setup after loading the view.
     }
 
