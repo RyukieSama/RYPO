@@ -96,33 +96,35 @@ struct RPPoetryHelper {
                     poetry.text = poem[self.tPoetryText]
                     poetryArr.append(poetry)
                 }
-                callBack(poetryArr)
+                DispatchQueue.main.async {
+                    callBack(poetryArr)
+                }
             } catch {
                 print(error)
             }
         }
     }
     
-    func readData() -> [RPPoetryBaseModel] {
-        if db == nil {
-            return [RPPoetryBaseModel]()
-        }
-        var poetryArr = [RPPoetryBaseModel]()
-        
-        do {
-            for poem in try db.prepare(tPoetry) {
-                var poetry = RPPoetryBaseModel()
-                poetry.volume = poem[tPoetryVolume]
-                poetry.sequence = poem[tPoetrySequence]
-                poetry.title = poem[tPoetryTitle]
-                poetry.text = poem[tPoetryText]
-                poetryArr.append(poetry)
-            }
-        } catch {
-            print(error)
-        }
-        
-        return poetryArr
-    }
+//    func readData() -> [RPPoetryBaseModel] {
+//        if db == nil {
+//            return [RPPoetryBaseModel]()
+//        }
+//        var poetryArr = [RPPoetryBaseModel]()
+//
+//        do {
+//            for poem in try db.prepare(tPoetry) {
+//                var poetry = RPPoetryBaseModel()
+//                poetry.volume = poem[tPoetryVolume]
+//                poetry.sequence = poem[tPoetrySequence]
+//                poetry.title = poem[tPoetryTitle]
+//                poetry.text = poem[tPoetryText]
+//                poetryArr.append(poetry)
+//            }
+//        } catch {
+//            print(error)
+//        }
+//
+//        return poetryArr
+//    }
     
 }

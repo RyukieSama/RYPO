@@ -219,6 +219,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="89x-0X-cuP">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="6XV-3p-dlF" id="wB3-01-Fj6"/>
+                                    <outlet property="delegate" destination="6XV-3p-dlF" id="fqw-AT-8kF"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -230,6 +234,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i6M-EX-ITK"/>
                     </view>
+                    <connections>
+                        <outlet property="tvMain" destination="89x-0X-cuP" id="MGw-D7-YEL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3HK-d8-ZLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
