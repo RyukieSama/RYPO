@@ -63,10 +63,13 @@ struct RPPoetryHelper {
                     var volume = RPPoetryVolumeModel()
                     volume.volume = poem[self.tMenuVolume]
                     volume.comment = poem[self.tMenuComment]
+                    volume.count = poem[self.tMenuCount]
                     volumeArr.append(volume)
                 }
 //                if callBack != nil {
+                DispatchQueue.main.async {
                     callBack(volumeArr)
+                }
 //                }
             } catch {
                 print(error)
@@ -79,6 +82,7 @@ struct RPPoetryHelper {
             print("数据库不存在")
             return
         }
+        
         dataQueue.async {
             var poetryArr = [RPPoetryBaseModel]()
             
