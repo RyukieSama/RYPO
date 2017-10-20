@@ -29,8 +29,9 @@ class RVolumeMainController: RPBaseController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let vc = segue.destination as! RPBaseController
         if segue.identifier == "segueVolumeToList" {
-            
+            vc.dic = ["volume" : selectedVolume]
         }
     }
 
@@ -41,6 +42,7 @@ class RVolumeMainController: RPBaseController {
     }
     
     // MARK: - data
+    private var selectedVolume : Int64 = 0
     private var volumes = [RPPoetryVolumeModel]()
     private func loadVolumeData() {
         RPPoetryHelper.sharedHelper.loadVolumeList { (volumeArr) in
@@ -67,6 +69,7 @@ extension RVolumeMainController : UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedVolume = Int64(indexPath.row + 1)
         performSegue(withIdentifier: "segueVolumeToList", sender: nil)
     }
     

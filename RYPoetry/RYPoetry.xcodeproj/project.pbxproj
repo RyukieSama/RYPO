@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0F6CAF4AC9A3062E35E1BAF0 /* Pods_RYPoetry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A265A432EA01821B38D762E /* Pods_RYPoetry.framework */; };
+		4A0B45291F999FAB00836BE3 /* RPPoetryReadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0B45271F999FAB00836BE3 /* RPPoetryReadCell.swift */; };
+		4A0B452A1F999FAB00836BE3 /* RPPoetryReadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0B45281F999FAB00836BE3 /* RPPoetryReadCell.xib */; };
 		4A12977E1F95962100A021BA /* RPPoetryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12977D1F95962100A021BA /* RPPoetryDetailController.swift */; };
 		4A1297801F959A0100A021BA /* RPPoetryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12977F1F959A0100A021BA /* RPPoetryDetailCell.swift */; };
 		4A1297821F959E5A00A021BA /* RPMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A1297811F959E5A00A021BA /* RPMain.storyboard */; };
@@ -35,6 +37,7 @@
 		4A5F03471F7CFE8700199F0D /* RYPoetryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F03461F7CFE8700199F0D /* RYPoetryUITests.swift */; };
 		4A6B597C1F98ABDC000DF7CB /* RPPoetryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B597A1F98ABDC000DF7CB /* RPPoetryListCell.swift */; };
 		4A6B597D1F98ABDC000DF7CB /* RPPoetryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A6B597B1F98ABDC000DF7CB /* RPPoetryListCell.xib */; };
+		4A6B597F1F9995F7000DF7CB /* RPReaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6B597E1F9995F7000DF7CB /* RPReaderController.swift */; };
 		4AB296B31F7D485900004273 /* FZZJ-HFXSJW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4AFF4D8E1F7D378700E2EC01 /* FZZJ-HFXSJW.TTF */; };
 		4AB7A8411F94AAA2006BE50C /* RPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB7A8401F94AAA2006BE50C /* RPConstants.swift */; };
 		4AFF4D8C1F7D361C00E2EC01 /* RYFontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF4D8B1F7D361C00E2EC01 /* RYFontHelper.swift */; };
@@ -60,6 +63,8 @@
 /* Begin PBXFileReference section */
 		0A265A432EA01821B38D762E /* Pods_RYPoetry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RYPoetry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		261FE57C88B43897E43CD64B /* Pods-RYPoetry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RYPoetry.release.xcconfig"; path = "Pods/Target Support Files/Pods-RYPoetry/Pods-RYPoetry.release.xcconfig"; sourceTree = "<group>"; };
+		4A0B45271F999FAB00836BE3 /* RPPoetryReadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPPoetryReadCell.swift; sourceTree = "<group>"; };
+		4A0B45281F999FAB00836BE3 /* RPPoetryReadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RPPoetryReadCell.xib; sourceTree = "<group>"; };
 		4A12977D1F95962100A021BA /* RPPoetryDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPPoetryDetailController.swift; sourceTree = "<group>"; };
 		4A12977F1F959A0100A021BA /* RPPoetryDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPPoetryDetailCell.swift; sourceTree = "<group>"; };
 		4A1297811F959E5A00A021BA /* RPMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RPMain.storyboard; sourceTree = "<group>"; };
@@ -93,6 +98,7 @@
 		4A5F03481F7CFE8700199F0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A6B597A1F98ABDC000DF7CB /* RPPoetryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPPoetryListCell.swift; sourceTree = "<group>"; };
 		4A6B597B1F98ABDC000DF7CB /* RPPoetryListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RPPoetryListCell.xib; sourceTree = "<group>"; };
+		4A6B597E1F9995F7000DF7CB /* RPReaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPReaderController.swift; sourceTree = "<group>"; };
 		4AB7A8401F94AAA2006BE50C /* RPConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPConstants.swift; sourceTree = "<group>"; };
 		4AFF4D8B1F7D361C00E2EC01 /* RYFontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RYFontHelper.swift; sourceTree = "<group>"; };
 		4AFF4D8E1F7D378700E2EC01 /* FZZJ-HFXSJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FZZJ-HFXSJW.TTF"; sourceTree = "<group>"; };
@@ -258,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				4A50F4BC1F983D4A00B1B1FF /* RPPoetryListController.swift */,
+				4A6B597E1F9995F7000DF7CB /* RPReaderController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -267,6 +274,8 @@
 			children = (
 				4A6B597A1F98ABDC000DF7CB /* RPPoetryListCell.swift */,
 				4A6B597B1F98ABDC000DF7CB /* RPPoetryListCell.xib */,
+				4A0B45271F999FAB00836BE3 /* RPPoetryReadCell.swift */,
+				4A0B45281F999FAB00836BE3 /* RPPoetryReadCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -575,6 +584,7 @@
 				4A5F032E1F7CFE8700199F0D /* Assets.xcassets in Resources */,
 				4A1297821F959E5A00A021BA /* RPMain.storyboard in Resources */,
 				4A12978D1F95A83300A021BA /* RPPoetryDetailCell.xib in Resources */,
+				4A0B452A1F999FAB00836BE3 /* RPPoetryReadCell.xib in Resources */,
 				4A6B597D1F98ABDC000DF7CB /* RPPoetryListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,6 +658,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A6B597F1F9995F7000DF7CB /* RPReaderController.swift in Sources */,
 				4AFF4D8C1F7D361C00E2EC01 /* RYFontHelper.swift in Sources */,
 				4AB7A8411F94AAA2006BE50C /* RPConstants.swift in Sources */,
 				4A12978F1F95B18700A021BA /* RPBaseController.swift in Sources */,
@@ -658,6 +669,7 @@
 				4A50F4BF1F98405400B1B1FF /* RPBaseCollectionCell.swift in Sources */,
 				4A12978B1F95A34800A021BA /* RPMainCell.swift in Sources */,
 				4A6B597C1F98ABDC000DF7CB /* RPPoetryListCell.swift in Sources */,
+				4A0B45291F999FAB00836BE3 /* RPPoetryReadCell.swift in Sources */,
 				4A1297861F959F2200A021BA /* RPMainController.swift in Sources */,
 				4A12979F1F97449600A021BA /* RPPoetryHelper.swift in Sources */,
 				4A5F03271F7CFE8700199F0D /* AppDelegate.swift in Sources */,

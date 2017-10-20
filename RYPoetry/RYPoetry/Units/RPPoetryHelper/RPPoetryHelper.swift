@@ -50,6 +50,7 @@ struct RPPoetryHelper {
     }
     
     // MARK: - public func
+    //获取卷列表
     func loadVolumeList(callBack : @escaping RPPoetryHelperClosures) {
         if db == nil {
             print("数据库不存在")
@@ -77,6 +78,7 @@ struct RPPoetryHelper {
         }
     }
     
+    //获所有诗
     func loadAllPoetry(callBack : @escaping RPPoetryHelperClosures) {
         if db == nil {
             print("数据库不存在")
@@ -104,27 +106,65 @@ struct RPPoetryHelper {
             }
         }
     }
+
+    //按卷号获取诗
+    func loadPoetries(inVolume : Int64 ,callBack : @escaping RPPoetryHelperClosures) {
+        if db == nil {
+            print("数据库不存在")
+            return
+        }
+        
+        dataQueue.async {
+            var poetryArr = [RPPoetryBaseModel]()
+            
+            do {
+                
+                for poem in try self.db.prepare(self.tPoetry.filter(self.tPoetryVolume == inVolume)) {
+                    var poetry = RPPoetryBaseModel()
+                    poetry.id = poem[self.tPoetryId]
+                    poetry.volume = poem[self.tPoetryVolume]
+                    poetry.sequence = poem[self.tPoetrySequence]
+                    poetry.title = poem[self.tPoetryTitle]
+                    poetry.text = poem[self.tPoetryText]
+                    poetryArr.append(poetry)
+                }
+                DispatchQueue.main.async {
+                    callBack(poetryArr)
+                }
+            } catch {
+                print(error)
+            }
+        }
+    }
     
-//    func readData() -> [RPPoetryBaseModel] {
-//        if db == nil {
-//            return [RPPoetryBaseModel]()
-//        }
-//        var poetryArr = [RPPoetryBaseModel]()
-//
-//        do {
-//            for poem in try db.prepare(tPoetry) {
-//                var poetry = RPPoetryBaseModel()
-//                poetry.volume = poem[tPoetryVolume]
-//                poetry.sequence = poem[tPoetrySequence]
-//                poetry.title = poem[tPoetryTitle]
-//                poetry.text = poem[tPoetryText]
-//                poetryArr.append(poetry)
-//            }
-//        } catch {
-//            print(error)
-//        }
-//
-//        return poetryArr
-//    }
+    //按作者获取诗
+    func loadPoetries(ofAuthor : String ,callBack : @escaping RPPoetryHelperClosures) {
+        if db == nil {
+            print("数据库不存在")
+            return
+        }
+        
+        dataQueue.async {
+            var poetryArr = [RPPoetryBaseModel]()
+            
+            do {
+                
+                for poem in try self.db.prepare(self.tPoetry.filter(self.tPoetryAuthor == ofAuthor)) {
+                    var poetry = RPPoetryBaseModel()
+                    poetry.id = poem[self.tPoetryId]
+                    poetry.volume = poem[self.tPoetryVolume]
+                    poetry.sequence = poem[self.tPoetrySequence]
+                    poetry.title = poem[self.tPoetryTitle]
+                    poetry.text = poem[self.tPoetryText]
+                    poetryArr.append(poetry)
+                }
+                DispatchQueue.main.async {
+                    callBack(poetryArr)
+                }
+            } catch {
+                print(error)
+            }
+        }
+    }
     
 }

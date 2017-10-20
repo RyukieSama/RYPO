@@ -29,6 +29,10 @@ class RPPoetryListController: RPBaseController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "segueToReadPoetryDetail" {
+            let vc = segue.destination as! RPReaderController
+            vc.poetry = poetries[selectedIndex]
+        }
     }
 
     // MARK: - UI
@@ -40,12 +44,30 @@ class RPPoetryListController: RPBaseController {
     
     // MARK: - data
     private var poetries = [RPPoetryBaseModel]()
+    private var selectedIndex = 0
     private func loadData() {
-        RPPoetryHelper.sharedHelper.loadAllPoetry { (poetryArr) in
-            print(poetryArr.count)
-            self.poetries = poetryArr as! [RPPoetryBaseModel]
-            self.tvMain.reloadData()
+        //按卷号加载
+        let volume = dic["volume"] as! Int64
+        if volume > 0 {
+            RPPoetryHelper.sharedHelper.loadPoetries(inVolume: volume) { (poetryArr) in
+                print(poetryArr.count)
+                self.poetries = poetryArr as! [RPPoetryBaseModel]
+                self.tvMain.reloadData()
+            }
+            return
         }
+        
+        //按作者加载
+        let author = dic["author"] as! String
+        if author.count > 0 {
+            RPPoetryHelper.sharedHelper.loadPoetries(ofAuthor: author) { (poetryArr) in
+                print(poetryArr.count)
+                self.poetries = poetryArr as! [RPPoetryBaseModel]
+                self.tvMain.reloadData()
+            }
+            return
+        }
+        
     }
 }
 
@@ -62,5 +84,10 @@ extension RPPoetryListController : UITableViewDelegate,UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RPPoetryListCell", for: indexPath) as! RPPoetryListCell
         cell.bindPoetryModel(poetry: poetries[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndex = indexPath.row
+         performSegue(withIdentifier: "segueToReadPoetryDetail", sender: nil)
     }
 }

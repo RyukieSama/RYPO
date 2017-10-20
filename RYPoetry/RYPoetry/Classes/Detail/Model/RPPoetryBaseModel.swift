@@ -16,6 +16,13 @@ struct RPPoetryBaseModel {
     var lines : [String]?
     var volume : Int64?
     var sequence : Int64?
+    
+    func getLines() -> [String]? {
+        if (lines == nil) {
+            
+        }
+        return lines
+    }
 }
 
 struct RPPoetryVolumeModel {
