@@ -170,7 +170,6 @@
 		4A1297971F9702EA00A021BA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4A1297981F97032300A021BA /* RPPoetryBaseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -283,6 +282,7 @@
 		4A50F4BB1F983D3300B1B1FF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4A1297981F97032300A021BA /* RPPoetryBaseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

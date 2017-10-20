@@ -18,13 +18,16 @@ class RPReaderController: RPBaseController {
     // MARK: - UI
     @IBOutlet weak var tvMain: UITableView!
     private func setupUI() {
+        tvMain.tableFooterView = UIView.init()
         tvMain.register(UINib.init(nibName: "RPPoetryReadCell", bundle: nil), forCellReuseIdentifier: "RPPoetryReadCell")
     }
     
     // MARK: - data
+    var poetryLines : [String]?
     var poetry : RPPoetryBaseModel? {
         didSet {
             title = poetry?.title
+            poetryLines = poetry?.getLines()
         }
     }
 }
@@ -35,12 +38,12 @@ extension RPReaderController : UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return (poetryLines?.count)!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RPPoetryReadCell", for: indexPath)
-        
+        cell.textLabel?.text = poetryLines?[indexPath.row]
         return cell
     }
 }
