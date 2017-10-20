@@ -96,6 +96,7 @@ struct RPPoetryHelper {
                     poetry.sequence = poem[self.tPoetrySequence]
                     poetry.title = poem[self.tPoetryTitle]
                     poetry.text = poem[self.tPoetryText]
+                    poetry.author = poem[self.tPoetryAuthor]
                     poetryArr.append(poetry)
                 }
                 DispatchQueue.main.async {
@@ -126,6 +127,7 @@ struct RPPoetryHelper {
                     poetry.sequence = poem[self.tPoetrySequence]
                     poetry.title = poem[self.tPoetryTitle]
                     poetry.text = poem[self.tPoetryText]
+                    poetry.author = poem[self.tPoetryAuthor]
                     poetryArr.append(poetry)
                 }
                 DispatchQueue.main.async {
@@ -156,6 +158,7 @@ struct RPPoetryHelper {
                     poetry.sequence = poem[self.tPoetrySequence]
                     poetry.title = poem[self.tPoetryTitle]
                     poetry.text = poem[self.tPoetryText]
+                    poetry.author = poem[self.tPoetryAuthor]
                     poetryArr.append(poetry)
                 }
                 DispatchQueue.main.async {

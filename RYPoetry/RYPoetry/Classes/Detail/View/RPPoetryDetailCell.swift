@@ -36,6 +36,6 @@ class RPPoetryDetailCell: UITableViewCell {
         //文字
         lbText.textColor = UIColor.black
         lbText.font = RYFontHelper.getFontstyle(ttfName: "asd", fontSize: 24)
-        lbText.text = "啊实打实大声大声打的见你人贵人屠洪刚一和人体UK基督教看去玩儿推哦平地方规划九克拉"
+        lbText.text = "啊实打实大声大声打的见你人贵人屠洪刚一和人体UK基督教看去玩儿推哦平地方规划九克拉啊实打实大声大声打的见你人贵人屠洪刚一和人体UK基督教看去玩儿推哦平地方规划九克拉"
     }
 }

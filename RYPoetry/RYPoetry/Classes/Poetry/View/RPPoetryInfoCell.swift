@@ -1,5 +1,5 @@
 //
-//  RPPoetryReadCell.swift
+//  RPPoetryInfoCell.swift
 //  RYPoetry
 //
 //  Created by 王荣庆 on 2017/10/20.
@@ -8,12 +8,11 @@
 
 import UIKit
 
-class RPPoetryReadCell: RPBaseTableViewCell {
+class RPPoetryInfoCell: RPBaseTableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        setupUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -23,14 +22,12 @@ class RPPoetryReadCell: RPBaseTableViewCell {
     }
     
     // MARK: - UI
-    @IBOutlet weak var tvText: UITextView!
-    private func setupUI() {
-        tvText.isEditable = false
-        tvText.font = RYFontHelper.getFontstyle(ttfName: "asd", fontSize: 24)
-    }
+    @IBOutlet weak var lbTitle: UILabel!
+    @IBOutlet weak var lbAuthor: UILabel!
     
-    // MARK: - Data
-    func bindText (text:String) {
-        tvText.text = text
+    // MARK: - data
+    func bindPoetry(poetry : RPPoetryBaseModel) {
+        lbTitle.text = poetry.title
+        lbAuthor.text = poetry.author
     }
 }

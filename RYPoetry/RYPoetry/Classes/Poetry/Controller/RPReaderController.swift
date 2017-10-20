@@ -18,8 +18,10 @@ class RPReaderController: RPBaseController {
     // MARK: - UI
     @IBOutlet weak var tvMain: UITableView!
     private func setupUI() {
+        tvMain.separatorStyle = UITableViewCellSeparatorStyle.none
         tvMain.tableFooterView = UIView.init()
         tvMain.register(UINib.init(nibName: "RPPoetryReadCell", bundle: nil), forCellReuseIdentifier: "RPPoetryReadCell")
+        tvMain.register(UINib.init(nibName: "RPPoetryInfoCell", bundle: nil), forCellReuseIdentifier: "RPPoetryInfoCell")
     }
     
     // MARK: - data
@@ -42,8 +44,14 @@ extension RPReaderController : UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RPPoetryReadCell", for: indexPath)
-        cell.textLabel?.text = poetryLines?[indexPath.row]
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "RPPoetryInfoCell", for: indexPath) as! RPPoetryInfoCell
+            cell.bindPoetry(poetry: poetry!)
+            return cell
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RPPoetryReadCell", for: indexPath) as! RPPoetryReadCell
+        cell.bindText(text: (poetryLines?[indexPath.row])!)
         return cell
     }
+    
 }
