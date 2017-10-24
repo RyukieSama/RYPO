@@ -32,18 +32,18 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数量" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8N-Xh-EsW">
-                        <rect key="frame" x="142.5" y="68" width="35" height="22.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数量" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8N-Xh-EsW">
+                        <rect key="frame" x="277" y="68" width="35" height="22.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="i8N-Xh-EsW" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="CPO-de-Qmm"/>
                     <constraint firstItem="anJ-B6-rw8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="DqV-L0-MW0"/>
                     <constraint firstItem="i8N-Xh-EsW" firstAttribute="top" secondItem="tiY-ob-7Yf" secondAttribute="bottom" constant="8" id="guM-33-2Bg"/>
                     <constraint firstItem="tiY-ob-7Yf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hQ9-f8-0R1"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="i8N-Xh-EsW" secondAttribute="trailing" id="mQM-z4-R0w"/>
                     <constraint firstAttribute="bottomMargin" secondItem="i8N-Xh-EsW" secondAttribute="bottom" id="q4C-Pc-wdh"/>
                     <constraint firstItem="anJ-B6-rw8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="rG0-fS-b0Z"/>
                     <constraint firstItem="tiY-ob-7Yf" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="wWU-Ar-LtV"/>

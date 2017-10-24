@@ -55,11 +55,11 @@ class RPMainController: RPBaseController {
     }
     
     // MARK: - UI
-    
     @IBOutlet weak var cvMain: UICollectionView!
     
     private func setupUI() {
-        view.backgroundColor = UIColor.gray
+        view.backgroundColor = UIColor.lightGray
+        cvMain.backgroundColor = UIColor.clear
     }
     
     // MARK: - segueID

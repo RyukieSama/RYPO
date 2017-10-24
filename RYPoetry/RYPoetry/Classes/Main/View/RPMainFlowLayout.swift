@@ -12,7 +12,7 @@ class RPMainFlowLayout: UICollectionViewFlowLayout {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        itemSize = CGSize(width: 240, height: 320)
+        itemSize = CGSize(width: 240, height: 400)
         scrollDirection = UICollectionViewScrollDirection.horizontal
         minimumInteritemSpacing = 50.0
         let margin = UIScreen.main.bounds.size.width/2.0 - itemSize.width/2.0

@@ -16,7 +16,7 @@
             <objects>
                 <navigationController id="n5A-xC-TUo" customClass="RPNaviController" customModule="RYPoetry" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jam-fG-zVy">
-                        <rect key="frame" x="0.0" y="20" width="375" height="48"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -36,10 +36,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RVY-c6-WeA">
-                                <rect key="frame" x="0.0" y="110" width="375" height="400"/>
+                                <rect key="frame" x="0.0" y="83.5" width="375" height="500"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="lwa-yY-UFL"/>
+                                    <constraint firstAttribute="height" constant="500" id="lwa-yY-UFL"/>
                                 </constraints>
                                 <collectionViewLayout key="collectionViewLayout" id="eYv-Lr-9u4" customClass="RPMainFlowLayout" customModule="RYPoetry" customModuleProvider="target"/>
                                 <cells>
@@ -106,7 +106,7 @@
                             <constraint firstItem="UHi-zc-TMz" firstAttribute="trailing" secondItem="RVY-c6-WeA" secondAttribute="trailing" id="OOU-F2-K69"/>
                             <constraint firstItem="RVY-c6-WeA" firstAttribute="centerX" secondItem="Yz8-Oa-V8H" secondAttribute="centerX" id="XWv-OP-qr4"/>
                             <constraint firstItem="RVY-c6-WeA" firstAttribute="leading" secondItem="UHi-zc-TMz" secondAttribute="leading" id="dJD-YQ-6ni"/>
-                            <constraint firstItem="RVY-c6-WeA" firstAttribute="centerY" secondItem="Yz8-Oa-V8H" secondAttribute="centerY" constant="-23.5" id="hTW-qS-jdl"/>
+                            <constraint firstItem="RVY-c6-WeA" firstAttribute="centerY" secondItem="Yz8-Oa-V8H" secondAttribute="centerY" id="tym-GT-0Ec"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UHi-zc-TMz"/>
                     </view>
@@ -131,7 +131,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Uq-pJ-NEm">
-                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="EcO-Ns-uWs" id="oN3-KL-yPi"/>
@@ -182,7 +182,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gYY-ca-pFt">
-                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="HKc-Wu-0M1" id="ksh-Eh-yU7"/>
@@ -217,7 +217,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="89x-0X-cuP">
-                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="6XV-3p-dlF" id="wB3-01-Fj6"/>
@@ -252,7 +252,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I0l-nL-vYq">
-                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="GJ8-F2-8Vw" id="0Hb-sd-Nm5"/>
@@ -323,6 +323,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xwA-Ef-1nN"/>
+        <segue reference="s4s-2f-9or"/>
     </inferredMetricsTieBreakers>
 </document>

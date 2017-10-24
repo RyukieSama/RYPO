@@ -12,7 +12,7 @@ class RPVolumeCell: RPBaseTableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -22,11 +22,6 @@ class RPVolumeCell: RPBaseTableViewCell {
     }
     
     func bindModel(volume : RPPoetryVolumeModel) {
-//        let formatter = NumberFormatter()
-//        formatter.numberStyle = .spellOut
-//        let volumeString = formatter.string(from: NSNumber(value: volume.volume!))
-//        let countString = formatter.string(from: NSNumber(value:volume.count!))
-        
         lbNumber.text = "卷" + NSNumber(value: volume.volume!).chineseNumberString()
         lbAuthor.text = volume.comment
         lbCount.text = NSNumber(value:volume.count!).chineseNumberString() + "篇"
@@ -36,6 +31,10 @@ class RPVolumeCell: RPBaseTableViewCell {
     @IBOutlet weak var lbNumber: UILabel!
     @IBOutlet weak var lbAuthor: UILabel!
     @IBOutlet weak var lbCount: UILabel!
-    
+    private func setupUI () {
+        lbNumber.font = RYFontHelper.contentFont()
+        lbAuthor.font = RYFontHelper.titleFont()
+        lbCount.font = RYFontHelper.contentFont()
+    }
     
 }

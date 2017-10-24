@@ -16,6 +16,7 @@ class RPMainCell: RPBaseCollectionCell {
     }
     
     func setupUI() {
+        contentView.backgroundColor = UIColor.white
         lbTitle.font = RYFontHelper.getFontstyle(ttfName: "asd", fontSize: 42)
         btOne.titleLabel?.font = RYFontHelper.contentFont()
         btOne.titleLabel?.textAlignment = NSTextAlignment.center
