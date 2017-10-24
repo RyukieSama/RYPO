@@ -12,7 +12,7 @@ class RPPoetryInfoCell: RPBaseTableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupUI()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -24,6 +24,10 @@ class RPPoetryInfoCell: RPBaseTableViewCell {
     // MARK: - UI
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var lbAuthor: UILabel!
+    private func setupUI () {
+        lbTitle.font = RYFontHelper.titleFont()
+        lbAuthor.font = RYFontHelper.subtitleFont()
+    }
     
     // MARK: - data
     func bindPoetry(poetry : RPPoetryBaseModel) {

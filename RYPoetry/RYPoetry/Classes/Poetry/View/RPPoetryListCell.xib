@@ -13,31 +13,34 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="RPPoetryListCell" customModule="RYPoetry" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="64" id="KGk-i7-Jjw" customClass="RPPoetryListCell" customModule="RYPoetry" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="63.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7z-S9-tvM">
-                        <rect key="frame" x="143" y="11" width="35" height="21"/>
+                        <rect key="frame" x="8" y="8" width="304" height="18.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作者" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4b-zR-BOV">
-                        <rect key="frame" x="277" y="11" width="35" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="作者" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4b-zR-BOV">
+                        <rect key="frame" x="8" y="34.5" width="304" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="x7z-S9-tvM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FHi-Ba-Ql3"/>
-                    <constraint firstItem="v4b-zR-BOV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="LvY-qh-AIB"/>
-                    <constraint firstItem="x7z-S9-tvM" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="egB-vO-Lhb"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="v4b-zR-BOV" secondAttribute="trailing" id="xWB-Wu-u65"/>
+                    <constraint firstItem="v4b-zR-BOV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Hi4-IY-bsH"/>
+                    <constraint firstItem="v4b-zR-BOV" firstAttribute="top" secondItem="x7z-S9-tvM" secondAttribute="bottom" constant="8" id="Hic-T2-3gH"/>
+                    <constraint firstItem="x7z-S9-tvM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="NXI-xh-OcS"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="v4b-zR-BOV" secondAttribute="bottom" id="drd-wm-xxw"/>
+                    <constraint firstItem="v4b-zR-BOV" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="pMK-u2-05e"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="x7z-S9-tvM" secondAttribute="trailing" id="x3A-HQ-gIp"/>
+                    <constraint firstItem="x7z-S9-tvM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="yZt-sV-Ytv"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -45,6 +48,7 @@
                 <outlet property="lbAuthor" destination="v4b-zR-BOV" id="yLh-x8-kiW"/>
                 <outlet property="lbTitle" destination="x7z-S9-tvM" id="IkC-E2-Kio"/>
             </connections>
+            <point key="canvasLocation" x="25" y="19"/>
         </tableViewCell>
     </objects>
 </document>

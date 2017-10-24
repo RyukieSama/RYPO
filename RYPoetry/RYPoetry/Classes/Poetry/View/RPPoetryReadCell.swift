@@ -26,7 +26,7 @@ class RPPoetryReadCell: RPBaseTableViewCell {
     @IBOutlet weak var tvText: UITextView!
     private func setupUI() {
         tvText.isEditable = false
-        tvText.font = RYFontHelper.getFontstyle(ttfName: "asd", fontSize: 24)
+        tvText.font = RYFontHelper.contentFont()
     }
     
     // MARK: - Data

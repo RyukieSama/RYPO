@@ -23,7 +23,21 @@ class RYFontHelper: NSObject {
         return UIFont(name: "FZZJ-HFXSJW", size: fontSize)!
     }
     
+    // MARK: - 一些常用字体
+    class func titleFont () -> UIFont {
+        return RYFontHelper.getFontstyle(ttfName: "FZZJ-HFXSJW", fontSize: 30)
+    }
+    
+    class func subtitleFont () -> UIFont {
+        return RYFontHelper.getFontstyle(ttfName: "FZZJ-HFXSJW", fontSize: 20)
+    }
+    
+    class func contentFont () -> UIFont {
+        return RYFontHelper.getFontstyle(ttfName: "FZZJ-HFXSJW", fontSize: 24)
+    }
+    
 }
+
 
 /**
  Font is Copperplate-Light

@@ -17,9 +17,9 @@ class RPMainCell: RPBaseCollectionCell {
     
     func setupUI() {
         lbTitle.font = RYFontHelper.getFontstyle(ttfName: "asd", fontSize: 42)
-        btOne.titleLabel?.font = RYFontHelper.getFontstyle(ttfName: "asd", fontSize: 24)
+        btOne.titleLabel?.font = RYFontHelper.contentFont()
         btOne.titleLabel?.textAlignment = NSTextAlignment.center
-        btTwo.titleLabel?.font = RYFontHelper.getFontstyle(ttfName: "asd", fontSize: 24)
+        btTwo.titleLabel?.font = RYFontHelper.contentFont()
         btTwo.titleLabel?.textAlignment = NSTextAlignment.center
     }
     

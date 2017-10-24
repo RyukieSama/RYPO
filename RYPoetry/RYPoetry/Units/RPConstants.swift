@@ -8,8 +8,9 @@
 
 import UIKit
 
+// MARK: - UI
 let RP_SCREEN_BOUNDS : CGRect = UIScreen.main.bounds
 
-class RPConstants: NSObject {
-    
+struct RPConstants {
+
 }

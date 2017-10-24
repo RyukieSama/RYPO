@@ -22,13 +22,20 @@ class RPVolumeCell: RPBaseTableViewCell {
     }
     
     func bindModel(volume : RPPoetryVolumeModel) {
-        lbNumber.text = "卷\(volume.volume ?? 0)"
+//        let formatter = NumberFormatter()
+//        formatter.numberStyle = .spellOut
+//        let volumeString = formatter.string(from: NSNumber(value: volume.volume!))
+//        let countString = formatter.string(from: NSNumber(value:volume.count!))
+        
+        lbNumber.text = "卷" + NSNumber(value: volume.volume!).chineseNumberString()
         lbAuthor.text = volume.comment
-        lbCount.text = "\(volume.count ?? 0)篇"
+        lbCount.text = NSNumber(value:volume.count!).chineseNumberString() + "篇"
     }
     
     // MARK: - UI
     @IBOutlet weak var lbNumber: UILabel!
     @IBOutlet weak var lbAuthor: UILabel!
     @IBOutlet weak var lbCount: UILabel!
+    
+    
 }
