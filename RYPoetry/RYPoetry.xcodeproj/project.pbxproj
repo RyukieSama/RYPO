@@ -24,6 +24,7 @@
 		4A12979B1F9703E900A021BA /* RPDetailSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12979A1F9703E900A021BA /* RPDetailSettingController.swift */; };
 		4A12979F1F97449600A021BA /* RPPoetryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12979E1F97449600A021BA /* RPPoetryHelper.swift */; };
 		4A1A9EF11F9F29F2002A67C3 /* NSNumber+ChineseNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A9EF01F9F29F2002A67C3 /* NSNumber+ChineseNumber.swift */; };
+		4A1A9EF41F9F382D002A67C3 /* RYRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A9EF31F9F382D002A67C3 /* RYRefresh.swift */; };
 		4A50F4AB1F975DFF00B1B1FF /* quantangshi.db in Resources */ = {isa = PBXBuildFile; fileRef = 4A50F4A91F975B5D00B1B1FF /* quantangshi.db */; };
 		4A50F4B11F983C2A00B1B1FF /* RVolumeMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A50F4B01F983C2A00B1B1FF /* RVolumeMainController.swift */; };
 		4A50F4B41F983C6700B1B1FF /* RPAuthorMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A50F4B31F983C6700B1B1FF /* RPAuthorMainController.swift */; };
@@ -82,6 +83,7 @@
 		4A12979A1F9703E900A021BA /* RPDetailSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPDetailSettingController.swift; sourceTree = "<group>"; };
 		4A12979E1F97449600A021BA /* RPPoetryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPPoetryHelper.swift; sourceTree = "<group>"; };
 		4A1A9EF01F9F29F2002A67C3 /* NSNumber+ChineseNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNumber+ChineseNumber.swift"; sourceTree = "<group>"; };
+		4A1A9EF31F9F382D002A67C3 /* RYRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RYRefresh.swift; sourceTree = "<group>"; };
 		4A50F4A91F975B5D00B1B1FF /* quantangshi.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = quantangshi.db; sourceTree = "<group>"; };
 		4A50F4B01F983C2A00B1B1FF /* RVolumeMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RVolumeMainController.swift; sourceTree = "<group>"; };
 		4A50F4B31F983C6700B1B1FF /* RPAuthorMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPAuthorMainController.swift; sourceTree = "<group>"; };
@@ -195,6 +197,14 @@
 				4A1A9EF01F9F29F2002A67C3 /* NSNumber+ChineseNumber.swift */,
 			);
 			path = Fundation;
+			sourceTree = "<group>";
+		};
+		4A1A9EF21F9F37DE002A67C3 /* RYRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				4A1A9EF31F9F382D002A67C3 /* RYRefresh.swift */,
+			);
+			path = RYRefresh;
 			sourceTree = "<group>";
 		};
 		4A50F4AC1F983BB500B1B1FF /* Volume */ = {
@@ -427,6 +437,7 @@
 		4AFF4D821F7D09AF00E2EC01 /* Units */ = {
 			isa = PBXGroup;
 			children = (
+				4A1A9EF21F9F37DE002A67C3 /* RYRefresh */,
 				4A1A9EEF1F9F2925002A67C3 /* Fundation */,
 				4AB7A8401F94AAA2006BE50C /* RPConstants.swift */,
 				4A12979D1F97446D00A021BA /* RPPoetryHelper */,
@@ -678,6 +689,7 @@
 			files = (
 				4A6B597F1F9995F7000DF7CB /* RPReaderController.swift in Sources */,
 				4AFF4D8C1F7D361C00E2EC01 /* RYFontHelper.swift in Sources */,
+				4A1A9EF41F9F382D002A67C3 /* RYRefresh.swift in Sources */,
 				4AB7A8411F94AAA2006BE50C /* RPConstants.swift in Sources */,
 				4A12978F1F95B18700A021BA /* RPBaseController.swift in Sources */,
 				4A50F4B11F983C2A00B1B1FF /* RVolumeMainController.swift in Sources */,

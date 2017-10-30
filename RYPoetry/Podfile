@@ -8,8 +8,7 @@ target 'RYPoetry' do
 
 #pod 'SnapKit', '~> 4.0.0'
 pod 'Alamofire', '~> 4.5'
-pod 'SVProgressHUD'
-pod 'SDWebImage'
+pod 'Kingfisher', '~> 4.0'
 pod 'SQLite.swift', '~> 0.11.4'
 
 end

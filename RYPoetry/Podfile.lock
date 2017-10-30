@@ -1,25 +1,20 @@
 PODS:
   - Alamofire (4.5.1)
-  - SDWebImage (4.1.0):
-    - SDWebImage/Core (= 4.1.0)
-  - SDWebImage/Core (4.1.0)
+  - Kingfisher (4.1.1)
   - SQLite.swift (0.11.4):
     - SQLite.swift/standard (= 0.11.4)
   - SQLite.swift/standard (0.11.4)
-  - SVProgressHUD (2.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
-  - SDWebImage
+  - Kingfisher (~> 4.0)
   - SQLite.swift (~> 0.11.4)
-  - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
+  Kingfisher: 6793a473357b5dbee42b0068ef203fe8325f259e
   SQLite.swift: 3e3bee21da701b5b9f87c4a672cb54f233505692
-  SVProgressHUD: 3f37f3409ddb15f35c99315ae7dc33c474aa3256
 
-PODFILE CHECKSUM: d1e77947d5269e42efee4502ce99922b8533e9a9
+PODFILE CHECKSUM: da5f21da91d094f4cc8cd2ccd045e34b4bdf9287
 
 COCOAPODS: 1.2.0
