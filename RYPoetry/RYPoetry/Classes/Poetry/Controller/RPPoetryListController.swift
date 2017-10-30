@@ -46,6 +46,14 @@ class RPPoetryListController: RPBaseController {
     private var poetries = [RPPoetryBaseModel]()
     private var selectedIndex = 0
     private func loadData() {
+        if (dic.count == 0) {//加载全部
+            RPPoetryHelper.sharedHelper.loadAllPoetry(callBack: { (poetryArr) in
+                self.poetries = poetryArr as! [RPPoetryBaseModel]
+                self.tvMain.reloadData()
+            })
+            return
+        }
+        
         //按卷号加载
         let volume = dic["volume"] as! Int64
         if volume > 0 {

@@ -147,41 +147,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4A1297941F9702AE00A021BA /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				4A1297971F9702EA00A021BA /* Model */,
-				4A1297961F9702E400A021BA /* View */,
-				4A1297951F9702DC00A021BA /* Controller */,
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
-		4A1297951F9702DC00A021BA /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				4A12977D1F95962100A021BA /* RPPoetryDetailController.swift */,
-				4A12979A1F9703E900A021BA /* RPDetailSettingController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		4A1297961F9702E400A021BA /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4A12977F1F959A0100A021BA /* RPPoetryDetailCell.swift */,
-				4A12978C1F95A83200A021BA /* RPPoetryDetailCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		4A1297971F9702EA00A021BA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		4A12979D1F97446D00A021BA /* RPPoetryHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,72 +172,6 @@
 			path = RYRefresh;
 			sourceTree = "<group>";
 		};
-		4A50F4AC1F983BB500B1B1FF /* Volume */ = {
-			isa = PBXGroup;
-			children = (
-				4A50F4AF1F983BE100B1B1FF /* Model */,
-				4A50F4AE1F983BDB00B1B1FF /* View */,
-				4A50F4AD1F983BD000B1B1FF /* Controller */,
-			);
-			path = Volume;
-			sourceTree = "<group>";
-		};
-		4A50F4AD1F983BD000B1B1FF /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				4A50F4B01F983C2A00B1B1FF /* RVolumeMainController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		4A50F4AE1F983BDB00B1B1FF /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4A50F4C31F989C6300B1B1FF /* RPVolumeCell.swift */,
-				4A50F4C41F989C6300B1B1FF /* RPVolumeCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		4A50F4AF1F983BE100B1B1FF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		4A50F4B21F983C4100B1B1FF /* Author */ = {
-			isa = PBXGroup;
-			children = (
-				4A50F4B71F983C7F00B1B1FF /* Model */,
-				4A50F4B61F983C7900B1B1FF /* View */,
-				4A50F4B51F983C6E00B1B1FF /* Controller */,
-			);
-			path = Author;
-			sourceTree = "<group>";
-		};
-		4A50F4B51F983C6E00B1B1FF /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				4A50F4B31F983C6700B1B1FF /* RPAuthorMainController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		4A50F4B61F983C7900B1B1FF /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		4A50F4B71F983C7F00B1B1FF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		4A50F4B81F983D0900B1B1FF /* Poetry */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +187,10 @@
 			children = (
 				4A50F4BC1F983D4A00B1B1FF /* RPPoetryListController.swift */,
 				4A6B597E1F9995F7000DF7CB /* RPReaderController.swift */,
+				4A50F4B01F983C2A00B1B1FF /* RVolumeMainController.swift */,
+				4A12977D1F95962100A021BA /* RPPoetryDetailController.swift */,
+				4A12979A1F9703E900A021BA /* RPDetailSettingController.swift */,
+				4A50F4B31F983C6700B1B1FF /* RPAuthorMainController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -301,6 +204,10 @@
 				4A0B45281F999FAB00836BE3 /* RPPoetryReadCell.xib */,
 				4A7854B41F99F34B00BA8E86 /* RPPoetryInfoCell.swift */,
 				4A7854B51F99F34B00BA8E86 /* RPPoetryInfoCell.xib */,
+				4A50F4C31F989C6300B1B1FF /* RPVolumeCell.swift */,
+				4A50F4C41F989C6300B1B1FF /* RPVolumeCell.xib */,
+				4A12977F1F959A0100A021BA /* RPPoetryDetailCell.swift */,
+				4A12978C1F95A83200A021BA /* RPPoetryDetailCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -424,10 +331,6 @@
 			isa = PBXGroup;
 			children = (
 				4A50F4B81F983D0900B1B1FF /* Poetry */,
-				4A50F4B21F983C4100B1B1FF /* Author */,
-				4A50F4AC1F983BB500B1B1FF /* Volume */,
-				4A1297941F9702AE00A021BA /* Detail */,
-				4AFF4D851F7D0A0100E2EC01 /* Mine */,
 				4AFF4D841F7D09F900E2EC01 /* Main */,
 				4AFF4D831F7D09EE00E2EC01 /* Welcome */,
 			);
@@ -461,13 +364,6 @@
 				4A86B13E1F94890000B827A5 /* Controller */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		4AFF4D851F7D0A0100E2EC01 /* Mine */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Mine;
 			sourceTree = "<group>";
 		};
 		4AFF4D8A1F7D35CD00E2EC01 /* RYFontHelper */ = {

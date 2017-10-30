@@ -32,12 +32,10 @@ class RPMainController: RPBaseController {
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        let vc = segue.destination as! RPBaseController
-        if segue.identifier == segueDetail {
-            vc.dic = ["title" : mainCellModels[currentIndex].title]
-        }
+//        let vc = segue.destination as! RPBaseController
+//        if segue.identifier == segueAllPoetry {
+//            vc.dic = ["title" : mainCellModels[currentIndex].title]
+//        }
     }
     
     func routeWithSegue (identifier : String) {
@@ -63,7 +61,7 @@ class RPMainController: RPBaseController {
     }
     
     // MARK: - segueID
-    let segueDetail = "segueToDetail"
+    let segueAllPoetry = "segueToAllList"
     
     // MARK: - other
     var currentIndex = 0;
@@ -110,7 +108,7 @@ extension RPMainController : UICollectionViewDelegate,UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath)
         if indexPath.item == currentIndex {
-            performSegue(withIdentifier: segueDetail, sender: nil)
+            performSegue(withIdentifier: segueAllPoetry, sender: nil)
         } else {
             //            collectionView.scrollToItem(at: indexPath, at: UICollectionViewScrollPosition.centeredHorizontally, animated: true)
         }
