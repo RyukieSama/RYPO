@@ -36,14 +36,13 @@ struct RPPoetryHelper {
     private let tPoetryText = Expression<String>("text") //内容
     
     private mutating func loadDataBase() {
-        let path = Bundle.main.path(forResource: "quantangshi.db", ofType: nil)
-        if path == nil {
+        guard let path = Bundle.main.path(forResource: "quantangshi.db", ofType: nil) else {
             //要在buidPhases 中添加文件  要不然会找不到
             return
         }
         print(path as Any)
         do {
-            db = try Connection(path!)
+            db = try Connection(path)
         } catch {
             print(error)
         }
@@ -52,10 +51,11 @@ struct RPPoetryHelper {
     // MARK: - public func
     //获取卷列表
     func loadVolumeList(callBack : @escaping RPPoetryHelperClosures) {
-        if db == nil {
+        guard db != nil else {
             print("数据库不存在")
             return
         }
+        
         dataQueue.async {
             var volumeArr = [RPPoetryVolumeModel]()
             
@@ -80,7 +80,7 @@ struct RPPoetryHelper {
     
     //获所有诗
     func loadAllPoetry(callBack : @escaping RPPoetryHelperClosures) {
-        if db == nil {
+        guard db != nil else {
             print("数据库不存在")
             return
         }
@@ -110,7 +110,7 @@ struct RPPoetryHelper {
 
     //按卷号获取诗
     func loadPoetries(inVolume : Int64 ,callBack : @escaping RPPoetryHelperClosures) {
-        if db == nil {
+        guard db != nil else {
             print("数据库不存在")
             return
         }
@@ -141,7 +141,7 @@ struct RPPoetryHelper {
     
     //按作者获取诗
     func loadPoetries(ofAuthor : String ,callBack : @escaping RPPoetryHelperClosures) {
-        if db == nil {
+        guard db != nil else {
             print("数据库不存在")
             return
         }

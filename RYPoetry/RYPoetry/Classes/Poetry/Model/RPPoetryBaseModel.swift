@@ -19,27 +19,27 @@ struct RPPoetryBaseModel {
     
     // 在 class 中实现带有mutating方法的接口时，不用mutating进行修饰。因为对于class来说，类的成员变量和方法都是透明的，所以不必使用 mutating 来进行修饰
     mutating func getLines() -> [String]? {
-        if (lines == nil) {
-            var arr = [String]()
-            let collectionOne = text?.split(separator: "。")
-            for strOne in collectionOne! {
-                let collectionTwo = strOne.split(separator: "，")
-                for strTwo in collectionTwo {
-                    if strTwo.contains("\n") {
-                        var strTemp = String.init(strTwo)
-                        let range = strTemp.range(of: "\n")
-                        strTemp.replaceSubrange(range!, with: "")
-                        arr.append(String.init(strTemp))
-//                        print(strTemp)
-                    } else {
-                        arr.append(String.init(strTwo))
-//                        print(strTwo)
-                    }
-                    
-                }
-            }
-            lines = arr
+        guard lines == nil else {
+            return lines
         }
+        
+        var arr = [String]()
+        let collectionOne = text?.split(separator: "。")
+        for strOne in collectionOne! {
+            let collectionTwo = strOne.split(separator: "，")
+            for strTwo in collectionTwo {
+                guard strTwo.contains("\n") else {
+                    arr.append(String.init(strTwo))
+                    continue
+                }
+                
+                var strTemp = String.init(strTwo)
+                let range = strTemp.range(of: "\n")
+                strTemp.replaceSubrange(range!, with: "")
+                arr.append(String.init(strTemp))
+            }
+        }
+        lines = arr
         return lines
     }
 }

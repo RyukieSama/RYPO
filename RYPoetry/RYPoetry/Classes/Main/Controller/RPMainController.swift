@@ -39,7 +39,7 @@ class RPMainController: RPBaseController {
     }
     
     func routeWithSegue (identifier : String) {
-        if identifier.count <= 0 {
+        guard identifier.count > 0 else {
             return
         }
         performSegue(withIdentifier: identifier, sender: nil)
