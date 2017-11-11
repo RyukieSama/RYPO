@@ -40,7 +40,7 @@ extension RPReaderController : UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (poetryLines?.count)!
+        return (poetryLines?.count)! + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -50,7 +50,7 @@ extension RPReaderController : UITableViewDelegate,UITableViewDataSource {
             return cell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "RPPoetryReadCell", for: indexPath) as! RPPoetryReadCell
-        cell.bindText(text: (poetryLines?[indexPath.row])!)
+        cell.bindText(text: (poetryLines?[indexPath.row-1])!)
         return cell
     }
     
