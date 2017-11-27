@@ -43,6 +43,7 @@
 		4A7854B61F99F34B00BA8E86 /* RPPoetryInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7854B41F99F34B00BA8E86 /* RPPoetryInfoCell.swift */; };
 		4A7854B71F99F34B00BA8E86 /* RPPoetryInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A7854B51F99F34B00BA8E86 /* RPPoetryInfoCell.xib */; };
 		4AB296B31F7D485900004273 /* FZZJ-HFXSJW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4AFF4D8E1F7D378700E2EC01 /* FZZJ-HFXSJW.TTF */; };
+		4AB48E2F1FCC125100C2B200 /* RPDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB48E2E1FCC125100C2B200 /* RPDataCenter.swift */; };
 		4AB7A8411F94AAA2006BE50C /* RPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB7A8401F94AAA2006BE50C /* RPConstants.swift */; };
 		4AFF4D8C1F7D361C00E2EC01 /* RYFontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF4D8B1F7D361C00E2EC01 /* RYFontHelper.swift */; };
 /* End PBXBuildFile section */
@@ -107,6 +108,7 @@
 		4A6B597E1F9995F7000DF7CB /* RPReaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPReaderController.swift; sourceTree = "<group>"; };
 		4A7854B41F99F34B00BA8E86 /* RPPoetryInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPPoetryInfoCell.swift; sourceTree = "<group>"; };
 		4A7854B51F99F34B00BA8E86 /* RPPoetryInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RPPoetryInfoCell.xib; sourceTree = "<group>"; };
+		4AB48E2E1FCC125100C2B200 /* RPDataCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPDataCenter.swift; sourceTree = "<group>"; };
 		4AB7A8401F94AAA2006BE50C /* RPConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPConstants.swift; sourceTree = "<group>"; };
 		4AFF4D8B1F7D361C00E2EC01 /* RYFontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RYFontHelper.swift; sourceTree = "<group>"; };
 		4AFF4D8E1F7D378700E2EC01 /* FZZJ-HFXSJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FZZJ-HFXSJW.TTF"; sourceTree = "<group>"; };
@@ -308,6 +310,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		4AB48E2D1FCC120A00C2B200 /* RPDataCenter */ = {
+			isa = PBXGroup;
+			children = (
+				4AB48E2E1FCC125100C2B200 /* RPDataCenter.swift */,
+			);
+			path = RPDataCenter;
+			sourceTree = "<group>";
+		};
 		4AFF4D7F1F7D07C300E2EC01 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +350,7 @@
 		4AFF4D821F7D09AF00E2EC01 /* Units */ = {
 			isa = PBXGroup;
 			children = (
+				4AB48E2D1FCC120A00C2B200 /* RPDataCenter */,
 				4A1A9EF21F9F37DE002A67C3 /* RYRefresh */,
 				4A1A9EEF1F9F2925002A67C3 /* Fundation */,
 				4AB7A8401F94AAA2006BE50C /* RPConstants.swift */,
@@ -603,6 +614,7 @@
 				4A1297911F95D82D00A021BA /* RPMainFlowLayout.swift in Sources */,
 				4A12979B1F9703E900A021BA /* RPDetailSettingController.swift in Sources */,
 				4A1A9EF11F9F29F2002A67C3 /* NSNumber+ChineseNumber.swift in Sources */,
+				4AB48E2F1FCC125100C2B200 /* RPDataCenter.swift in Sources */,
 				4A50F4BD1F983D4A00B1B1FF /* RPPoetryListController.swift in Sources */,
 				4A1297841F959E9E00A021BA /* RPNaviController.swift in Sources */,
 				4A1297931F96F7E500A021BA /* RPMainCellModel.swift in Sources */,
