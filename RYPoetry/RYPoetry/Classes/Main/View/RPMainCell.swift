@@ -31,8 +31,9 @@ class RPMainCell: RPBaseCollectionCell {
             cellModel.title = "鉴赏"
             btOne.setTitle("卷", for: UIControlState.normal)
             btTwo.setTitle("全", for: UIControlState.normal)
-            segueOneID = segueVolumeMainID
-            segueTwoID = segueAllListID
+            segueOneID = Segue_VolumeMainID
+            segueTwoID = Segue_AllListID
+            
             break
         case .fight:
             lbTitle.text = "对\n诗"
@@ -85,7 +86,4 @@ class RPMainCell: RPBaseCollectionCell {
     @IBOutlet weak var lbTitle: UILabel!
     var segueOneID : String?
     var segueTwoID : String?
-    
-    private let segueVolumeMainID = "segueToVolumeMain"
-    private let segueAllListID = "segueToAllList"
 }

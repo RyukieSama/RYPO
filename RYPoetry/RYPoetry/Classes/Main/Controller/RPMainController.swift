@@ -38,13 +38,6 @@ class RPMainController: RPBaseController {
 //        }
     }
     
-    func routeWithSegue (identifier : String) {
-        guard identifier.count > 0 else {
-            return
-        }
-        performSegue(withIdentifier: identifier, sender: nil)
-    }
-    
     //配置unwind segue
     @IBAction func unwindSegueAction(segue : UIStoryboardSegue) {
         if segue.identifier == "segueBackToMain" {
@@ -108,9 +101,8 @@ extension RPMainController : UICollectionViewDelegate,UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath)
         if indexPath.item == currentIndex {
-            performSegue(withIdentifier: segueAllPoetry, sender: nil)
-        } else {
-            //            collectionView.scrollToItem(at: indexPath, at: UICollectionViewScrollPosition.centeredHorizontally, animated: true)
+            let cellModel = mainCellModels[indexPath.row]
+            routeWithSegue(identifier: cellModel.segueId)
         }
     }
     

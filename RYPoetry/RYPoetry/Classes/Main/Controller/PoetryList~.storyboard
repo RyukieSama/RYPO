@@ -114,9 +114,8 @@
                     <connections>
                         <outlet property="cvMain" destination="RVY-c6-WeA" id="fNi-LK-Gip"/>
                         <segue destination="EcO-Ns-uWs" kind="show" identifier="segueToDetail" id="4Lz-jS-dI6"/>
-                        <segue destination="8oB-gx-iHh" kind="show" identifier="segueToVolumeMain" id="QkQ-kO-ec9"/>
-                        <segue destination="YCE-0P-I8a" kind="show" identifier="segueToAllList" id="s4s-2f-9or"/>
-                        <segue destination="yHf-pD-TC1" kind="presentation" identifier="segueToLogIn" id="gMn-WX-p8J"/>
+                        <segue destination="HKc-Wu-0M1" kind="show" identifier="segueToVolumeMain" id="QkQ-kO-ec9"/>
+                        <segue destination="6XV-3p-dlF" kind="show" identifier="segueToAllList" id="s4s-2f-9or"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AF3-Qs-93e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -174,6 +173,110 @@
             </objects>
             <point key="canvasLocation" x="793" y="-1320"/>
         </scene>
+        <!--Volume Main Controller-->
+        <scene sceneID="zvx-Dr-6cy">
+            <objects>
+                <viewController id="HKc-Wu-0M1" customClass="RVolumeMainController" customModule="RYPoetry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bwL-Fp-2dE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gYY-ca-pFt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="HKc-Wu-0M1" id="ksh-Eh-yU7"/>
+                                    <outlet property="delegate" destination="HKc-Wu-0M1" id="FoO-SQ-xm9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gYY-ca-pFt" firstAttribute="leading" secondItem="Ptx-nr-Vrm" secondAttribute="leading" id="1XC-Yu-uGV"/>
+                            <constraint firstItem="Ptx-nr-Vrm" firstAttribute="trailing" secondItem="gYY-ca-pFt" secondAttribute="trailing" id="IAs-uX-XSb"/>
+                            <constraint firstItem="gYY-ca-pFt" firstAttribute="top" secondItem="Ptx-nr-Vrm" secondAttribute="top" id="lYV-Xs-3TO"/>
+                            <constraint firstItem="Ptx-nr-Vrm" firstAttribute="bottom" secondItem="gYY-ca-pFt" secondAttribute="bottom" id="utH-3Z-92i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ptx-nr-Vrm"/>
+                    </view>
+                    <connections>
+                        <outlet property="tvMain" destination="gYY-ca-pFt" id="ynb-Dp-y9c"/>
+                        <segue destination="6XV-3p-dlF" kind="show" identifier="segueVolumeToList" id="xwA-Ef-1nN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8MK-iw-eCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="-510"/>
+        </scene>
+        <!--Poetry List Controller-->
+        <scene sceneID="dyL-ab-ufQ">
+            <objects>
+                <viewController id="6XV-3p-dlF" customClass="RPPoetryListController" customModule="RYPoetry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nnk-fY-3Dg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="89x-0X-cuP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="6XV-3p-dlF" id="wB3-01-Fj6"/>
+                                    <outlet property="delegate" destination="6XV-3p-dlF" id="fqw-AT-8kF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i6M-EX-ITK" firstAttribute="trailing" secondItem="89x-0X-cuP" secondAttribute="trailing" id="3yM-ft-rsm"/>
+                            <constraint firstItem="89x-0X-cuP" firstAttribute="leading" secondItem="i6M-EX-ITK" secondAttribute="leading" id="Diu-Xe-9F8"/>
+                            <constraint firstItem="i6M-EX-ITK" firstAttribute="bottom" secondItem="89x-0X-cuP" secondAttribute="bottom" id="F2W-ab-w25"/>
+                            <constraint firstItem="89x-0X-cuP" firstAttribute="top" secondItem="i6M-EX-ITK" secondAttribute="top" id="Pr1-vg-6SK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i6M-EX-ITK"/>
+                    </view>
+                    <connections>
+                        <outlet property="tvMain" destination="89x-0X-cuP" id="MGw-D7-YEL"/>
+                        <segue destination="GJ8-F2-8Vw" kind="show" identifier="segueToReadPoetryDetail" id="ldd-1R-U7R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3HK-d8-ZLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="793" y="267"/>
+        </scene>
+        <!--Reader Controller-->
+        <scene sceneID="04z-Yj-Rul">
+            <objects>
+                <viewController id="GJ8-F2-8Vw" customClass="RPReaderController" customModule="RYPoetry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nvV-eg-tzu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I0l-nL-vYq">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="GJ8-F2-8Vw" id="0Hb-sd-Nm5"/>
+                                    <outlet property="delegate" destination="GJ8-F2-8Vw" id="eaz-zY-4D7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3hN-a0-tKv" firstAttribute="bottom" secondItem="I0l-nL-vYq" secondAttribute="bottom" id="3Fo-da-rU6"/>
+                            <constraint firstItem="3hN-a0-tKv" firstAttribute="trailing" secondItem="I0l-nL-vYq" secondAttribute="trailing" id="Cyf-5n-h9d"/>
+                            <constraint firstItem="I0l-nL-vYq" firstAttribute="top" secondItem="3hN-a0-tKv" secondAttribute="top" id="iRN-dq-a5p"/>
+                            <constraint firstItem="I0l-nL-vYq" firstAttribute="leading" secondItem="3hN-a0-tKv" secondAttribute="leading" id="pHk-Gh-G9l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3hN-a0-tKv"/>
+                    </view>
+                    <connections>
+                        <outlet property="tvMain" destination="I0l-nL-vYq" id="1Xg-ah-pvh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rPN-aK-RIC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1614" y="238"/>
+        </scene>
         <!--Detail Setting Controller-->
         <scene sceneID="z0A-sk-8hV">
             <objects>
@@ -218,29 +321,8 @@
             </objects>
             <point key="canvasLocation" x="1614" y="-1320"/>
         </scene>
-        <!--PoetryList-->
-        <scene sceneID="Wrh-db-hkh">
-            <objects>
-                <viewControllerPlaceholder storyboardName="PoetryList" id="YCE-0P-I8a" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Fj-3S-Rkv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="607" y="211"/>
-        </scene>
-        <!--LogIn-->
-        <scene sceneID="ZFx-Ga-sLE">
-            <objects>
-                <viewControllerPlaceholder storyboardName="LogIn" id="yHf-pD-TC1" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2XX-de-36y" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="584" y="-16"/>
-        </scene>
-        <!--VolumeList-->
-        <scene sceneID="gvP-J4-voS">
-            <objects>
-                <viewControllerPlaceholder storyboardName="VolumeList" id="8oB-gx-iHh" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Q5-6j-Wo4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="611" y="84"/>
-        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="s4s-2f-9or"/>
+    </inferredMetricsTieBreakers>
 </document>

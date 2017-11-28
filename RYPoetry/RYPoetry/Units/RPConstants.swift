@@ -11,6 +11,11 @@ import UIKit
 // MARK: - UI
 let RP_SCREEN_BOUNDS : CGRect = UIScreen.main.bounds
 
+// MARK: - Segue
+let Segue_VolumeMainID = "segueToVolumeMain"
+let Segue_AllListID = "segueToAllList"
+let Segue_ToLogIn = "segueToLogIn"
+
 struct RPConstants {
 
 }

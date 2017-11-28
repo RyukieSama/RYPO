@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hPe-d7-NMs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navi Controller-->
+        <scene sceneID="06F-YV-1z8">
+            <objects>
+                <navigationController id="hPe-d7-NMs" customClass="RPNaviController" customModule="RYPoetry" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NQ6-eb-v0A">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oJC-qz-8S5" kind="relationship" relationship="rootViewController" id="QMM-r6-l5y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZf-uH-3Jb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-682" y="140"/>
+        </scene>
+        <!--Log In View Controller-->
+        <scene sceneID="ncm-45-0eh">
+            <objects>
+                <viewController id="oJC-qz-8S5" customClass="RPLogInViewController" customModule="RYPoetry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z0X-qB-zxN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xei-eY-vFL">
+                                <rect key="frame" x="87.5" y="318" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Yh9-i7-dCb"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EMt-r6-ZFn">
+                                <rect key="frame" x="87.5" y="273" width="200" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DbT-M6-loC">
+                                <rect key="frame" x="168" y="356" width="38" height="30"/>
+                                <state key="normal" title="LogIn"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nb8-lW-p4i">
+                                <rect key="frame" x="162" y="394" width="50" height="30"/>
+                                <state key="normal" title="SignUp"/>
+                                <connections>
+                                    <segue destination="i1p-bN-BjQ" kind="show" id="qpQ-Ib-7bT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kz-jV-P59">
+                                <rect key="frame" x="165" y="432" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Forget"/>
+                                <connections>
+                                    <segue destination="SIw-Kr-be0" kind="show" id="i2P-Tf-zVB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nq-Pf-hot">
+                                <rect key="frame" x="160" y="164" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="btDismissClick:" destination="oJC-qz-8S5" eventType="touchUpInside" id="syZ-qw-wa0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xei-eY-vFL" firstAttribute="centerX" secondItem="Z0X-qB-zxN" secondAttribute="centerX" id="AHe-lc-6X7"/>
+                            <constraint firstItem="EMt-r6-ZFn" firstAttribute="centerX" secondItem="xei-eY-vFL" secondAttribute="centerX" id="DyQ-fR-XsW"/>
+                            <constraint firstItem="2Nq-Pf-hot" firstAttribute="top" secondItem="gFj-cL-b99" secondAttribute="top" constant="100" id="IxJ-xp-svh"/>
+                            <constraint firstItem="EMt-r6-ZFn" firstAttribute="width" secondItem="xei-eY-vFL" secondAttribute="width" id="O4E-qP-iht"/>
+                            <constraint firstItem="DbT-M6-loC" firstAttribute="centerX" secondItem="xei-eY-vFL" secondAttribute="centerX" id="XAJ-OU-5k5"/>
+                            <constraint firstItem="xei-eY-vFL" firstAttribute="centerY" secondItem="Z0X-qB-zxN" secondAttribute="centerY" id="asF-zt-RtI"/>
+                            <constraint firstItem="nb8-lW-p4i" firstAttribute="top" secondItem="DbT-M6-loC" secondAttribute="bottom" constant="8" id="dop-TM-2FC"/>
+                            <constraint firstItem="2Nq-Pf-hot" firstAttribute="centerX" secondItem="gFj-cL-b99" secondAttribute="centerX" id="lRH-2u-SUr"/>
+                            <constraint firstItem="xei-eY-vFL" firstAttribute="top" secondItem="EMt-r6-ZFn" secondAttribute="bottom" constant="15" id="mUP-ZP-fYV"/>
+                            <constraint firstItem="nb8-lW-p4i" firstAttribute="centerX" secondItem="DbT-M6-loC" secondAttribute="centerX" id="s44-6P-pz1"/>
+                            <constraint firstItem="DbT-M6-loC" firstAttribute="top" secondItem="xei-eY-vFL" secondAttribute="bottom" constant="8" id="wDA-li-Zud"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gFj-cL-b99"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mMt-Gv-JeE"/>
+                    <connections>
+                        <outlet property="btLogin" destination="DbT-M6-loC" id="1ib-S5-ESW"/>
+                        <outlet property="tfAccount" destination="EMt-r6-ZFn" id="7rN-nW-1n4"/>
+                        <outlet property="tfPasword" destination="xei-eY-vFL" id="tbu-eV-KCK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3qd-rf-ntv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82" y="140"/>
+        </scene>
+        <!--忘记密码-->
+        <scene sceneID="zre-Ah-E6X">
+            <objects>
+                <viewController title="忘记密码" id="SIw-Kr-be0" customClass="RPForgotViewController" customModule="RYPoetry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aaG-a2-yCB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="N7k-AS-N7R"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O00-zD-pIo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976" y="416"/>
+        </scene>
+        <!--注册-->
+        <scene sceneID="hh7-a5-9xW">
+            <objects>
+                <viewController title="注册" id="i1p-bN-BjQ" customClass="RPSignUpViewController" customModule="RYPoetry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lxg-dz-KnO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="k8r-Cl-JMO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wcb-5h-aZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="969" y="-270"/>
+        </scene>
+    </scenes>
+</document>

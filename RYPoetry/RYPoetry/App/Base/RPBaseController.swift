@@ -35,5 +35,12 @@ class RPBaseController: UIViewController {
         print(self,"===deinit===")
     }
     
+    func routeWithSegue (identifier : String) {
+        guard identifier.count > 0 else {
+            print("segueId 有误")
+            return
+        }
+        performSegue(withIdentifier: identifier, sender: nil)
+    }
 
 }
