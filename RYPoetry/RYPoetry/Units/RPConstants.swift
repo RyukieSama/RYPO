@@ -19,3 +19,7 @@ let Segue_ToLogIn = "segueToLogIn"
 struct RPConstants {
 
 }
+
+// MARK: - LeanCloud
+let LeanCloud_APP_ID = "XNiw5AEeFSP066271OfwpGqY-gzGzoHsz"
+let leanCloud_APP_KEY = "0hAwFl1lKoVgoKDKGQH4Wz7q"

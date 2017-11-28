@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LeanCloud
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setDefault() {
         setNetwork()
         setWindow()
+        setLeanCloud()
     }
     
     func setWindow() {
@@ -27,6 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setNetwork() {
         
+    }
+    
+    func setLeanCloud() {
+        // 如果使用美国站点，请加上这行代码，并且写在初始化前面
+//        LeanCloud.setServiceRegion(.US)
+        LeanCloud.initialize(applicationID: LeanCloud_APP_ID, applicationKey: leanCloud_APP_KEY)
     }
     
     func setRootContorller() -> UIViewController {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LeanCloud
 
 class RPLogInViewController: RPBaseController {
 
@@ -44,6 +45,11 @@ class RPLogInViewController: RPBaseController {
         dismiss(animated: true) {
             
         }
+    }
+    
+    @IBAction func logInClick(_ sender: Any) {
+        
+        
     }
     
     // MARK: - UI

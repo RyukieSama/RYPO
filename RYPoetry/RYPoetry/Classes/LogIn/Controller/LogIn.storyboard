@@ -52,6 +52,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DbT-M6-loC">
                                 <rect key="frame" x="168" y="356" width="38" height="30"/>
                                 <state key="normal" title="LogIn"/>
+                                <connections>
+                                    <action selector="logInClick:" destination="oJC-qz-8S5" eventType="touchUpInside" id="tJx-RG-3Qf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nb8-lW-p4i">
                                 <rect key="frame" x="162" y="394" width="50" height="30"/>
