@@ -10,6 +10,7 @@ import UIKit
 
 // MARK: - UI
 let RP_SCREEN_BOUNDS : CGRect = UIScreen.main.bounds
+let RP_WINDOW_ROOT_VC = UIApplication.shared.keyWindow?.rootViewController
 
 // MARK: - Segue
 let Segue_VolumeMainID = "segueToVolumeMain"

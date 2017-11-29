@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setNetwork()
         setWindow()
         setLeanCloud()
+        setupGC()
     }
     
     func setWindow() {
@@ -27,14 +28,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
     }
     
+    /// 设置网络
     func setNetwork() {
         
     }
     
+    /// 设置LeanCloud
     func setLeanCloud() {
         // 如果使用美国站点，请加上这行代码，并且写在初始化前面
 //        LeanCloud.setServiceRegion(.US)
         LeanCloud.initialize(applicationID: LeanCloud_APP_ID, applicationKey: leanCloud_APP_KEY)
+    }
+    
+    /// 这只GameCenter
+    func setupGC() {
+        RPGameCenter.authenticateLocalPlayer()
     }
     
     func setRootContorller() -> UIViewController {

@@ -51,7 +51,7 @@
                 <viewControllerPlaceholder storyboardName="PoetryList" id="YCE-0P-I8a" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Fj-3S-Rkv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1415" y="-624"/>
+            <point key="canvasLocation" x="1409" y="-511"/>
         </scene>
     </scenes>
 </document>
