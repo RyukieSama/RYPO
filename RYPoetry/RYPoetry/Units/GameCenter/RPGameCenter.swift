@@ -8,6 +8,7 @@
 
 import Foundation
 import GameKit
+import LeanCloud
 
 let RPLocalPlayer = GKLocalPlayer.localPlayer()
 
@@ -15,7 +16,9 @@ class RPGameCenter : NSObject {
     class func authenticateLocalPlayer() {
         RPLocalPlayer.authenticateHandler = {(controller , error) in
             if controller != nil {
-                self.showAuthenticationDialogWhenReasonable()
+                //自动弹出 GameCenter登录 完成后会自动执行登录
+                RP_WINDOW_ROOT_VC?.present(controller!, animated: true, completion: {
+                })
             }
             else if RPLocalPlayer.isAuthenticated {
                 self.login(localPlayer: RPLocalPlayer)
@@ -24,10 +27,6 @@ class RPGameCenter : NSObject {
                 print("不支持GC")
             }
         }
-    }
-    
-    private class func showAuthenticationDialogWhenReasonable() {
-        showAlertForGAmeCenter()
     }
     
     /// 弹窗提示设置GC
@@ -52,10 +51,37 @@ class RPGameCenter : NSObject {
     }
     
     private class func login(localPlayer : GKLocalPlayer) {
-//        localPlayer.generateIdentityVerificationSignature { (publicKeyUrl, signature, salt, timestamp, error) in
-//
-//        }
         print(localPlayer.playerID as Any)
         
+        //登录
+        RPUser.logIn(username: localPlayer.playerID!, password: localPlayer.playerID!) { (result) in
+            switch result {
+            case .success(let user):
+                print(user)
+                break
+            case .failure(let error):
+                print(error)
+                if error.code == LC_ERROR_NO_USER {
+                    //注册
+                    signUp(localPlayer: localPlayer)
+                }
+            }
+        }
+    }
+    
+    private class func signUp(localPlayer : GKLocalPlayer) {
+        let currentUser = RPUser()
+        currentUser.username = LCString(localPlayer.playerID!)
+        currentUser.password = LCString(localPlayer.playerID!)
+        currentUser.nickName = LCString(localPlayer.alias!)
+        currentUser.signUp { (signUpResult) in
+            switch signUpResult {
+            case .success :
+                print(localPlayer.alias! + "注册成功")
+                break
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }

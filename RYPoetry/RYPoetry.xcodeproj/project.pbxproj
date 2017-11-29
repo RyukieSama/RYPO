@@ -23,6 +23,7 @@
 		4A1297991F97032300A021BA /* RPPoetryBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1297981F97032300A021BA /* RPPoetryBaseModel.swift */; };
 		4A12979B1F9703E900A021BA /* RPDetailSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12979A1F9703E900A021BA /* RPDetailSettingController.swift */; };
 		4A12979F1F97449600A021BA /* RPPoetryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12979E1F97449600A021BA /* RPPoetryHelper.swift */; };
+		4A1A93031FCE8AFD00C7D0D5 /* RPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A93021FCE8AFC00C7D0D5 /* RPUser.swift */; };
 		4A1A9EF11F9F29F2002A67C3 /* NSNumber+ChineseNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A9EF01F9F29F2002A67C3 /* NSNumber+ChineseNumber.swift */; };
 		4A1A9EF41F9F382D002A67C3 /* RYRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A9EF31F9F382D002A67C3 /* RYRefresh.swift */; };
 		4A50F4AB1F975DFF00B1B1FF /* quantangshi.db in Resources */ = {isa = PBXBuildFile; fileRef = 4A50F4A91F975B5D00B1B1FF /* quantangshi.db */; };
@@ -91,6 +92,7 @@
 		4A1297981F97032300A021BA /* RPPoetryBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPPoetryBaseModel.swift; sourceTree = "<group>"; };
 		4A12979A1F9703E900A021BA /* RPDetailSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPDetailSettingController.swift; sourceTree = "<group>"; };
 		4A12979E1F97449600A021BA /* RPPoetryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPPoetryHelper.swift; sourceTree = "<group>"; };
+		4A1A93021FCE8AFC00C7D0D5 /* RPUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPUser.swift; sourceTree = "<group>"; };
 		4A1A9EF01F9F29F2002A67C3 /* NSNumber+ChineseNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNumber+ChineseNumber.swift"; sourceTree = "<group>"; };
 		4A1A9EF31F9F382D002A67C3 /* RYRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RYRefresh.swift; sourceTree = "<group>"; };
 		4A50F4A91F975B5D00B1B1FF /* quantangshi.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = quantangshi.db; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				4AE95E221FCDC91200EDC914 /* RPGameCenter.swift */,
+				4A1A93021FCE8AFC00C7D0D5 /* RPUser.swift */,
 			);
 			path = GameCenter;
 			sourceTree = "<group>";
@@ -680,6 +683,7 @@
 				4A12978F1F95B18700A021BA /* RPBaseController.swift in Sources */,
 				4A50F4B11F983C2A00B1B1FF /* RVolumeMainController.swift in Sources */,
 				4A12977E1F95962100A021BA /* RPPoetryDetailController.swift in Sources */,
+				4A1A93031FCE8AFD00C7D0D5 /* RPUser.swift in Sources */,
 				4A50F4B41F983C6700B1B1FF /* RPAuthorMainController.swift in Sources */,
 				4ADDBD491FCCFBD100FF0EC7 /* RPLogInViewController.swift in Sources */,
 				4A50F4C11F98977000B1B1FF /* RPBaseTableViewCell.swift in Sources */,
