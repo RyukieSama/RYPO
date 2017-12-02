@@ -29,7 +29,7 @@ class RPMainCellModel: NSObject {
         case .travel:
             return ""
         case .mine:
-            return Segue_ToLogIn
+            return Segue_UserCenter
         default:
             return ""
         }

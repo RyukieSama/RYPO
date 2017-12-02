@@ -24,6 +24,8 @@
 		4A12979B1F9703E900A021BA /* RPDetailSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12979A1F9703E900A021BA /* RPDetailSettingController.swift */; };
 		4A12979F1F97449600A021BA /* RPPoetryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12979E1F97449600A021BA /* RPPoetryHelper.swift */; };
 		4A1A93031FCE8AFD00C7D0D5 /* RPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A93021FCE8AFC00C7D0D5 /* RPUser.swift */; };
+		4A1A93051FCEBC4300C7D0D5 /* UserCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A1A93041FCEBC4300C7D0D5 /* UserCenter.storyboard */; };
+		4A1A93071FCEBCB800C7D0D5 /* RPUserCenterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A93061FCEBCB800C7D0D5 /* RPUserCenterController.swift */; };
 		4A1A9EF11F9F29F2002A67C3 /* NSNumber+ChineseNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A9EF01F9F29F2002A67C3 /* NSNumber+ChineseNumber.swift */; };
 		4A1A9EF41F9F382D002A67C3 /* RYRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A9EF31F9F382D002A67C3 /* RYRefresh.swift */; };
 		4A50F4AB1F975DFF00B1B1FF /* quantangshi.db in Resources */ = {isa = PBXBuildFile; fileRef = 4A50F4A91F975B5D00B1B1FF /* quantangshi.db */; };
@@ -46,10 +48,6 @@
 		4AB296B31F7D485900004273 /* FZZJ-HFXSJW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4AFF4D8E1F7D378700E2EC01 /* FZZJ-HFXSJW.TTF */; };
 		4AB48E2F1FCC125100C2B200 /* RPDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB48E2E1FCC125100C2B200 /* RPDataCenter.swift */; };
 		4AB7A8411F94AAA2006BE50C /* RPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB7A8401F94AAA2006BE50C /* RPConstants.swift */; };
-		4ADDBD451FCCF4D900FF0EC7 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ADDBD441FCCF4D900FF0EC7 /* LogIn.storyboard */; };
-		4ADDBD491FCCFBD100FF0EC7 /* RPLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADDBD481FCCFBD100FF0EC7 /* RPLogInViewController.swift */; };
-		4ADDBD4B1FCCFBE800FF0EC7 /* RPSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADDBD4A1FCCFBE800FF0EC7 /* RPSignUpViewController.swift */; };
-		4ADDBD4D1FCCFE6B00FF0EC7 /* RPForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADDBD4C1FCCFE6B00FF0EC7 /* RPForgotViewController.swift */; };
 		4ADDBD4F1FCD046B00FF0EC7 /* PoetryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ADDBD4E1FCD046A00FF0EC7 /* PoetryList.storyboard */; };
 		4ADDBD511FCD04C500FF0EC7 /* VolumeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ADDBD501FCD04C500FF0EC7 /* VolumeList.storyboard */; };
 		4AE95E231FCDC91200EDC914 /* RPGameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE95E221FCDC91200EDC914 /* RPGameCenter.swift */; };
@@ -93,6 +91,8 @@
 		4A12979A1F9703E900A021BA /* RPDetailSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPDetailSettingController.swift; sourceTree = "<group>"; };
 		4A12979E1F97449600A021BA /* RPPoetryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPPoetryHelper.swift; sourceTree = "<group>"; };
 		4A1A93021FCE8AFC00C7D0D5 /* RPUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPUser.swift; sourceTree = "<group>"; };
+		4A1A93041FCEBC4300C7D0D5 /* UserCenter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserCenter.storyboard; sourceTree = "<group>"; };
+		4A1A93061FCEBCB800C7D0D5 /* RPUserCenterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPUserCenterController.swift; sourceTree = "<group>"; };
 		4A1A9EF01F9F29F2002A67C3 /* NSNumber+ChineseNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNumber+ChineseNumber.swift"; sourceTree = "<group>"; };
 		4A1A9EF31F9F382D002A67C3 /* RYRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RYRefresh.swift; sourceTree = "<group>"; };
 		4A50F4A91F975B5D00B1B1FF /* quantangshi.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = quantangshi.db; sourceTree = "<group>"; };
@@ -120,10 +120,6 @@
 		4A7854B51F99F34B00BA8E86 /* RPPoetryInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RPPoetryInfoCell.xib; sourceTree = "<group>"; };
 		4AB48E2E1FCC125100C2B200 /* RPDataCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPDataCenter.swift; sourceTree = "<group>"; };
 		4AB7A8401F94AAA2006BE50C /* RPConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPConstants.swift; sourceTree = "<group>"; };
-		4ADDBD441FCCF4D900FF0EC7 /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
-		4ADDBD481FCCFBD100FF0EC7 /* RPLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPLogInViewController.swift; sourceTree = "<group>"; };
-		4ADDBD4A1FCCFBE800FF0EC7 /* RPSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSignUpViewController.swift; sourceTree = "<group>"; };
-		4ADDBD4C1FCCFE6B00FF0EC7 /* RPForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPForgotViewController.swift; sourceTree = "<group>"; };
 		4ADDBD4E1FCD046A00FF0EC7 /* PoetryList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PoetryList.storyboard; sourceTree = "<group>"; };
 		4ADDBD501FCD04C500FF0EC7 /* VolumeList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VolumeList.storyboard; sourceTree = "<group>"; };
 		4AE95E221FCDC91200EDC914 /* RPGameCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPGameCenter.swift; sourceTree = "<group>"; };
@@ -342,14 +338,14 @@
 			path = RPDataCenter;
 			sourceTree = "<group>";
 		};
-		4ADDBD401FCCF44000FF0EC7 /* LogIn */ = {
+		4ADDBD401FCCF44000FF0EC7 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
 				4ADDBD431FCCF47F00FF0EC7 /* Controller */,
 				4ADDBD421FCCF47700FF0EC7 /* Model */,
 				4ADDBD411FCCF47100FF0EC7 /* View */,
 			);
-			path = LogIn;
+			path = Mine;
 			sourceTree = "<group>";
 		};
 		4ADDBD411FCCF47100FF0EC7 /* View */ = {
@@ -369,10 +365,8 @@
 		4ADDBD431FCCF47F00FF0EC7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4ADDBD481FCCFBD100FF0EC7 /* RPLogInViewController.swift */,
-				4ADDBD4A1FCCFBE800FF0EC7 /* RPSignUpViewController.swift */,
-				4ADDBD4C1FCCFE6B00FF0EC7 /* RPForgotViewController.swift */,
-				4ADDBD441FCCF4D900FF0EC7 /* LogIn.storyboard */,
+				4A1A93061FCEBCB800C7D0D5 /* RPUserCenterController.swift */,
+				4A1A93041FCEBC4300C7D0D5 /* UserCenter.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -408,7 +402,7 @@
 		4AFF4D811F7D099900E2EC01 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4ADDBD401FCCF44000FF0EC7 /* LogIn */,
+				4ADDBD401FCCF44000FF0EC7 /* Mine */,
 				4A50F4B81F983D0900B1B1FF /* Poetry */,
 				4AFF4D841F7D09F900E2EC01 /* Main */,
 				4AFF4D831F7D09EE00E2EC01 /* Welcome */,
@@ -419,8 +413,8 @@
 		4AFF4D821F7D09AF00E2EC01 /* Units */ = {
 			isa = PBXGroup;
 			children = (
-				4AE95E211FCDC8F000EDC914 /* GameCenter */,
 				4AB7A8401F94AAA2006BE50C /* RPConstants.swift */,
+				4AE95E211FCDC8F000EDC914 /* GameCenter */,
 				4AB48E2D1FCC120A00C2B200 /* RPDataCenter */,
 				4A1A9EF21F9F37DE002A67C3 /* RYRefresh */,
 				4A1A9EEF1F9F2925002A67C3 /* Fundation */,
@@ -597,9 +591,9 @@
 				4A50F4C61F989C6300B1B1FF /* RPVolumeCell.xib in Resources */,
 				4ADDBD4F1FCD046B00FF0EC7 /* PoetryList.storyboard in Resources */,
 				4AB296B31F7D485900004273 /* FZZJ-HFXSJW.TTF in Resources */,
-				4ADDBD451FCCF4D900FF0EC7 /* LogIn.storyboard in Resources */,
 				4A5F032E1F7CFE8700199F0D /* Assets.xcassets in Resources */,
 				4A1297821F959E5A00A021BA /* RPMain.storyboard in Resources */,
+				4A1A93051FCEBC4300C7D0D5 /* UserCenter.storyboard in Resources */,
 				4A12978D1F95A83300A021BA /* RPPoetryDetailCell.xib in Resources */,
 				4A0B452A1F999FAB00836BE3 /* RPPoetryReadCell.xib in Resources */,
 				4A6B597D1F98ABDC000DF7CB /* RPPoetryListCell.xib in Resources */,
@@ -685,13 +679,11 @@
 				4A12977E1F95962100A021BA /* RPPoetryDetailController.swift in Sources */,
 				4A1A93031FCE8AFD00C7D0D5 /* RPUser.swift in Sources */,
 				4A50F4B41F983C6700B1B1FF /* RPAuthorMainController.swift in Sources */,
-				4ADDBD491FCCFBD100FF0EC7 /* RPLogInViewController.swift in Sources */,
 				4A50F4C11F98977000B1B1FF /* RPBaseTableViewCell.swift in Sources */,
 				4A50F4BF1F98405400B1B1FF /* RPBaseCollectionCell.swift in Sources */,
 				4A12978B1F95A34800A021BA /* RPMainCell.swift in Sources */,
+				4A1A93071FCEBCB800C7D0D5 /* RPUserCenterController.swift in Sources */,
 				4A6B597C1F98ABDC000DF7CB /* RPPoetryListCell.swift in Sources */,
-				4ADDBD4D1FCCFE6B00FF0EC7 /* RPForgotViewController.swift in Sources */,
-				4ADDBD4B1FCCFBE800FF0EC7 /* RPSignUpViewController.swift in Sources */,
 				4A0B45291F999FAB00836BE3 /* RPPoetryReadCell.swift in Sources */,
 				4A1297861F959F2200A021BA /* RPMainController.swift in Sources */,
 				4A12979F1F97449600A021BA /* RPPoetryHelper.swift in Sources */,

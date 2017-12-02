@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V6U-2q-EHN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="OgI-yD-s0f">
+            <objects>
+                <navigationController id="V6U-2q-EHN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZIc-yK-E7I">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jOC-zJ-RWI" kind="relationship" relationship="rootViewController" id="djq-kO-N0o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T9Z-q9-MJz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-698" y="154"/>
+        </scene>
+        <!--User Center Controller-->
+        <scene sceneID="aog-Ok-uDF">
+            <objects>
+                <viewController id="jOC-zJ-RWI" customClass="RPUserCenterController" customModule="RYPoetry" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hpu-9U-mfT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quj-Gi-90b">
+                                <rect key="frame" x="12" y="76" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="hFt-el-Tkj"/>
+                                    <constraint firstAttribute="height" constant="60" id="iDA-Yv-6lR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NickName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbM-kt-eiW">
+                                <rect key="frame" x="12" y="144" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Quj-Gi-90b" firstAttribute="top" secondItem="5Oi-IG-z1c" secondAttribute="top" constant="12" id="38b-nI-mLS"/>
+                            <constraint firstItem="CbM-kt-eiW" firstAttribute="leading" secondItem="Quj-Gi-90b" secondAttribute="leading" id="dB4-Jp-pv7"/>
+                            <constraint firstItem="CbM-kt-eiW" firstAttribute="top" secondItem="Quj-Gi-90b" secondAttribute="bottom" constant="8" id="hZw-kU-66B"/>
+                            <constraint firstItem="Quj-Gi-90b" firstAttribute="leading" secondItem="5Oi-IG-z1c" secondAttribute="leading" constant="12" id="xXe-Di-PHR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Oi-IG-z1c"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DMy-H9-o3J"/>
+                    <connections>
+                        <outlet property="btUser" destination="Quj-Gi-90b" id="XC1-2u-VFV"/>
+                        <outlet property="lbNickName" destination="CbM-kt-eiW" id="FlB-le-23G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9wK-0X-wxa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86" y="153"/>
+        </scene>
+    </scenes>
+</document>

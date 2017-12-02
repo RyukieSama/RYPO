@@ -116,7 +116,7 @@
                         <segue destination="EcO-Ns-uWs" kind="show" identifier="segueToDetail" id="4Lz-jS-dI6"/>
                         <segue destination="8oB-gx-iHh" kind="show" identifier="segueToVolumeMain" id="QkQ-kO-ec9"/>
                         <segue destination="YCE-0P-I8a" kind="show" identifier="segueToAllList" id="s4s-2f-9or"/>
-                        <segue destination="yHf-pD-TC1" kind="presentation" identifier="segueToLogIn" id="gMn-WX-p8J"/>
+                        <segue destination="4QK-hj-hhf" kind="presentation" identifier="segueToUserCenter" id="0ia-Fq-Z6A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AF3-Qs-93e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -226,13 +226,13 @@
             </objects>
             <point key="canvasLocation" x="607" y="211"/>
         </scene>
-        <!--LogIn-->
-        <scene sceneID="ZFx-Ga-sLE">
+        <!--UserCenter-->
+        <scene sceneID="5TI-Lq-eAd">
             <objects>
-                <viewControllerPlaceholder storyboardName="LogIn" id="yHf-pD-TC1" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2XX-de-36y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="UserCenter" id="4QK-hj-hhf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hBZ-p6-hgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584" y="-16"/>
+            <point key="canvasLocation" x="611" y="15"/>
         </scene>
         <!--VolumeList-->
         <scene sceneID="gvP-J4-voS">

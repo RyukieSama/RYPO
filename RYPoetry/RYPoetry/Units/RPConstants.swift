@@ -15,7 +15,7 @@ let RP_WINDOW_ROOT_VC = UIApplication.shared.keyWindow?.rootViewController
 // MARK: - Segue
 let Segue_VolumeMainID = "segueToVolumeMain"
 let Segue_AllListID = "segueToAllList"
-let Segue_ToLogIn = "segueToLogIn"
+let Segue_UserCenter = "segueToUserCenter"
 
 struct RPConstants {
 
