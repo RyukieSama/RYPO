@@ -10,7 +10,6 @@ import UIKit
 import GameKit
 
 class RPUserCenterController: RPBaseController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -52,6 +51,16 @@ class RPUserCenterController: RPBaseController {
         }
     }
 
+    // MARK: - ACTION
+    @IBAction func gameCenterClick(_ sender: Any) {
+        let vc = GKGameCenterViewController()
+        vc.gameCenterDelegate = self
+        present(vc, animated: true) {
+            
+        }
+    }
+    
+    
     // MARK: -  UI
     @IBOutlet weak var btUser: UIButton!
     @IBOutlet weak var lbNickName: UILabel!
@@ -60,4 +69,12 @@ class RPUserCenterController: RPBaseController {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
+}
+
+extension RPUserCenterController : GKGameCenterControllerDelegate {
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true) {
+            
+        }
+    }
 }
