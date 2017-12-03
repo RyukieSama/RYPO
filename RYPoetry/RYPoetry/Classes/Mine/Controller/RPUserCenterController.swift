@@ -8,6 +8,9 @@
 
 import UIKit
 import GameKit
+import Photos
+import LeanCloud
+import AVOSCloud
 
 class RPUserCenterController: RPBaseController {
     override func viewDidLoad() {
@@ -60,21 +63,78 @@ class RPUserCenterController: RPBaseController {
         }
     }
     
+    // MARK: - FUNCTION
+    private func showImagePicker() {
+        present(imagePicker, animated: true) {
+            
+        }
+    }
+    
+    private func updateUserAvatar(image : UIImage) {
+        let imageData = UIImagePNGRepresentation(image)
+        let file = AVFile(data: imageData!)
+        file.saveInBackground { (flag, error) in
+            if error == nil {}
+            print(file.url as Any)
+        }
+        
+        btUser.setImage(image, for: .normal)
+    }
     
     // MARK: -  UI
     @IBOutlet weak var btUser: UIButton!
     @IBOutlet weak var lbNickName: UILabel!
+    private lazy var imagePicker : UIImagePickerController = {
+        let vc = UIImagePickerController()
+        vc.delegate = self
+        return vc
+    }()
     
     private func setupUI() {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
+    @IBAction func avatarClick(_ sender: Any) {
+        let status = PHPhotoLibrary.authorizationStatus()
+        
+        switch status {
+        case .notDetermined:
+            PHPhotoLibrary.requestAuthorization({ (status) in
+                if status == .authorized {
+                    self.showImagePicker()
+                }
+            })
+            break
+        case .restricted:
+            break
+        case .denied:
+            break
+        case .authorized:
+            showImagePicker()
+            break
+        }
+        
+    }
+    
 }
 
-extension RPUserCenterController : GKGameCenterControllerDelegate {
+extension RPUserCenterController : GKGameCenterControllerDelegate,
+    UIImagePickerControllerDelegate,
+    UINavigationControllerDelegate
+ {
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
         gameCenterViewController.dismiss(animated: true) {
             
         }
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        updateUserAvatar(image: image!)
+        
+        imagePicker.dismiss(animated: true, completion: {
+            
+        })
+    }
+    
 }

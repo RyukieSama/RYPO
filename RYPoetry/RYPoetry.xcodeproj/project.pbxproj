@@ -48,6 +48,7 @@
 		4AB296B31F7D485900004273 /* FZZJ-HFXSJW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4AFF4D8E1F7D378700E2EC01 /* FZZJ-HFXSJW.TTF */; };
 		4AB48E2F1FCC125100C2B200 /* RPDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB48E2E1FCC125100C2B200 /* RPDataCenter.swift */; };
 		4AB7A8411F94AAA2006BE50C /* RPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB7A8401F94AAA2006BE50C /* RPConstants.swift */; };
+		4ADB31D11FD454A4005CB839 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ADB31D01FD45497005CB839 /* Photos.framework */; };
 		4ADDBD4F1FCD046B00FF0EC7 /* PoetryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ADDBD4E1FCD046A00FF0EC7 /* PoetryList.storyboard */; };
 		4ADDBD511FCD04C500FF0EC7 /* VolumeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ADDBD501FCD04C500FF0EC7 /* VolumeList.storyboard */; };
 		4AE95E231FCDC91200EDC914 /* RPGameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE95E221FCDC91200EDC914 /* RPGameCenter.swift */; };
@@ -120,6 +121,7 @@
 		4A7854B51F99F34B00BA8E86 /* RPPoetryInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RPPoetryInfoCell.xib; sourceTree = "<group>"; };
 		4AB48E2E1FCC125100C2B200 /* RPDataCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPDataCenter.swift; sourceTree = "<group>"; };
 		4AB7A8401F94AAA2006BE50C /* RPConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPConstants.swift; sourceTree = "<group>"; };
+		4ADB31D01FD45497005CB839 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		4ADDBD4E1FCD046A00FF0EC7 /* PoetryList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PoetryList.storyboard; sourceTree = "<group>"; };
 		4ADDBD501FCD04C500FF0EC7 /* VolumeList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VolumeList.storyboard; sourceTree = "<group>"; };
 		4AE95E221FCDC91200EDC914 /* RPGameCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPGameCenter.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ADB31D11FD454A4005CB839 /* Photos.framework in Frameworks */,
 				0F6CAF4AC9A3062E35E1BAF0 /* Pods_RYPoetry.framework in Frameworks */,
 				4AE95E2B1FCDCF2200EDC914 /* GameKit.framework in Frameworks */,
 			);
@@ -160,6 +163,7 @@
 		0DC97F5A7E964E622733CE98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4ADB31D01FD45497005CB839 /* Photos.framework */,
 				4AE95E2A1FCDCF2200EDC914 /* GameKit.framework */,
 				0A265A432EA01821B38D762E /* Pods_RYPoetry.framework */,
 			);

@@ -11,5 +11,6 @@ pod 'Alamofire', '~> 4.5'
 pod 'Kingfisher', '~> 4.0'
 pod 'SQLite.swift', '~> 0.11.4'
 pod 'LeanCloud', '~> 11.0.0'
+pod 'AVOSCloud', '~> 8.0.3'
 
 end
