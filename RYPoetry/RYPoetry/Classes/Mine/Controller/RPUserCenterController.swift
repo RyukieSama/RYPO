@@ -74,7 +74,9 @@ class RPUserCenterController: RPBaseController {
         let imageData = UIImagePNGRepresentation(image)
         let file = AVFile(data: imageData!)
         file.saveInBackground { (flag, error) in
-            if error == nil {}
+            if error == nil {
+                print(error as Any)
+            }
             print(file.url as Any)
         }
         
