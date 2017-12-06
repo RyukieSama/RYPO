@@ -11,6 +11,7 @@ import GameKit
 import Photos
 import LeanCloud
 import AVOSCloud
+import Kingfisher
 
 class RPUserCenterController: RPBaseController {
     override func viewDidLoad() {
@@ -94,6 +95,10 @@ class RPUserCenterController: RPBaseController {
     
     private func setupUI() {
         navigationController?.setNavigationBarHidden(true, animated: true)
+        
+        let url = URL(string:"http://ac-XNiw5AEe.clouddn.com/ocZuF4Id49GUgPzjdMv5BQC")
+        btUser.kf.setImage(with: url, for: .normal)
+        
     }
     
     @IBAction func avatarClick(_ sender: Any) {

@@ -57,9 +57,11 @@ class RPGameCenter : NSObject {
         RPUser.logIn(username: localPlayer.playerID!, password: localPlayer.playerID!) { (result) in
             switch result {
             case .success(let user):
+                print("======登录成功======")
                 print(user)
                 break
             case .failure(let error):
+                print("======登录失败======")
                 print(error)
                 if error.code == LC_ERROR_NO_USER {
                     //注册

@@ -40,6 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        LeanCloud.setServiceRegion(.US)
         LeanCloud.initialize(applicationID: LeanCloud_APP_ID, applicationKey: LeanCloud_APP_KEY)
         
+        // 使用美国站点需要增加以下代码：
+//        AVOSCloud.setServiceRegion(.US)
+        
         //初始化数据引擎
         AVOSCloud.setApplicationId(LeanCloud_APP_ID, clientKey: LeanCloud_APP_KEY)
         
@@ -51,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
-    /// 这只GameCenter
+    /// 设置GameCenter
     func setupGC() {
         RPGameCenter.authenticateLocalPlayer()
     }
