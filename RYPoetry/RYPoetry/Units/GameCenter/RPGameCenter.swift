@@ -59,6 +59,11 @@ class RPGameCenter : NSObject {
             case .success(let user):
                 print("======登录成功======")
                 print(user)
+                
+                //保存本地  用户信息
+//                UserDefaults().set(user, forKey: "UserData")
+                
+                
                 break
             case .failure(let error):
                 print("======登录失败======")

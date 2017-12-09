@@ -39,7 +39,7 @@ class RPUserCenterController: RPBaseController {
     }
     
     private func loadUserData() {
-        lbNickName.text = RPLocalPlayer.alias;
+        lbNickName.text = RPUser.rpCurrentUser().nickName?.stringValue;
         btUser.setTitle("", for: .normal)
         btUser.backgroundColor = UIColor.gray
         
@@ -92,6 +92,8 @@ class RPUserCenterController: RPBaseController {
         vc.delegate = self
         return vc
     }()
+    @IBOutlet weak var tfNickName: UITextField!
+    @IBOutlet weak var btNickNameCommit: UIButton!
     
     private func setupUI() {
         navigationController?.setNavigationBarHidden(true, animated: true)
@@ -122,6 +124,28 @@ class RPUserCenterController: RPBaseController {
         }
         
     }
+    
+    @IBAction func nickNameCommit(_ sender: Any) {
+        let text = tfNickName.text
+        
+        guard text?.count != 0 else {
+            return
+        }
+        
+        let currentUser = RPUser.rpCurrentUser()
+        currentUser.nickName = LCString(text!)
+        
+        currentUser.save { result in
+            switch result {
+            case .success:
+                self.lbNickName.text = text
+                break
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
     
 }
 
