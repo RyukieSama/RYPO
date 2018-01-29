@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct RPPoetryBaseModel {
+class RPPoetryBaseModel {
     var id : Int64?
     var title : String?
     var author : String?
@@ -18,7 +18,8 @@ struct RPPoetryBaseModel {
     var sequence : Int64?
     
     // 在 class 中实现带有mutating方法的接口时，不用mutating进行修饰。因为对于class来说，类的成员变量和方法都是透明的，所以不必使用 mutating 来进行修饰
-    mutating func getLines() -> [String]? {
+    //http://swifter.tips/protocol-mutation/
+    func getLines() -> [String]? {
         guard lines == nil else {
             return lines
         }
@@ -44,7 +45,7 @@ struct RPPoetryBaseModel {
     }
 }
 
-struct RPPoetryVolumeModel {
+class RPPoetryVolumeModel {
     var volume : Int64?
     var comment : String?
     var count : Int64?

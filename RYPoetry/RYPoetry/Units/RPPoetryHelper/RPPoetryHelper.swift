@@ -9,7 +9,7 @@
 import UIKit
 import SQLite
 
-struct RPPoetryHelper {
+class RPPoetryHelper {
     typealias RPPoetryHelperClosures = ([Any]) -> ()
     //singleton
     static let sharedHelper = RPPoetryHelper()
@@ -35,7 +35,7 @@ struct RPPoetryHelper {
     private let tPoetryAuthor = Expression<String>("author") //作者
     private let tPoetryText = Expression<String>("text") //内容
     
-    private mutating func loadDataBase() {
+    private func loadDataBase() {
         guard let path = Bundle.main.path(forResource: "quantangshi.db", ofType: nil) else {
             //要在buidPhases 中添加文件  要不然会找不到
             return
