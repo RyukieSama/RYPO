@@ -12,13 +12,15 @@ import UIKit
 let RP_SCREEN_BOUNDS : CGRect = UIScreen.main.bounds
 let RP_WINDOW_ROOT_VC = UIApplication.shared.keyWindow?.rootViewController
 
-// MARK: - Segue
-let Segue_VolumeMainID = "segueToVolumeMain"
-let Segue_AllListID = "segueToAllList"
-let Segue_UserCenter = "segueToUserCenter"
-
-struct RPConstants {
-
+public struct RPConfig {
+    // MARK: - segue
+    public struct RPSegue {
+        public let volumeMain = "segueToVolumeMain"
+        public let allList = "segueToAllList"
+        public let userCenter = "segueToUserCenter"
+    }
+    public static let segue = RPSegue()
+    
 }
 
 // MARK: - LeanCloud

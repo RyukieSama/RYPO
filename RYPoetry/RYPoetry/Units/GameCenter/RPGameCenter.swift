@@ -13,7 +13,7 @@ import LeanCloud
 let RPLocalPlayer = GKLocalPlayer.localPlayer()
 
 class RPGameCenter : NSObject {
-    class func authenticateLocalPlayer() {
+    static func authenticateLocalPlayer() {
         RPLocalPlayer.authenticateHandler = {(controller , error) in
             if controller != nil {
                 //自动弹出 GameCenter登录 完成后会自动执行登录

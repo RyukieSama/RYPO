@@ -20,7 +20,7 @@ class RPUser: LCUser {
         }
     }
     
-    class func rpCurrentUser() -> RPUser {
+    static func rpCurrentUser() -> RPUser {
         return RPUser.current! as! RPUser
     }
     

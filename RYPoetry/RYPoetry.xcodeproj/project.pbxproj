@@ -129,6 +129,7 @@
 		4AE95E221FCDC91200EDC914 /* RPGameCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPGameCenter.swift; sourceTree = "<group>"; };
 		4AE95E2A1FCDCF2200EDC914 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		4AE95E2C1FCDCFA900EDC914 /* RYPoetry.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RYPoetry.entitlements; sourceTree = "<group>"; };
+		4AECA4DF20200417003427D3 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = ../../MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4AFF4D8B1F7D361C00E2EC01 /* RYFontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RYFontHelper.swift; sourceTree = "<group>"; };
 		4AFF4D8E1F7D378700E2EC01 /* FZZJ-HFXSJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FZZJ-HFXSJW.TTF"; sourceTree = "<group>"; };
 		641393E7860C1FF27F6C0010 /* Pods-RYPoetry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RYPoetry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RYPoetry/Pods-RYPoetry.debug.xcconfig"; sourceTree = "<group>"; };
@@ -292,6 +293,7 @@
 			children = (
 				4AE95E2C1FCDCFA900EDC914 /* RYPoetry.entitlements */,
 				4A5F03321F7CFE8700199F0D /* Info.plist */,
+				4AECA4DF20200417003427D3 /* MyPlayground.playground */,
 				4AFF4D821F7D09AF00E2EC01 /* Units */,
 				4AFF4D811F7D099900E2EC01 /* Classes */,
 				4AFF4D801F7D07D800E2EC01 /* Resource */,

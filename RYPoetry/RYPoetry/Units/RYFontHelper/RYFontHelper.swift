@@ -9,7 +9,7 @@
 import UIKit
 
 class RYFontHelper: NSObject {
-    class func getFontstyle(ttfName : String, fontSize : CGFloat) -> UIFont {
+    static func getFontstyle(ttfName : String, fontSize : CGFloat) -> UIFont {
 //        let familyNames = UIFont.familyNames
 //        for familyName in familyNames {
 //            print("++++++ " + familyName + " ++++++")
@@ -24,15 +24,15 @@ class RYFontHelper: NSObject {
     }
     
     // MARK: - 一些常用字体
-    class func titleFont () -> UIFont {
+    static func titleFont () -> UIFont {
         return RYFontHelper.getFontstyle(ttfName: "FZZJ-HFXSJW", fontSize: 30)
     }
     
-    class func subtitleFont () -> UIFont {
+    static func subtitleFont () -> UIFont {
         return RYFontHelper.getFontstyle(ttfName: "FZZJ-HFXSJW", fontSize: 20)
     }
     
-    class func contentFont () -> UIFont {
+    static func contentFont () -> UIFont {
         return RYFontHelper.getFontstyle(ttfName: "FZZJ-HFXSJW", fontSize: 24)
     }
     

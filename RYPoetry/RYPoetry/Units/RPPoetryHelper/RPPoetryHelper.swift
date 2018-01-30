@@ -61,17 +61,15 @@ class RPPoetryHelper {
             
             do {
                 for poem in try self.db.prepare(self.tMenu) {
-                    var volume = RPPoetryVolumeModel()
+                    let volume = RPPoetryVolumeModel()
                     volume.volume = poem[self.tMenuVolume]
                     volume.comment = poem[self.tMenuComment]
                     volume.count = poem[self.tMenuCount]
                     volumeArr.append(volume)
                 }
-//                if callBack != nil {
                 DispatchQueue.main.async {
                     callBack(volumeArr)
                 }
-//                }
             } catch {
                 print(error)
             }
@@ -90,7 +88,7 @@ class RPPoetryHelper {
             
             do {
                 for poem in try self.db.prepare(self.tPoetry) {
-                    var poetry = RPPoetryBaseModel()
+                    let poetry = RPPoetryBaseModel()
                     poetry.id = poem[self.tPoetryId]
                     poetry.volume = poem[self.tPoetryVolume]
                     poetry.sequence = poem[self.tPoetrySequence]
@@ -121,7 +119,7 @@ class RPPoetryHelper {
             do {
                 
                 for poem in try self.db.prepare(self.tPoetry.filter(self.tPoetryVolume == inVolume)) {
-                    var poetry = RPPoetryBaseModel()
+                    let poetry = RPPoetryBaseModel()
                     poetry.id = poem[self.tPoetryId]
                     poetry.volume = poem[self.tPoetryVolume]
                     poetry.sequence = poem[self.tPoetrySequence]
@@ -152,7 +150,7 @@ class RPPoetryHelper {
             do {
                 
                 for poem in try self.db.prepare(self.tPoetry.filter(self.tPoetryAuthor == ofAuthor)) {
-                    var poetry = RPPoetryBaseModel()
+                    let poetry = RPPoetryBaseModel()
                     poetry.id = poem[self.tPoetryId]
                     poetry.volume = poem[self.tPoetryVolume]
                     poetry.sequence = poem[self.tPoetrySequence]
@@ -169,5 +167,9 @@ class RPPoetryHelper {
             }
         }
     }
+    
+    //获取残诗
+    
+    
     
 }

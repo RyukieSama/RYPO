@@ -31,8 +31,8 @@ class RPMainCell: RPBaseCollectionCell {
             cellModel.title = "鉴赏"
             btOne.setTitle("卷", for: UIControlState.normal)
             btTwo.setTitle("全", for: UIControlState.normal)
-            segueOneID = Segue_VolumeMainID
-            segueTwoID = Segue_AllListID
+            segueOneID = RPConfig.segue.volumeMain
+            segueTwoID = RPConfig.segue.allList
             
             break
         case .fight:
