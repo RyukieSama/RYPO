@@ -172,4 +172,36 @@ class RPPoetryHelper {
     
     
     
+    //处理诗数据
+    static func judgePoetry(poetry: RPPoetryBaseModel) -> RPPoetryBaseModel {
+        //行类型
+        poetry.lineType = judgePoetryLinesType(poetry: poetry)
+        //内容类型
+        poetry.contentType = judgePoetryContentType(poetry: poetry)
+        
+        return poetry
+    }
+    
+    /// 获取诗的内容类型
+    ///
+    /// - Parameter poetry:
+    /// - Returns:
+    static private func judgePoetryContentType(poetry: RPPoetryBaseModel) -> RPPoetryContentType {
+        //内容类型
+        
+        
+        return .normal
+    }
+    
+    /// 获取诗的格式类型
+    ///
+    /// - Parameter poetry:
+    /// - Returns:
+    static private func judgePoetryLinesType(poetry: RPPoetryBaseModel) -> RPPoetryLineType {
+        //内容类型
+        
+        
+        return .quatrain
+    }
+    
 }

@@ -8,22 +8,55 @@
 
 import UIKit
 
+//索引一张表
+//诗一张表
+//诗的属性一张表
+
+/// 诗的内容类型
+///
+/// - normal: 正常
+/// - fragmentary: 残缺
+/// - symbols: 有特殊符号的
+enum RPPoetryContentType {
+    case normal
+    case fragmentary
+    case symbols
+}
+
+/// 诗的类型
+///
+/// - quatrain: 绝句
+/// - pentasyllabic: 五言律诗
+/// - heptasyllabic: 七言律诗
+/// - long: 排律
+/// - folk: 乐府诗
+/// - other: 其他
+enum RPPoetryLineType {
+    case quatrain
+    case pentasyllabic
+    case heptasyllabic
+    case long
+    case folk
+    case other
+}
+
 class RPPoetryBaseModel {
+    /// 数据ID
     var id : Int64?
+    /// 标题
     var title : String?
+    /// 作者
     var author : String?
+    /// 全文本
     var text : String?
-    var lines : [String]?
+    /// 卷号
     var volume : Int64?
+    /// 所在卷中的序号
     var sequence : Int64?
-    
-    // 在 class 中实现带有mutating方法的接口时，不用mutating进行修饰。因为对于class来说，类的成员变量和方法都是透明的，所以不必使用 mutating 来进行修饰
-    //http://swifter.tips/protocol-mutation/
-    func getLines() -> [String]? {
-        guard lines == nil else {
-            return lines
-        }
-        
+    var contentType : RPPoetryContentType?
+    var lineType : RPPoetryLineType?
+    /// 诗句数组
+    lazy var lines : [String] = {
         var arr = [String]()
         let collectionOne = text?.split(separator: "。")
         for strOne in collectionOne! {
@@ -40,9 +73,12 @@ class RPPoetryBaseModel {
                 arr.append(String.init(strTemp))
             }
         }
-        lines = arr
-        return lines
-    }
+        return arr
+    }()
+    /// 行数
+    lazy var lineCount : Int64 = Int64({
+        return lines.count
+        }())
 }
 
 class RPPoetryVolumeModel {

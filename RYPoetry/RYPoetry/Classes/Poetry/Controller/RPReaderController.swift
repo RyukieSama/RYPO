@@ -29,7 +29,7 @@ class RPReaderController: RPBaseController {
     var poetry : RPPoetryBaseModel? {
         didSet {
             title = poetry?.title
-            poetryLines = poetry?.getLines()
+            poetryLines = poetry?.lines
         }
     }
 }
