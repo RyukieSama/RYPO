@@ -8,6 +8,7 @@
 
 import UIKit
 import SQLite
+import LeanCloud
 
 class RPPoetryHelper {
     typealias RPPoetryHelperClosures = ([Any]) -> ()
@@ -23,14 +24,14 @@ class RPPoetryHelper {
     // MARK: - Menu
     private let tMenu = Table("menu") //目录表
 //    private let tMenuId = Expression<Int64>("id")      //主键
-    private let tMenuVolume = Expression<Int64>("volume")  //卷数
+    private let tMenuVolume = Expression<Int>("volume")  //卷数
     private let tMenuComment = Expression<String>("comment") //诗人
-    private let tMenuCount = Expression<Int64>("count") //数量
+    private let tMenuCount = Expression<Int>("count") //数量
     // MARK: - Poetry
     private let tPoetry = Table("poem") //目录表
-    private let tPoetryId = Expression<Int64>("id")      //主键
-    private let tPoetryVolume = Expression<Int64>("volume")  //卷数
-    private let tPoetrySequence = Expression<Int64>("sequence") //所在卷中的序号
+    private let tPoetryId = Expression<Int>("id")      //主键
+    private let tPoetryVolume = Expression<Int>("volume")  //卷数
+    private let tPoetrySequence = Expression<Int>("sequence") //所在卷中的序号
     private let tPoetryTitle = Expression<String>("title") //标题
     private let tPoetryAuthor = Expression<String>("author") //作者
     private let tPoetryText = Expression<String>("text") //内容
@@ -62,9 +63,9 @@ class RPPoetryHelper {
             do {
                 for poem in try self.db.prepare(self.tMenu) {
                     let volume = RPPoetryVolumeModel()
-                    volume.volume = poem[self.tMenuVolume]
-                    volume.comment = poem[self.tMenuComment]
-                    volume.count = poem[self.tMenuCount]
+                    volume.volume = LCNumber(integerLiteral: poem[self.tMenuVolume])
+                    volume.comment = LCString(poem[self.tMenuComment])
+                    volume.count = LCNumber(integerLiteral: poem[self.tMenuCount])
                     volumeArr.append(volume)
                 }
                 DispatchQueue.main.async {
@@ -88,14 +89,7 @@ class RPPoetryHelper {
             
             do {
                 for poem in try self.db.prepare(self.tPoetry) {
-                    let poetry = RPPoetryBaseModel()
-                    poetry.id = poem[self.tPoetryId]
-                    poetry.volume = poem[self.tPoetryVolume]
-                    poetry.sequence = poem[self.tPoetrySequence]
-                    poetry.title = poem[self.tPoetryTitle]
-                    poetry.text = poem[self.tPoetryText]
-                    poetry.author = poem[self.tPoetryAuthor]
-                    poetryArr.append(poetry)
+                    poetryArr.append(self.poetryFromPoem(poem: poem))
                 }
                 DispatchQueue.main.async {
                     callBack(poetryArr)
@@ -107,7 +101,7 @@ class RPPoetryHelper {
     }
 
     //按卷号获取诗
-    func loadPoetries(inVolume : Int64 ,callBack : @escaping RPPoetryHelperClosures) {
+    func loadPoetries(inVolume : Int ,callBack : @escaping RPPoetryHelperClosures) {
         guard db != nil else {
             print("数据库不存在")
             return
@@ -119,14 +113,7 @@ class RPPoetryHelper {
             do {
                 
                 for poem in try self.db.prepare(self.tPoetry.filter(self.tPoetryVolume == inVolume)) {
-                    let poetry = RPPoetryBaseModel()
-                    poetry.id = poem[self.tPoetryId]
-                    poetry.volume = poem[self.tPoetryVolume]
-                    poetry.sequence = poem[self.tPoetrySequence]
-                    poetry.title = poem[self.tPoetryTitle]
-                    poetry.text = poem[self.tPoetryText]
-                    poetry.author = poem[self.tPoetryAuthor]
-                    poetryArr.append(poetry)
+                    poetryArr.append(self.poetryFromPoem(poem: poem))
                 }
                 DispatchQueue.main.async {
                     callBack(poetryArr)
@@ -150,14 +137,7 @@ class RPPoetryHelper {
             do {
                 
                 for poem in try self.db.prepare(self.tPoetry.filter(self.tPoetryAuthor == ofAuthor)) {
-                    let poetry = RPPoetryBaseModel()
-                    poetry.id = poem[self.tPoetryId]
-                    poetry.volume = poem[self.tPoetryVolume]
-                    poetry.sequence = poem[self.tPoetrySequence]
-                    poetry.title = poem[self.tPoetryTitle]
-                    poetry.text = poem[self.tPoetryText]
-                    poetry.author = poem[self.tPoetryAuthor]
-                    poetryArr.append(poetry)
+                    poetryArr.append(self.poetryFromPoem(poem: poem))
                 }
                 DispatchQueue.main.async {
                     callBack(poetryArr)
@@ -175,10 +155,9 @@ class RPPoetryHelper {
     //处理诗数据
     static func judgePoetry(poetry: RPPoetryBaseModel) -> RPPoetryBaseModel {
         //行类型
-        poetry.lineType = judgePoetryLinesType(poetry: poetry)
+        poetry.lineType = LCString(judgePoetryLinesType(poetry: poetry).rawValue)
         //内容类型
-        poetry.contentType = judgePoetryContentType(poetry: poetry)
-        
+        poetry.contentType = LCString(judgePoetryContentType(poetry: poetry).rawValue)
         return poetry
     }
     
@@ -202,6 +181,31 @@ class RPPoetryHelper {
         
         
         return .quatrain
+    }
+    
+    /// 存储 poetrys
+    ///
+    /// - Parameter poetrys: 需要存到数据库的
+    static func savePoetrys(poetrys: [RPPoetryBaseModel]) {
+        
+    }
+    
+    /// 保存目录
+    ///
+    /// - Parameter volumes: 目录
+    static func saveVolumes(volumes: [RPPoetryVolumeModel]) {
+        
+    }
+    
+    private func poetryFromPoem(poem: Row) -> (RPPoetryBaseModel) {
+        let poetry = RPPoetryBaseModel()
+        poetry.id = LCNumber(integerLiteral: poem[self.tPoetryId])
+        poetry.volume = LCNumber(integerLiteral: poem[self.tPoetryVolume])
+        poetry.sequence = LCNumber(integerLiteral: poem[self.tPoetrySequence])
+        poetry.title = LCString(poem[self.tPoetryTitle])
+        poetry.text = LCString(poem[self.tPoetryText])
+        poetry.author = LCString(poem[self.tPoetryAuthor])
+        return poetry
     }
     
 }

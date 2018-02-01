@@ -31,7 +31,7 @@ class RPPoetryInfoCell: RPBaseTableViewCell {
     
     // MARK: - data
     func bindPoetry(poetry : RPPoetryBaseModel) {
-        lbTitle.text = poetry.title
-        lbAuthor.text = poetry.author
+        lbTitle.text = poetry.title?.stringValue
+        lbAuthor.text = poetry.author?.stringValue
     }
 }

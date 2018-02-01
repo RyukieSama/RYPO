@@ -42,7 +42,7 @@ class RVolumeMainController: RPBaseController {
     }
     
     // MARK: - data
-    private var selectedVolume : Int64 = 0
+    private var selectedVolume : Int = 0
     private var volumes = [RPPoetryVolumeModel]()
     private func loadVolumeData() {
         RPPoetryHelper.sharedHelper.loadVolumeList { (volumeArr) in
@@ -69,7 +69,7 @@ extension RVolumeMainController : UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedVolume = Int64(indexPath.row + 1)
+        selectedVolume = Int(indexPath.row + 1)
         performSegue(withIdentifier: "segueVolumeToList", sender: nil)
     }
     

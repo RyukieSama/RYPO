@@ -55,7 +55,7 @@ class RPPoetryListController: RPBaseController {
         }
         
         //按卷号加载
-        let volume = dic["volume"] as! Int64
+        let volume = dic["volume"] as! Int
         if volume > 0 {
             RPPoetryHelper.sharedHelper.loadPoetries(inVolume: volume) { (poetryArr) in
                 print(poetryArr.count)

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LeanCloud
 
 //索引一张表
 //诗一张表
@@ -17,10 +18,10 @@ import UIKit
 /// - normal: 正常
 /// - fragmentary: 残缺
 /// - symbols: 有特殊符号的
-enum RPPoetryContentType {
-    case normal
-    case fragmentary
-    case symbols
+enum RPPoetryContentType : String {
+    case normal = "normal"
+    case fragmentary = "fragmentary"
+    case symbols = "symbols"
 }
 
 /// 诗的类型
@@ -31,34 +32,39 @@ enum RPPoetryContentType {
 /// - long: 排律
 /// - folk: 乐府诗
 /// - other: 其他
-enum RPPoetryLineType {
-    case quatrain
-    case pentasyllabic
-    case heptasyllabic
-    case long
-    case folk
-    case other
+enum RPPoetryLineType : String {
+    case quatrain = "quatrain"
+    case pentasyllabic = "pentasyllabic"
+    case heptasyllabic = "heptasyllabic"
+    case long = "long"
+    case folk = "folk"
+    case other = "other"
 }
 
-class RPPoetryBaseModel {
+class RPPoetryBaseModel : LCObject {
+    // LCObject 子类化必须的操作
+    override static func objectClassName() -> String {
+        return "RPPoetryBaseModel"
+    }
     /// 数据ID
-    var id : Int64?
+    @objc dynamic var id : LCNumber?
     /// 标题
-    var title : String?
+    @objc dynamic var title : LCString?
     /// 作者
-    var author : String?
+    @objc dynamic var author : LCString?
     /// 全文本
-    var text : String?
+    @objc dynamic var text : LCString?
     /// 卷号
-    var volume : Int64?
+    @objc dynamic var volume : LCNumber?
     /// 所在卷中的序号
-    var sequence : Int64?
-    var contentType : RPPoetryContentType?
-    var lineType : RPPoetryLineType?
+    @objc dynamic var sequence : LCNumber?
+    
+    @objc dynamic var contentType : LCString?
+    @objc dynamic var lineType : LCString?
     /// 诗句数组
     lazy var lines : [String] = {
         var arr = [String]()
-        let collectionOne = text?.split(separator: "。")
+        let collectionOne = text?.stringValue?.split(separator: "。")
         for strOne in collectionOne! {
             let collectionTwo = strOne.split(separator: "，")
             for strTwo in collectionTwo {
@@ -76,13 +82,16 @@ class RPPoetryBaseModel {
         return arr
     }()
     /// 行数
-    lazy var lineCount : Int64 = Int64({
+    lazy var lineCount : Int = Int({
         return lines.count
         }())
 }
 
-class RPPoetryVolumeModel {
-    var volume : Int64?
-    var comment : String?
-    var count : Int64?
+class RPPoetryVolumeModel : LCObject {
+    override static func objectClassName() -> String {
+        return "RPPoetryVolumeModel"
+    }
+    @objc dynamic var volume : LCNumber?
+    @objc dynamic var comment : LCString?
+    @objc dynamic var count : LCNumber?
 }

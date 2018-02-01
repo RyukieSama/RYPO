@@ -28,7 +28,7 @@ class RPReaderController: RPBaseController {
     var poetryLines : [String]?
     var poetry : RPPoetryBaseModel? {
         didSet {
-            title = poetry?.title
+            title = poetry?.title?.stringValue
             poetryLines = poetry?.lines
         }
     }

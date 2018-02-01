@@ -14,11 +14,7 @@ let LC_ERROR_NO_USER = 211
 class RPUser: LCUser {
     /// 用户昵称
     //http://swifter.tips/objc-dynamic/
-    @objc dynamic var nickName : LCString? {
-        didSet {
-            set("nickName", value: nickName)
-        }
-    }
+    @objc dynamic var nickName : LCString?
     
     static func rpCurrentUser() -> RPUser {
         return RPUser.current! as! RPUser
