@@ -12,16 +12,23 @@ import UIKit
 let RP_SCREEN_BOUNDS : CGRect = UIScreen.main.bounds
 let RP_WINDOW_ROOT_VC = UIApplication.shared.keyWindow?.rootViewController
 
-public struct RPConfig {
-    // MARK: - segue
-    public struct RPSegue {
-        public let volumeMain = "segueToVolumeMain"
-        public let allList = "segueToAllList"
-        public let userCenter = "segueToUserCenter"
-    }
-    public static let segue = RPSegue()
-    
+// MARK: - segue
+enum RPSegueName : String {
+    case volumeMain = "segueToVolumeMain"
+    case allList = "segueToAllList"
+    case userCenter = "segueToUserCenter"
 }
+
+//public struct RPConfig {
+//    // MARK: - segue
+//    public struct RPSegue {
+//        public let volumeMain = "segueToVolumeMain"
+//        public let allList = "segueToAllList"
+//        public let userCenter = "segueToUserCenter"
+//    }
+//    public static let segue = RPSegue()
+    
+//}
 
 // MARK: - LeanCloud
 let LeanCloud_APP_ID = "XNiw5AEeFSP066271OfwpGqY-gzGzoHsz"
