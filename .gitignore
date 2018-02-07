@@ -17,6 +17,7 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
+*.generated.swift 
 
 ### Xcode Patch ###
 *.xcodeproj/*

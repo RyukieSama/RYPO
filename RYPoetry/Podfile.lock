@@ -6,6 +6,9 @@ PODS:
     - LeanCloud/Storage (= 11.0.0)
   - LeanCloud/Storage (11.0.0):
     - Alamofire (~> 4.5)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
   - SQLite.swift (0.11.4):
     - SQLite.swift/standard (= 0.11.4)
   - SQLite.swift/standard (0.11.4)
@@ -15,6 +18,7 @@ DEPENDENCIES:
   - AVOSCloud (~> 8.0.3)
   - Kingfisher (~> 4.0)
   - LeanCloud (~> 11.0.0)
+  - R.swift
   - SQLite.swift (~> 0.11.4)
 
 SPEC CHECKSUMS:
@@ -22,8 +26,10 @@ SPEC CHECKSUMS:
   AVOSCloud: ec8b794941e2c41e52cab9cf148a666ba141038e
   Kingfisher: 5cd55fa124d1e731f1d4b04b02832e0e0432d1a9
   LeanCloud: cb29157ba8f4e948f3476b4503903b7e6da9c260
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   SQLite.swift: 3e3bee21da701b5b9f87c4a672cb54f233505692
 
-PODFILE CHECKSUM: f5a0b06ffa00f8ea085a15f97952746c0a81fe3e
+PODFILE CHECKSUM: e4b2a5b2615c2fbe5658b77bb249ed04718eb4c9
 
 COCOAPODS: 1.2.0

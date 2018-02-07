@@ -23,13 +23,13 @@ class RPMainCellModel: NSObject {
     lazy var segueId : String = {
         switch type {
         case .read:
-            return RPSegueName.volumeMain.rawValue
+            return R.segue.rpMainController.segueToVolumeMain.identifier
         case .fight:
             return ""
         case .travel:
             return ""
         case .mine:
-            return RPSegueName.userCenter.rawValue
+            return R.segue.rpMainController.segueToUserCenter.identifier
         default:
             return ""
         }
