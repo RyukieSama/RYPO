@@ -32,6 +32,38 @@ class RPReaderController: RPBaseController {
             poetryLines = poetry?.lines
         }
     }
+    
+    // MARK: - Action
+    @IBAction func uploadClick(_ sender: Any) {
+        print("uploadClick")
+        
+        poetry?.save { result in
+            switch result {
+            case .success:
+                print("UploadSuccess!")
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    @IBAction func deleteClick(_ sender: Any) {
+        print("deleteClick")
+
+        poetry?.delete({ (result) in
+            switch result {
+            case .success:
+            print("DeleteSuccess!")
+            case .failure(let error):
+                print(error)
+            }
+        })
+    }
+    
+    @IBAction func infoClick(_ sender: Any) {
+        print(poetry as Any)
+    }
+    
 }
 
 extension RPReaderController : UITableViewDelegate,UITableViewDataSource {

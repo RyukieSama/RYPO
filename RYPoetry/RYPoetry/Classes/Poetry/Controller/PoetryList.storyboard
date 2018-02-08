@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6XV-3p-dlF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6XV-3p-dlF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -61,12 +61,38 @@
                                     <outlet property="delegate" destination="GJ8-F2-8Vw" id="eaz-zY-4D7"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CK9-Q5-8oe">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6fC-nL-ysm"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Upload" id="ySg-8Y-ijL">
+                                        <connections>
+                                            <action selector="uploadClick:" destination="GJ8-F2-8Vw" id="coe-Tm-kDW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Delete" id="w0y-DR-W7M">
+                                        <connections>
+                                            <action selector="deleteClick:" destination="GJ8-F2-8Vw" id="XJA-2k-w7D"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Info" id="84Z-Ly-IIJ">
+                                        <connections>
+                                            <action selector="infoClick:" destination="GJ8-F2-8Vw" id="J1Z-Ew-KZc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3hN-a0-tKv" firstAttribute="bottom" secondItem="I0l-nL-vYq" secondAttribute="bottom" id="3Fo-da-rU6"/>
                             <constraint firstItem="3hN-a0-tKv" firstAttribute="trailing" secondItem="I0l-nL-vYq" secondAttribute="trailing" id="Cyf-5n-h9d"/>
+                            <constraint firstItem="CK9-Q5-8oe" firstAttribute="trailing" secondItem="3hN-a0-tKv" secondAttribute="trailing" id="D0E-6X-7ZF"/>
+                            <constraint firstItem="CK9-Q5-8oe" firstAttribute="leading" secondItem="3hN-a0-tKv" secondAttribute="leading" id="Soo-oB-FDs"/>
                             <constraint firstItem="I0l-nL-vYq" firstAttribute="top" secondItem="3hN-a0-tKv" secondAttribute="top" id="iRN-dq-a5p"/>
+                            <constraint firstItem="3hN-a0-tKv" firstAttribute="bottom" secondItem="CK9-Q5-8oe" secondAttribute="bottom" id="iuT-Ed-iIZ"/>
                             <constraint firstItem="I0l-nL-vYq" firstAttribute="leading" secondItem="3hN-a0-tKv" secondAttribute="leading" id="pHk-Gh-G9l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3hN-a0-tKv"/>

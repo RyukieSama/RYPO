@@ -12,12 +12,12 @@ import UIKit
 let RP_SCREEN_BOUNDS : CGRect = UIScreen.main.bounds
 let RP_WINDOW_ROOT_VC = UIApplication.shared.keyWindow?.rootViewController
 
-// MARK: - segue
-enum RPSegueName : String {
-    case volumeMain = "segueToVolumeMain"
-    case allList = "segueToAllList"
-    case userCenter = "segueToUserCenter"
-}
+//// MARK: - segue
+//enum RPSegueName : String {
+//    case volumeMain = "segueToVolumeMain"
+//    case allList = "segueToAllList"
+//    case userCenter = "segueToUserCenter"
+//}
 
 //public struct RPConfig {
 //    // MARK: - segue
