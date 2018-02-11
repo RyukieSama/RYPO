@@ -31,6 +31,7 @@ enum RPPoetryContentType : String {
 /// - heptasyllabic: 七言律诗
 /// - long: 排律
 /// - folk: 乐府诗
+/// - songCi: 宋词
 /// - other: 其他
 enum RPPoetryLineType : String {
     case quatrain = "quatrain"
@@ -38,13 +39,23 @@ enum RPPoetryLineType : String {
     case heptasyllabic = "heptasyllabic"
     case long = "long"
     case folk = "folk"
+    case songCi = "songCi"
     case other = "other"
+}
+
+/// 时间类型
+///
+/// - tang: 唐代
+/// - song: 宋代
+enum RPPoetryTimeType : String {
+    case tang = "tang"
+    case song = "song"
 }
 
 class RPPoetryBaseModel : LCObject {
     // LCObject 子类化必须的操作
     override static func objectClassName() -> String {
-        return "RPPoetryBaseModel"
+        return "Poetry"
     }
     /// 数据ID
     @objc dynamic var id : LCNumber?
@@ -94,4 +105,19 @@ class RPPoetryVolumeModel : LCObject {
     @objc dynamic var volume : LCNumber?
     @objc dynamic var comment : LCString?
     @objc dynamic var count : LCNumber?
+}
+
+class RPAuthorModel : LCObject {
+    override static func objectClassName() -> String {
+        return "Author"
+    }
+    
+    //TODO: 重名问题
+    
+    /// 姓名
+    @objc dynamic var name : LCString?
+    /// 描述
+    @objc dynamic var desc : LCString?
+    /// 朝代
+    @objc dynamic var dynasty : LCString?
 }

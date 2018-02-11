@@ -36,6 +36,16 @@ class RPPoetryHelper {
     private let tPoetryAuthor = Expression<String>("author") //作者
     private let tPoetryText = Expression<String>("text") //内容
     
+    private let perFileCount = 1000
+    private let fileAuthorsSong = "authors.song"
+    /// 0~254,000 per 1,000
+    private let filePoetSong = "poet.song"
+    private let fileNumberSong = 255
+    private let fileAuthorsTang = "authors.tang"
+    /// 0~57,000 per 1,000
+    private let filePoetTang = "poet.tang"
+    private let fileNumberTang = 58
+    
     private func loadDataBase() {
         guard let path = Bundle.main.path(forResource: "quantangshi.db", ofType: nil) else {
             //要在buidPhases 中添加文件  要不然会找不到
@@ -207,5 +217,55 @@ class RPPoetryHelper {
         poetry.author = LCString(poem[self.tPoetryAuthor])
         return poetry
     }
+    
+    // MARK: - NewDataSource
+    //获取作者列表
+    func authorsListFromFile(type : RPPoetryTimeType) -> [Any]? {
+        var fileName:String
+        
+        switch type {
+        case .song:
+            fileName = fileAuthorsSong
+        default:
+            fileName = fileAuthorsTang
+        }
+        
+        let filePath = Bundle.main.path(forResource: fileName, ofType: "json")
+        
+        do {
+            let jsonString = try String(contentsOfFile: filePath!, encoding: String.Encoding.utf8)
+            let data = jsonString.data(using: String.Encoding.utf8)
+            let authors = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! [[String : Any]]
+            
+            //转模型上传
+            //TODO:   BoringSSL   问题
+            for i in 0..<authors.count {
+                
+                let dic = authors[i]
+                
+                let auth = RPAuthorModel()
+                auth.name = LCString(dic["name"] as! String)
+                auth.desc = LCString(dic["desc"] as! String)
+                auth.dynasty = LCString(type.rawValue)
+                
+                auth.save({ (result) in
+                    if result.isSuccess == true {
+                        print(auth.name?.stringValue as Any)
+                        print("已上传" + "\(i)" + "/" + "\(authors.count)")
+                    } else {
+                        print("诗人上传失败")
+                    }
+                })
+                
+            }
+            return authors
+        } catch {
+            print(error)
+            return nil
+        }
+    }
+    
+    //获取作品列表
+    
     
 }

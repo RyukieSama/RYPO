@@ -61,7 +61,8 @@ class RPReaderController: RPBaseController {
     }
     
     @IBAction func infoClick(_ sender: Any) {
-        print(poetry as Any)
+//        print(poetry as Any)
+//        _ = RPPoetryHelper.sharedHelper.authorsListFromFile(type: .song)
     }
     
 }
