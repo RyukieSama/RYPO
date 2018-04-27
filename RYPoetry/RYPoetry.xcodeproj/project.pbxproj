@@ -368,6 +368,7 @@
 		4ADB31D11FD454A4005CB839 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ADB31D01FD45497005CB839 /* Photos.framework */; };
 		4ADDBD4F1FCD046B00FF0EC7 /* PoetryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ADDBD4E1FCD046A00FF0EC7 /* PoetryList.storyboard */; };
 		4ADDBD511FCD04C500FF0EC7 /* VolumeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ADDBD501FCD04C500FF0EC7 /* VolumeList.storyboard */; };
+		4AE3E680207F5AE80091C0F1 /* RYWebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE3E67F207F5AE80091C0F1 /* RYWebImage.swift */; };
 		4AE95E231FCDC91200EDC914 /* RPGameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE95E221FCDC91200EDC914 /* RPGameCenter.swift */; };
 		4AE95E2B1FCDCF2200EDC914 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE95E2A1FCDCF2200EDC914 /* GameKit.framework */; };
 		4AFF4D8C1F7D361C00E2EC01 /* RYFontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF4D8B1F7D361C00E2EC01 /* RYFontHelper.swift */; };
@@ -758,10 +759,10 @@
 		4ADB31D01FD45497005CB839 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		4ADDBD4E1FCD046A00FF0EC7 /* PoetryList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PoetryList.storyboard; sourceTree = "<group>"; };
 		4ADDBD501FCD04C500FF0EC7 /* VolumeList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VolumeList.storyboard; sourceTree = "<group>"; };
+		4AE3E67F207F5AE80091C0F1 /* RYWebImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RYWebImage.swift; sourceTree = "<group>"; };
 		4AE95E221FCDC91200EDC914 /* RPGameCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPGameCenter.swift; sourceTree = "<group>"; };
 		4AE95E2A1FCDCF2200EDC914 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		4AE95E2C1FCDCFA900EDC914 /* RYPoetry.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RYPoetry.entitlements; sourceTree = "<group>"; };
-		4AECA4DF20200417003427D3 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = ../../MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4AFF4D8B1F7D361C00E2EC01 /* RYFontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RYFontHelper.swift; sourceTree = "<group>"; };
 		4AFF4D8E1F7D378700E2EC01 /* FZZJ-HFXSJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FZZJ-HFXSJW.TTF"; sourceTree = "<group>"; };
 		641393E7860C1FF27F6C0010 /* Pods-RYPoetry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RYPoetry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RYPoetry/Pods-RYPoetry.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1264,7 +1265,6 @@
 			children = (
 				4AE95E2C1FCDCFA900EDC914 /* RYPoetry.entitlements */,
 				4A5F03321F7CFE8700199F0D /* Info.plist */,
-				4AECA4DF20200417003427D3 /* MyPlayground.playground */,
 				4AFF4D821F7D09AF00E2EC01 /* Units */,
 				4AFF4D811F7D099900E2EC01 /* Classes */,
 				4AFF4D801F7D07D800E2EC01 /* Resource */,
@@ -1358,6 +1358,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		4AE3E67E207F5A830091C0F1 /* RYWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				4AE3E67F207F5AE80091C0F1 /* RYWebImage.swift */,
+			);
+			path = RYWebImage;
+			sourceTree = "<group>";
+		};
 		4AE95E211FCDC8F000EDC914 /* GameCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1403,6 +1411,7 @@
 			children = (
 				4AC2BD38202AAD93001868D2 /* R.generated.swift */,
 				4AB7A8401F94AAA2006BE50C /* RPConstants.swift */,
+				4AE3E67E207F5A830091C0F1 /* RYWebImage */,
 				4A5D4A771FD4EBDA0088B949 /* RPCloudServer */,
 				4AE95E211FCDC8F000EDC914 /* GameCenter */,
 				4AB48E2D1FCC120A00C2B200 /* RPDataCenter */,
@@ -2005,6 +2014,7 @@
 				4A1A93071FCEBCB800C7D0D5 /* RPUserCenterController.swift in Sources */,
 				4A6B597C1F98ABDC000DF7CB /* RPPoetryListCell.swift in Sources */,
 				4A0B45291F999FAB00836BE3 /* RPPoetryReadCell.swift in Sources */,
+				4AE3E680207F5AE80091C0F1 /* RYWebImage.swift in Sources */,
 				4A1297861F959F2200A021BA /* RPMainController.swift in Sources */,
 				4A12979F1F97449600A021BA /* RPPoetryHelper.swift in Sources */,
 				4A5F03271F7CFE8700199F0D /* AppDelegate.swift in Sources */,

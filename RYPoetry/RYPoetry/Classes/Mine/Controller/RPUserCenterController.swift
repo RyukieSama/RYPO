@@ -98,7 +98,7 @@ class RPUserCenterController: RPBaseController {
     private func setupUI() {
         navigationController?.setNavigationBarHidden(true, animated: true)
         
-        let url = URL(string:"http://ac-XNiw5AEe.clouddn.com/ocZuF4Id49GUgPzjdMv5BQC")
+        let url = URL(string:"http://lc-XNiw5AEe.cn-n1.lcfile.com/AlFa9fGhm2hSOBtWMIrTIdD")
         btUser.kf.setImage(with: url, for: .normal)
         
     }
