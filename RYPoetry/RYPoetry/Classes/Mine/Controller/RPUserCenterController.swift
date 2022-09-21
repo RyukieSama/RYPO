@@ -9,9 +9,6 @@
 import UIKit
 import GameKit
 import Photos
-import LeanCloud
-import AVOSCloud
-import Kingfisher
 
 class RPUserCenterController: RPBaseController {
     override func viewDidLoad() {
@@ -39,12 +36,12 @@ class RPUserCenterController: RPBaseController {
     }
     
     private func loadUserData() {
-        lbNickName.text = RPUser.rpCurrentUser().nickName?.stringValue;
+        lbNickName.text = "NickName"//RPUser.rpCurrentUser().nickName?.stringValue;
         btUser.setTitle("", for: .normal)
         btUser.backgroundColor = UIColor.gray
         
         //TODO: 切换用户也要处理
-        RPLocalPlayer.loadPhoto(for: .normal) { (image, error) in            
+        RPLocalPlayer.loadPhoto(for: GKPhotoSizeNormal) { (image, error) in
             if image != nil {
                 self.btUser.setImage(image, for: .normal)
             }
@@ -72,14 +69,14 @@ class RPUserCenterController: RPBaseController {
     }
     
     private func updateUserAvatar(image : UIImage) {
-        let imageData = UIImagePNGRepresentation(image)
-        let file = AVFile(data: imageData!)
-        file.saveInBackground { (flag, error) in
-            if error == nil {
-                print(error as Any)
-            }
-            print(file.url as Any)
-        }
+//        let imageData = UIImagePNGRepresentation(image)
+//        let file = AVFile(data: imageData!)
+//        file.saveInBackground { (flag, error) in
+//            if error == nil {
+//                print(error as Any)
+//            }
+//            print(file.url as Any)
+//        }
         
         btUser.setImage(image, for: .normal)
     }
@@ -99,7 +96,7 @@ class RPUserCenterController: RPBaseController {
         navigationController?.setNavigationBarHidden(true, animated: true)
         
         let url = URL(string:"http://lc-XNiw5AEe.cn-n1.lcfile.com/AlFa9fGhm2hSOBtWMIrTIdD")
-        btUser.kf.setImage(with: url, for: .normal)
+//        btUser.kf.setImage(with: url, for: .normal)
         
     }
     
@@ -121,6 +118,8 @@ class RPUserCenterController: RPBaseController {
         case .authorized:
             showImagePicker()
             break
+        case .limited:
+            break
         }
         
     }
@@ -132,18 +131,18 @@ class RPUserCenterController: RPBaseController {
             return
         }
         
-        let currentUser = RPUser.rpCurrentUser()
-        currentUser.nickName = LCString(text!)
-        
-        currentUser.save { result in
-            switch result {
-            case .success:
-                self.lbNickName.text = text
-                break
-            case .failure(let error):
-                print(error)
-            }
-        }
+//        let currentUser = RPUser.rpCurrentUser()
+//        currentUser.nickName = LCString(text!)
+//
+//        currentUser.save { result in
+//            switch result {
+//            case .success:
+//                self.lbNickName.text = text
+//                break
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
     }
     
     

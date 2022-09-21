@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import LeanCloud
 
 //索引一张表
 //诗一张表
@@ -52,30 +51,26 @@ enum RPPoetryTimeType : String {
     case song = "song"
 }
 
-class RPPoetryBaseModel : LCObject {
-    // LCObject 子类化必须的操作
-    override static func objectClassName() -> String {
-        return "Poetry"
-    }
+class RPPoetryBaseModel {
     /// 数据ID
-    @objc dynamic var id : LCNumber?
+    var id : Int?
     /// 标题
-    @objc dynamic var title : LCString?
+    var title : String?
     /// 作者
-    @objc dynamic var author : LCString?
+    var author : String?
     /// 全文本
-    @objc dynamic var text : LCString?
+    var text : String?
     /// 卷号
-    @objc dynamic var volume : LCNumber?
+    var volume : Int?
     /// 所在卷中的序号
-    @objc dynamic var sequence : LCNumber?
+    var sequence : Int?
     
-    @objc dynamic var contentType : LCString?
-    @objc dynamic var lineType : LCString?
+    var contentType : String?
+    var lineType : String?
     /// 诗句数组
     lazy var lines : [String] = {
         var arr = [String]()
-        let collectionOne = text?.stringValue?.split(separator: "。")
+        let collectionOne = text?.split(separator: "。")
         for strOne in collectionOne! {
             let collectionTwo = strOne.split(separator: "，")
             for strTwo in collectionTwo {
@@ -95,29 +90,20 @@ class RPPoetryBaseModel : LCObject {
     /// 行数
     lazy var lineCount : Int = Int({
         return lines.count
-        }())
+    }())
 }
 
-class RPPoetryVolumeModel : LCObject {
-    override static func objectClassName() -> String {
-        return "RPPoetryVolumeModel"
-    }
-    @objc dynamic var volume : LCNumber?
-    @objc dynamic var comment : LCString?
-    @objc dynamic var count : LCNumber?
+class RPPoetryVolumeModel {
+    var volume: Int?
+    var comment: String?
+    var count: Int?
 }
 
-class RPAuthorModel : LCObject {
-    override static func objectClassName() -> String {
-        return "Author"
-    }
-    
-    //TODO: 重名问题
-    
+class RPAuthorModel {
     /// 姓名
-    @objc dynamic var name : LCString?
+    var name: String?
     /// 描述
-    @objc dynamic var desc : LCString?
+    var desc: String?
     /// 朝代
-    @objc dynamic var dynasty : LCString?
+    var dynasty: String?
 }

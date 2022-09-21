@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F6CAF4AC9A3062E35E1BAF0 /* Pods_RYPoetry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A265A432EA01821B38D762E /* Pods_RYPoetry.framework */; };
 		4A0B45291F999FAB00836BE3 /* RPPoetryReadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0B45271F999FAB00836BE3 /* RPPoetryReadCell.swift */; };
 		4A0B452A1F999FAB00836BE3 /* RPPoetryReadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0B45281F999FAB00836BE3 /* RPPoetryReadCell.xib */; };
 		4A12977E1F95962100A021BA /* RPPoetryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12977D1F95962100A021BA /* RPPoetryDetailController.swift */; };
@@ -23,7 +22,6 @@
 		4A1297991F97032300A021BA /* RPPoetryBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1297981F97032300A021BA /* RPPoetryBaseModel.swift */; };
 		4A12979B1F9703E900A021BA /* RPDetailSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12979A1F9703E900A021BA /* RPDetailSettingController.swift */; };
 		4A12979F1F97449600A021BA /* RPPoetryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12979E1F97449600A021BA /* RPPoetryHelper.swift */; };
-		4A1A93031FCE8AFD00C7D0D5 /* RPUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A93021FCE8AFC00C7D0D5 /* RPUser.swift */; };
 		4A1A93051FCEBC4300C7D0D5 /* UserCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A1A93041FCEBC4300C7D0D5 /* UserCenter.storyboard */; };
 		4A1A93071FCEBCB800C7D0D5 /* RPUserCenterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A93061FCEBCB800C7D0D5 /* RPUserCenterController.swift */; };
 		4A1A9EF11F9F29F2002A67C3 /* NSNumber+ChineseNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A9EF01F9F29F2002A67C3 /* NSNumber+ChineseNumber.swift */; };
@@ -364,7 +362,6 @@
 		4AB296B31F7D485900004273 /* FZZJ-HFXSJW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 4AFF4D8E1F7D378700E2EC01 /* FZZJ-HFXSJW.TTF */; };
 		4AB48E2F1FCC125100C2B200 /* RPDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB48E2E1FCC125100C2B200 /* RPDataCenter.swift */; };
 		4AB7A8411F94AAA2006BE50C /* RPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB7A8401F94AAA2006BE50C /* RPConstants.swift */; };
-		4AC2BD39202AAD93001868D2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC2BD38202AAD93001868D2 /* R.generated.swift */; };
 		4ADB31D11FD454A4005CB839 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ADB31D01FD45497005CB839 /* Photos.framework */; };
 		4ADDBD4F1FCD046B00FF0EC7 /* PoetryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ADDBD4E1FCD046A00FF0EC7 /* PoetryList.storyboard */; };
 		4ADDBD511FCD04C500FF0EC7 /* VolumeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ADDBD501FCD04C500FF0EC7 /* VolumeList.storyboard */; };
@@ -372,6 +369,7 @@
 		4AE95E231FCDC91200EDC914 /* RPGameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE95E221FCDC91200EDC914 /* RPGameCenter.swift */; };
 		4AE95E2B1FCDCF2200EDC914 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE95E2A1FCDCF2200EDC914 /* GameKit.framework */; };
 		4AFF4D8C1F7D361C00E2EC01 /* RYFontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFF4D8B1F7D361C00E2EC01 /* RYFontHelper.swift */; };
+		5DDD6721A68FF8481FC5E1B1 /* libPods-RYPoetry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D722F1922E30C5D08B46C33 /* libPods-RYPoetry.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -392,7 +390,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A265A432EA01821B38D762E /* Pods_RYPoetry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RYPoetry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		261FE57C88B43897E43CD64B /* Pods-RYPoetry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RYPoetry.release.xcconfig"; path = "Pods/Target Support Files/Pods-RYPoetry/Pods-RYPoetry.release.xcconfig"; sourceTree = "<group>"; };
 		4A0B45271F999FAB00836BE3 /* RPPoetryReadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPPoetryReadCell.swift; sourceTree = "<group>"; };
 		4A0B45281F999FAB00836BE3 /* RPPoetryReadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RPPoetryReadCell.xib; sourceTree = "<group>"; };
@@ -409,7 +406,6 @@
 		4A1297981F97032300A021BA /* RPPoetryBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPPoetryBaseModel.swift; sourceTree = "<group>"; };
 		4A12979A1F9703E900A021BA /* RPDetailSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPDetailSettingController.swift; sourceTree = "<group>"; };
 		4A12979E1F97449600A021BA /* RPPoetryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPPoetryHelper.swift; sourceTree = "<group>"; };
-		4A1A93021FCE8AFC00C7D0D5 /* RPUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPUser.swift; sourceTree = "<group>"; };
 		4A1A93041FCEBC4300C7D0D5 /* UserCenter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserCenter.storyboard; sourceTree = "<group>"; };
 		4A1A93061FCEBCB800C7D0D5 /* RPUserCenterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPUserCenterController.swift; sourceTree = "<group>"; };
 		4A1A9EF01F9F29F2002A67C3 /* NSNumber+ChineseNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNumber+ChineseNumber.swift"; sourceTree = "<group>"; };
@@ -755,7 +751,6 @@
 		4A7854B51F99F34B00BA8E86 /* RPPoetryInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RPPoetryInfoCell.xib; sourceTree = "<group>"; };
 		4AB48E2E1FCC125100C2B200 /* RPDataCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPDataCenter.swift; sourceTree = "<group>"; };
 		4AB7A8401F94AAA2006BE50C /* RPConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPConstants.swift; sourceTree = "<group>"; };
-		4AC2BD38202AAD93001868D2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		4ADB31D01FD45497005CB839 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		4ADDBD4E1FCD046A00FF0EC7 /* PoetryList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PoetryList.storyboard; sourceTree = "<group>"; };
 		4ADDBD501FCD04C500FF0EC7 /* VolumeList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VolumeList.storyboard; sourceTree = "<group>"; };
@@ -766,6 +761,7 @@
 		4AFF4D8B1F7D361C00E2EC01 /* RYFontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RYFontHelper.swift; sourceTree = "<group>"; };
 		4AFF4D8E1F7D378700E2EC01 /* FZZJ-HFXSJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FZZJ-HFXSJW.TTF"; sourceTree = "<group>"; };
 		641393E7860C1FF27F6C0010 /* Pods-RYPoetry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RYPoetry.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RYPoetry/Pods-RYPoetry.debug.xcconfig"; sourceTree = "<group>"; };
+		9D722F1922E30C5D08B46C33 /* libPods-RYPoetry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RYPoetry.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -774,8 +770,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ADB31D11FD454A4005CB839 /* Photos.framework in Frameworks */,
-				0F6CAF4AC9A3062E35E1BAF0 /* Pods_RYPoetry.framework in Frameworks */,
 				4AE95E2B1FCDCF2200EDC914 /* GameKit.framework in Frameworks */,
+				5DDD6721A68FF8481FC5E1B1 /* libPods-RYPoetry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -801,7 +797,7 @@
 			children = (
 				4ADB31D01FD45497005CB839 /* Photos.framework */,
 				4AE95E2A1FCDCF2200EDC914 /* GameKit.framework */,
-				0A265A432EA01821B38D762E /* Pods_RYPoetry.framework */,
+				9D722F1922E30C5D08B46C33 /* libPods-RYPoetry.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1370,7 +1366,6 @@
 			isa = PBXGroup;
 			children = (
 				4AE95E221FCDC91200EDC914 /* RPGameCenter.swift */,
-				4A1A93021FCE8AFC00C7D0D5 /* RPUser.swift */,
 			);
 			path = GameCenter;
 			sourceTree = "<group>";
@@ -1409,7 +1404,6 @@
 		4AFF4D821F7D09AF00E2EC01 /* Units */ = {
 			isa = PBXGroup;
 			children = (
-				4AC2BD38202AAD93001868D2 /* R.generated.swift */,
 				4AB7A8401F94AAA2006BE50C /* RPConstants.swift */,
 				4AE3E67E207F5A830091C0F1 /* RYWebImage */,
 				4A5D4A771FD4EBDA0088B949 /* RPCloudServer */,
@@ -1476,9 +1470,6 @@
 				4A5F031F1F7CFE8700199F0D /* Sources */,
 				4A5F03201F7CFE8700199F0D /* Frameworks */,
 				4A5F03211F7CFE8700199F0D /* Resources */,
-				C255D56119675EF376B699CA /* [CP] Embed Pods Frameworks */,
-				B3003966888CD45A1C42C8A8 /* [CP] Copy Pods Resources */,
-				4AC2BD36202AAC29001868D2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1938,56 +1929,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RYPoetry-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		4AC2BD36202AAC29001868D2 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
-		};
-		B3003966888CD45A1C42C8A8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RYPoetry/Pods-RYPoetry-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C255D56119675EF376B699CA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RYPoetry/Pods-RYPoetry-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2006,7 +1957,6 @@
 				4A12978F1F95B18700A021BA /* RPBaseController.swift in Sources */,
 				4A50F4B11F983C2A00B1B1FF /* RVolumeMainController.swift in Sources */,
 				4A12977E1F95962100A021BA /* RPPoetryDetailController.swift in Sources */,
-				4A1A93031FCE8AFD00C7D0D5 /* RPUser.swift in Sources */,
 				4A50F4B41F983C6700B1B1FF /* RPAuthorMainController.swift in Sources */,
 				4A50F4C11F98977000B1B1FF /* RPBaseTableViewCell.swift in Sources */,
 				4A50F4BF1F98405400B1B1FF /* RPBaseCollectionCell.swift in Sources */,
@@ -2025,7 +1975,6 @@
 				4AB48E2F1FCC125100C2B200 /* RPDataCenter.swift in Sources */,
 				4A50F4BD1F983D4A00B1B1FF /* RPPoetryListController.swift in Sources */,
 				4A1297841F959E9E00A021BA /* RPNaviController.swift in Sources */,
-				4AC2BD39202AAD93001868D2 /* R.generated.swift in Sources */,
 				4A1297931F96F7E500A021BA /* RPMainCellModel.swift in Sources */,
 				4A7854B61F99F34B00BA8E86 /* RPPoetryInfoCell.swift in Sources */,
 				4A1297991F97032300A021BA /* RPPoetryBaseModel.swift in Sources */,
@@ -2113,7 +2062,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -2164,7 +2113,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -2182,7 +2131,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9AV5M9QCT9;
 				INFOPLIST_FILE = RYPoetry/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.Ryukie.Sama.RYPoetry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2201,7 +2150,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9AV5M9QCT9;
 				INFOPLIST_FILE = RYPoetry/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.Ryukie.Sama.RYPoetry;
 				PRODUCT_NAME = "$(TARGET_NAME)";

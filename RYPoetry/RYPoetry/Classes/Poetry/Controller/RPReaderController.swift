@@ -28,7 +28,7 @@ class RPReaderController: RPBaseController {
     var poetryLines : [String]?
     var poetry : RPPoetryBaseModel? {
         didSet {
-            title = poetry?.title?.stringValue
+            title = poetry?.title
             poetryLines = poetry?.lines
         }
     }
@@ -37,27 +37,27 @@ class RPReaderController: RPBaseController {
     @IBAction func uploadClick(_ sender: Any) {
         print("uploadClick")
         
-        poetry?.save { result in
-            switch result {
-            case .success:
-                print("UploadSuccess!")
-            case .failure(let error):
-                print(error)
-            }
-        }
+//        poetry?.save { result in
+//            switch result {
+//            case .success:
+//                print("UploadSuccess!")
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
     }
     
     @IBAction func deleteClick(_ sender: Any) {
         print("deleteClick")
 
-        poetry?.delete({ (result) in
-            switch result {
-            case .success:
-            print("DeleteSuccess!")
-            case .failure(let error):
-                print(error)
-            }
-        })
+//        poetry?.delete({ (result) in
+//            switch result {
+//            case .success:
+//            print("DeleteSuccess!")
+//            case .failure(let error):
+//                print(error)
+//            }
+//        })
     }
     
     @IBAction func infoClick(_ sender: Any) {

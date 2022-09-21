@@ -22,9 +22,9 @@ class RPVolumeCell: RPBaseTableViewCell {
     }
     
     func bindModel(volume : RPPoetryVolumeModel) {
-        lbNumber.text = "卷" + NSNumber(value: (volume.volume?.intValue)!).chineseNumberString()
-        lbAuthor.text = volume.comment?.stringValue
-        lbCount.text = NSNumber(value:(volume.count?.intValue)!).chineseNumberString() + "篇"
+        lbNumber.text = "卷" + NSNumber(value: (volume.volume ?? 0)).chineseNumberString()
+        lbAuthor.text = volume.comment
+        lbCount.text = NSNumber(value: Int(volume.count ?? 0)).chineseNumberString() + "篇"
     }
     
     // MARK: - UI

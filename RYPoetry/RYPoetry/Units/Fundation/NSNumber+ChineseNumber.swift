@@ -9,7 +9,6 @@
 import Foundation
 
 extension NSNumber {
-    
     /// 返回格式化的字符转   一百八十九   这样的
     func chineseNumberString() -> String {
         let formatter = NumberFormatter()

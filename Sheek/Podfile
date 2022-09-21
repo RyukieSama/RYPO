@@ -1,0 +1,27 @@
+source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
+workspace 'RYPoetry.xcworkspace'
+
+platform :ios, ‘12.0’
+# 工程不显示任何警告
+inhibit_all_warnings!
+
+use_frameworks!
+
+def ryukieKit
+  pod 'Messi', :path => '../../Messi'
+  pod 'Swifty', :path => '../../Swifty'
+  pod 'Vulture', :path => '../../Vulture'
+end
+
+
+target 'RYPoetry' do
+  project 'RYPoetry.xcodeproj'
+  
+  ryukieKit
+  # google
+  
+  pod 'IQKeyboardManagerSwift'
+  pod 'Kingfisher'
+#  pod "GCDWebServer/WebUploader", "~> 3.0"
+  
+end

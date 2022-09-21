@@ -8,7 +8,6 @@
 
 import Foundation
 import GameKit
-import LeanCloud
 
 let RPLocalPlayer = GKLocalPlayer.localPlayer()
 
@@ -54,41 +53,41 @@ class RPGameCenter : NSObject {
         print(localPlayer.playerID as Any)
         
         //登录
-        RPUser.logIn(username: localPlayer.playerID!, password: localPlayer.playerID!) { (result) in
-            switch result {
-            case .success(let user):
-                print("======登录成功======")
-                print(user)
-                
-                //保存本地  用户信息
-//                UserDefaults().set(user, forKey: "UserData")
-                
-                
-                break
-            case .failure(let error):
-                print("======登录失败======")
-                print(error)
-                if error.code == LC_ERROR_NO_USER {
-                    //注册
-                    signUp(localPlayer: localPlayer)
-                }
-            }
-        }
+//        RPUser.logIn(username: localPlayer.playerID!, password: localPlayer.playerID!) { (result) in
+//            switch result {
+//            case .success(let user):
+//                print("======登录成功======")
+//                print(user)
+//
+//                //保存本地  用户信息
+////                UserDefaults().set(user, forKey: "UserData")
+//
+//
+//                break
+//            case .failure(let error):
+//                print("======登录失败======")
+//                print(error)
+//                if error.code == LC_ERROR_NO_USER {
+//                    //注册
+//                    signUp(localPlayer: localPlayer)
+//                }
+//            }
+//        }
     }
     
     private class func signUp(localPlayer : GKLocalPlayer) {
-        let currentUser = RPUser()
-        currentUser.username = LCString(localPlayer.playerID!)
-        currentUser.password = LCString(localPlayer.playerID!)
-        currentUser.nickName = LCString(localPlayer.alias!)
-        currentUser.signUp { (signUpResult) in
-            switch signUpResult {
-            case .success :
-                print(localPlayer.alias! + "注册成功")
-                break
-            case .failure(let error):
-                print(error)
-            }
-        }
+//        let currentUser = RPUser()
+//        currentUser.username = LCString(localPlayer.playerID!)
+//        currentUser.password = LCString(localPlayer.playerID!)
+//        currentUser.nickName = LCString(localPlayer.alias!)
+//        currentUser.signUp { (signUpResult) in
+//            switch signUpResult {
+//            case .success :
+//                print(localPlayer.alias! + "注册成功")
+//                break
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
     }
 }

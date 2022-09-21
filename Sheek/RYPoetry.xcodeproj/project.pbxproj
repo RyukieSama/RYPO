@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A8781CB25246CDA00185588 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8781CA25246CDA00185588 /* AppDelegate.swift */; };
+		4A8781CD25246CDA00185588 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8781CC25246CDA00185588 /* SceneDelegate.swift */; };
+		4A8781CF25246CDA00185588 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8781CE25246CDA00185588 /* ContentView.swift */; };
+		4A8781D125246CDE00185588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A8781D025246CDE00185588 /* Assets.xcassets */; };
+		4A8781D425246CDE00185588 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A8781D325246CDE00185588 /* Preview Assets.xcassets */; };
+		4A8781D725246CDE00185588 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A8781D525246CDE00185588 /* LaunchScreen.storyboard */; };
+		4A8781E225246CDF00185588 /* RYPoetryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8781E125246CDF00185588 /* RYPoetryTests.swift */; };
+		4A8781ED25246CDF00185588 /* RYPoetryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8781EC25246CDF00185588 /* RYPoetryUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A8781DE25246CDF00185588 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A8781BF25246CDA00185588 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A8781C625246CDA00185588;
+			remoteInfo = RYPoetry;
+		};
+		4A8781E925246CDF00185588 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A8781BF25246CDA00185588 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A8781C625246CDA00185588;
+			remoteInfo = RYPoetry;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4A8781C725246CDA00185588 /* RYPoetry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RYPoetry.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A8781CA25246CDA00185588 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4A8781CC25246CDA00185588 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4A8781CE25246CDA00185588 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4A8781D025246CDE00185588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4A8781D325246CDE00185588 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4A8781D625246CDE00185588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4A8781D825246CDE00185588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A8781DD25246CDF00185588 /* RYPoetryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RYPoetryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A8781E125246CDF00185588 /* RYPoetryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RYPoetryTests.swift; sourceTree = "<group>"; };
+		4A8781E325246CDF00185588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A8781E825246CDF00185588 /* RYPoetryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RYPoetryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A8781EC25246CDF00185588 /* RYPoetryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RYPoetryUITests.swift; sourceTree = "<group>"; };
+		4A8781EE25246CDF00185588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A8781C425246CDA00185588 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A8781DA25246CDF00185588 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A8781E525246CDF00185588 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A8781BE25246CDA00185588 = {
+			isa = PBXGroup;
+			children = (
+				4A8781C925246CDA00185588 /* RYPoetry */,
+				4A8781E025246CDF00185588 /* RYPoetryTests */,
+				4A8781EB25246CDF00185588 /* RYPoetryUITests */,
+				4A8781C825246CDA00185588 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4A8781C825246CDA00185588 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A8781C725246CDA00185588 /* RYPoetry.app */,
+				4A8781DD25246CDF00185588 /* RYPoetryTests.xctest */,
+				4A8781E825246CDF00185588 /* RYPoetryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A8781C925246CDA00185588 /* RYPoetry */ = {
+			isa = PBXGroup;
+			children = (
+				4A8781CA25246CDA00185588 /* AppDelegate.swift */,
+				4A8781CC25246CDA00185588 /* SceneDelegate.swift */,
+				4A8781CE25246CDA00185588 /* ContentView.swift */,
+				4A8781D025246CDE00185588 /* Assets.xcassets */,
+				4A8781D525246CDE00185588 /* LaunchScreen.storyboard */,
+				4A8781D825246CDE00185588 /* Info.plist */,
+				4A8781D225246CDE00185588 /* Preview Content */,
+			);
+			path = RYPoetry;
+			sourceTree = "<group>";
+		};
+		4A8781D225246CDE00185588 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4A8781D325246CDE00185588 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4A8781E025246CDF00185588 /* RYPoetryTests */ = {
+			isa = PBXGroup;
+			children = (
+				4A8781E125246CDF00185588 /* RYPoetryTests.swift */,
+				4A8781E325246CDF00185588 /* Info.plist */,
+			);
+			path = RYPoetryTests;
+			sourceTree = "<group>";
+		};
+		4A8781EB25246CDF00185588 /* RYPoetryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4A8781EC25246CDF00185588 /* RYPoetryUITests.swift */,
+				4A8781EE25246CDF00185588 /* Info.plist */,
+			);
+			path = RYPoetryUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A8781C625246CDA00185588 /* RYPoetry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A8781F125246CDF00185588 /* Build configuration list for PBXNativeTarget "RYPoetry" */;
+			buildPhases = (
+				4A8781C325246CDA00185588 /* Sources */,
+				4A8781C425246CDA00185588 /* Frameworks */,
+				4A8781C525246CDA00185588 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RYPoetry;
+			productName = RYPoetry;
+			productReference = 4A8781C725246CDA00185588 /* RYPoetry.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4A8781DC25246CDF00185588 /* RYPoetryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A8781F425246CDF00185588 /* Build configuration list for PBXNativeTarget "RYPoetryTests" */;
+			buildPhases = (
+				4A8781D925246CDF00185588 /* Sources */,
+				4A8781DA25246CDF00185588 /* Frameworks */,
+				4A8781DB25246CDF00185588 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A8781DF25246CDF00185588 /* PBXTargetDependency */,
+			);
+			name = RYPoetryTests;
+			productName = RYPoetryTests;
+			productReference = 4A8781DD25246CDF00185588 /* RYPoetryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4A8781E725246CDF00185588 /* RYPoetryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A8781F725246CDF00185588 /* Build configuration list for PBXNativeTarget "RYPoetryUITests" */;
+			buildPhases = (
+				4A8781E425246CDF00185588 /* Sources */,
+				4A8781E525246CDF00185588 /* Frameworks */,
+				4A8781E625246CDF00185588 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A8781EA25246CDF00185588 /* PBXTargetDependency */,
+			);
+			name = RYPoetryUITests;
+			productName = RYPoetryUITests;
+			productReference = 4A8781E825246CDF00185588 /* RYPoetryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A8781BF25246CDA00185588 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					4A8781C625246CDA00185588 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					4A8781DC25246CDF00185588 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 4A8781C625246CDA00185588;
+					};
+					4A8781E725246CDF00185588 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 4A8781C625246CDA00185588;
+					};
+				};
+			};
+			buildConfigurationList = 4A8781C225246CDA00185588 /* Build configuration list for PBXProject "RYPoetry" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4A8781BE25246CDA00185588;
+			productRefGroup = 4A8781C825246CDA00185588 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A8781C625246CDA00185588 /* RYPoetry */,
+				4A8781DC25246CDF00185588 /* RYPoetryTests */,
+				4A8781E725246CDF00185588 /* RYPoetryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A8781C525246CDA00185588 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A8781D725246CDE00185588 /* LaunchScreen.storyboard in Resources */,
+				4A8781D425246CDE00185588 /* Preview Assets.xcassets in Resources */,
+				4A8781D125246CDE00185588 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A8781DB25246CDF00185588 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A8781E625246CDF00185588 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A8781C325246CDA00185588 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A8781CB25246CDA00185588 /* AppDelegate.swift in Sources */,
+				4A8781CD25246CDA00185588 /* SceneDelegate.swift in Sources */,
+				4A8781CF25246CDA00185588 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A8781D925246CDF00185588 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A8781E225246CDF00185588 /* RYPoetryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A8781E425246CDF00185588 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A8781ED25246CDF00185588 /* RYPoetryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A8781DF25246CDF00185588 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A8781C625246CDA00185588 /* RYPoetry */;
+			targetProxy = 4A8781DE25246CDF00185588 /* PBXContainerItemProxy */;
+		};
+		4A8781EA25246CDF00185588 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A8781C625246CDA00185588 /* RYPoetry */;
+			targetProxy = 4A8781E925246CDF00185588 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4A8781D525246CDE00185588 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A8781D625246CDE00185588 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4A8781EF25246CDF00185588 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4A8781F025246CDF00185588 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4A8781F225246CDF00185588 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"RYPoetry/Preview Content\"";
+				DEVELOPMENT_TEAM = 9AV5M9QCT9;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = RYPoetry/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.Ryukie.Sama.RYPoetry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4A8781F325246CDF00185588 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"RYPoetry/Preview Content\"";
+				DEVELOPMENT_TEAM = 9AV5M9QCT9;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = RYPoetry/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.Ryukie.Sama.RYPoetry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4A8781F525246CDF00185588 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9AV5M9QCT9;
+				INFOPLIST_FILE = RYPoetryTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.Ryukie.Sama.RYPoetryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RYPoetry.app/RYPoetry";
+			};
+			name = Debug;
+		};
+		4A8781F625246CDF00185588 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9AV5M9QCT9;
+				INFOPLIST_FILE = RYPoetryTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.Ryukie.Sama.RYPoetryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RYPoetry.app/RYPoetry";
+			};
+			name = Release;
+		};
+		4A8781F825246CDF00185588 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9AV5M9QCT9;
+				INFOPLIST_FILE = RYPoetryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.Ryukie.Sama.RYPoetryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RYPoetry;
+			};
+			name = Debug;
+		};
+		4A8781F925246CDF00185588 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9AV5M9QCT9;
+				INFOPLIST_FILE = RYPoetryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.Ryukie.Sama.RYPoetryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RYPoetry;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4A8781C225246CDA00185588 /* Build configuration list for PBXProject "RYPoetry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A8781EF25246CDF00185588 /* Debug */,
+				4A8781F025246CDF00185588 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A8781F125246CDF00185588 /* Build configuration list for PBXNativeTarget "RYPoetry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A8781F225246CDF00185588 /* Debug */,
+				4A8781F325246CDF00185588 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A8781F425246CDF00185588 /* Build configuration list for PBXNativeTarget "RYPoetryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A8781F525246CDF00185588 /* Debug */,
+				4A8781F625246CDF00185588 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A8781F725246CDF00185588 /* Build configuration list for PBXNativeTarget "RYPoetryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A8781F825246CDF00185588 /* Debug */,
+				4A8781F925246CDF00185588 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A8781BF25246CDA00185588 /* Project object */;
+}

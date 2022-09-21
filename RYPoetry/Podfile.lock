@@ -1,35 +1,22 @@
 PODS:
-  - Alamofire (4.5.0)
-  - AVOSCloud (8.0.3)
-  - Kingfisher (4.0.0)
-  - LeanCloud (11.0.0):
-    - LeanCloud/Storage (= 11.0.0)
-  - LeanCloud/Storage (11.0.0):
-    - Alamofire (~> 4.5)
-  - R.swift (4.0.0):
-    - R.swift.Library (~> 4.0.0)
-  - R.swift.Library (4.0.0)
-  - SQLite.swift (0.11.4):
-    - SQLite.swift/standard (= 0.11.4)
-  - SQLite.swift/standard (0.11.4)
+  - Alamofire (4.9.1)
+  - SQLite.swift (0.13.3):
+    - SQLite.swift/standard (= 0.13.3)
+  - SQLite.swift/standard (0.13.3)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.5)
-  - AVOSCloud (~> 8.0.3)
-  - Kingfisher (~> 4.0)
-  - LeanCloud (~> 11.0.0)
-  - R.swift
-  - SQLite.swift (~> 0.11.4)
+  - Alamofire
+  - SQLite.swift (~> 0.13.3)
+
+SPEC REPOS:
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - Alamofire
+    - SQLite.swift
 
 SPEC CHECKSUMS:
-  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
-  AVOSCloud: ec8b794941e2c41e52cab9cf148a666ba141038e
-  Kingfisher: 5cd55fa124d1e731f1d4b04b02832e0e0432d1a9
-  LeanCloud: cb29157ba8f4e948f3476b4503903b7e6da9c260
-  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
-  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
-  SQLite.swift: 3e3bee21da701b5b9f87c4a672cb54f233505692
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  SQLite.swift: 903bfa3bc9ab06345fdfbb578e34f47cfcf417da
 
-PODFILE CHECKSUM: e4b2a5b2615c2fbe5658b77bb249ed04718eb4c9
+PODFILE CHECKSUM: 778d54389e0d3261f473feb9c41abd2996ecd262
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.11.2

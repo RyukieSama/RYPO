@@ -8,7 +8,6 @@
 
 import UIKit
 import SQLite
-import LeanCloud
 
 class RPPoetryHelper {
     typealias RPPoetryHelperClosures = ([Any]) -> ()
@@ -73,9 +72,9 @@ class RPPoetryHelper {
             do {
                 for poem in try self.db.prepare(self.tMenu) {
                     let volume = RPPoetryVolumeModel()
-                    volume.volume = LCNumber(integerLiteral: poem[self.tMenuVolume])
-                    volume.comment = LCString(poem[self.tMenuComment])
-                    volume.count = LCNumber(integerLiteral: poem[self.tMenuCount])
+                    volume.volume = poem[self.tMenuVolume]
+                    volume.comment = poem[self.tMenuComment]
+                    volume.count = poem[self.tMenuCount]
                     volumeArr.append(volume)
                 }
                 DispatchQueue.main.async {
@@ -165,9 +164,9 @@ class RPPoetryHelper {
     //处理诗数据
     static func judgePoetry(poetry: RPPoetryBaseModel) -> RPPoetryBaseModel {
         //行类型
-        poetry.lineType = LCString(judgePoetryLinesType(poetry: poetry).rawValue)
+        poetry.lineType = judgePoetryLinesType(poetry: poetry).rawValue
         //内容类型
-        poetry.contentType = LCString(judgePoetryContentType(poetry: poetry).rawValue)
+        poetry.contentType = judgePoetryContentType(poetry: poetry).rawValue
         return poetry
     }
     
@@ -209,12 +208,12 @@ class RPPoetryHelper {
     
     private func poetryFromPoem(poem: Row) -> (RPPoetryBaseModel) {
         let poetry = RPPoetryBaseModel()
-        poetry.id = LCNumber(integerLiteral: poem[self.tPoetryId])
-        poetry.volume = LCNumber(integerLiteral: poem[self.tPoetryVolume])
-        poetry.sequence = LCNumber(integerLiteral: poem[self.tPoetrySequence])
-        poetry.title = LCString(poem[self.tPoetryTitle])
-        poetry.text = LCString(poem[self.tPoetryText])
-        poetry.author = LCString(poem[self.tPoetryAuthor])
+        poetry.id = poem[self.tPoetryId]
+        poetry.volume = poem[self.tPoetryVolume]
+        poetry.sequence = poem[self.tPoetrySequence]
+        poetry.title = poem[self.tPoetryTitle]
+        poetry.text = poem[self.tPoetryText]
+        poetry.author = poem[self.tPoetryAuthor]
         return poetry
     }
     
@@ -244,18 +243,18 @@ class RPPoetryHelper {
                 let dic = authors[i]
                 
                 let auth = RPAuthorModel()
-                auth.name = LCString(dic["name"] as! String)
-                auth.desc = LCString(dic["desc"] as! String)
-                auth.dynasty = LCString(type.rawValue)
+                auth.name = dic["name"] as? String
+                auth.desc = dic["desc"] as? String
+                auth.dynasty = type.rawValue
                 
-                auth.save({ (result) in
-                    if result.isSuccess == true {
-                        print(auth.name?.stringValue as Any)
-                        print("已上传" + "\(i)" + "/" + "\(authors.count)")
-                    } else {
-                        print("诗人上传失败")
-                    }
-                })
+//                auth.save({ (result) in
+//                    if result.isSuccess == true {
+//                        print(auth.name as Any)
+//                        print("已上传" + "\(i)" + "/" + "\(authors.count)")
+//                    } else {
+//                        print("诗人上传失败")
+//                    }
+//                })
                 
             }
             return authors

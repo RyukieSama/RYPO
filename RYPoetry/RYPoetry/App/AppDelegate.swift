@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import LeanCloud
-import AVOSCloud
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -36,21 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     /// 设置LeanCloud
     func setLeanCloud(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) {
-        // 如果使用美国站点，请加上这行代码，并且写在初始化前面
-//        LeanCloud.setServiceRegion(.US)
-        LeanCloud.initialize(applicationID: LeanCloud_APP_ID, applicationKey: LeanCloud_APP_KEY)
-        
-        // 使用美国站点需要增加以下代码：
-//        AVOSCloud.setServiceRegion(.US)
-        
-        //初始化数据引擎
-        AVOSCloud.setApplicationId(LeanCloud_APP_ID, clientKey: LeanCloud_APP_KEY)
-        
-        //追踪应用 启动情况
-        AVAnalytics.trackAppOpened(launchOptions: launchOptions)
-        
-        //日志
-        AVOSCloud.setAllLogsEnabled(true)
         
     }
     
